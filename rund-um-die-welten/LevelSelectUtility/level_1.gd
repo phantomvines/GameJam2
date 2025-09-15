@@ -5,10 +5,9 @@ extends Area2D
 # 0 -> death star
 # 1 -> mars
 @export var planet_type: GlobalVariables.planets
-var center_position
+@export var level_id: String
 var size_scale
 func _ready() -> void:
-	center_position = position
 	input_pickable = true
 	print(planet_type)
 	
@@ -31,4 +30,6 @@ func _ready() -> void:
 		print("not implemented")
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
-		print("Level " + GlobalVariables.planet_names[planet_type])
+		print("Level " + GlobalVariables.planet_names[planet_type] + " with ID " + level_id)
+		GlobalVariables.target_planet_position = position
+		GlobalVariables.selected_level = level_id
