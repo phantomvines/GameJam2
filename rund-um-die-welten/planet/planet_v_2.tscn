@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://bmlfyt1ykh3aq"]
+[gd_scene load_steps=20 format=3 uid="uid://bu365exk3v217"]
 
 [ext_resource type="Script" uid="uid://cx1bjpadn6wd3" path="res://planet_v_2.gd" id="1_ouy4y"]
 [ext_resource type="Texture2D" uid="uid://dneiw5b2ikvx1" path="res://assets/deathstar-Sheet.png" id="2_b8nw5"]
+[ext_resource type="Texture2D" uid="uid://beinvbs42eerv" path="res://assets/mars-Sheet.png" id="3_bbsm5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b8nw5"]
 
@@ -55,11 +56,77 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_itp2c"]
+atlas = ExtResource("3_bbsm5")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lv2v"]
+atlas = ExtResource("3_bbsm5")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtho3"]
+atlas = ExtResource("3_bbsm5")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nr5bh"]
+atlas = ExtResource("3_bbsm5")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nb57l"]
+atlas = ExtResource("3_bbsm5")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2y8r"]
+atlas = ExtResource("3_bbsm5")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slxe4"]
+atlas = ExtResource("3_bbsm5")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tqh4j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_itp2c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3lv2v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtho3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nr5bh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nb57l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2y8r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_slxe4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="planet_v2" type="Area2D"]
 script = ExtResource("1_ouy4y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_b8nw5")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="death_star" type="AnimatedSprite2D" parent="."]
+visible = false
+texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_itp2c")
+
+[node name="mars" type="AnimatedSprite2D" parent="."]
+visible = false
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_tqh4j")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
