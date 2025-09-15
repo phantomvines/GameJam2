@@ -1,6 +1,6 @@
 extends Area2D
 
-var speed = 200
+@export var speed = 130
 # angle
 var direction = 0
 var target_planet_position = Vector2(100,100)
@@ -22,3 +22,6 @@ func _physics_process(delta: float) -> void:
 		angle -= angular_speed*delta
 	
 	position = target_planet_position+Vector2(cos(angle), sin(angle))*radius
+	
+	#print(angle)
+	$Sprite2D.global_rotation = angle+deg_to_rad(180)
