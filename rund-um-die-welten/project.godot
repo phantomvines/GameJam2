@@ -21,8 +21,8 @@ GlobalVariables="*res://global/global_variables.gd"
 
 [display]
 
-window/size/viewport_width=800
-window/size/viewport_height=420
+window/size/viewport_width=2300
+window/size/viewport_height=1300
 window/stretch/mode="viewport"
 
 [global_group]
