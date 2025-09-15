@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Rund um die Welten"
+run/main_scene="uid://bmvpm0vjd6dfj"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GlobalVariables="*res://global/global_variables.gd"
 
 [rendering]
 

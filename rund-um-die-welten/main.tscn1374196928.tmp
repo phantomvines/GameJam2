@@ -8,18 +8,5 @@
 script = ExtResource("1_0xm2m")
 
 [node name="player" parent="." instance=ExtResource("2_h2yge")]
-position = Vector2(376, 161)
 
-[node name="planet_1" parent="." instance=ExtResource("3_h2yge")]
-
-[node name="planet_2" parent="." instance=ExtResource("3_h2yge")]
-offset_left = 63.0
-offset_top = 117.0
-offset_right = 145.0
-offset_bottom = 195.0
-
-[node name="planet_3" parent="." instance=ExtResource("3_h2yge")]
-offset_left = 188.0
-offset_top = 137.0
-offset_right = 224.0
-offset_bottom = 171.0
+[node name="planet" parent="." instance=ExtResource("3_h2yge")]
