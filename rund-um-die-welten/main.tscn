@@ -2,22 +2,22 @@
 
 [ext_resource type="Script" uid="uid://b78yuun70mgb3" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="2_h2yge"]
-[ext_resource type="PackedScene" uid="uid://bu365exk3v217" path="res://planet/planet_v_2.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bmlfyt1ykh3aq" path="res://planet/planet_v_2.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://ufu0fyp248bh" path="res://comet/comet.tscn" id="4_lquwl"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_0xm2m")
 
 [node name="player" parent="." groups=["player"] instance=ExtResource("2_h2yge")]
-position = Vector2(376, 161)
+position = Vector2(1397, 513)
 
 [node name="planet_v2_2" parent="." instance=ExtResource("4_1bvp3")]
-position = Vector2(322, 273)
+position = Vector2(1597, 741)
 planet_type = 1
 
 [node name="planet_v2" parent="." instance=ExtResource("4_1bvp3")]
-position = Vector2(187, 75)
+position = Vector2(780, 317)
 size_scale = 5.0
 
 [node name="comet" parent="." instance=ExtResource("4_lquwl")]
-position = Vector2(187, 264)
+position = Vector2(752, 769)

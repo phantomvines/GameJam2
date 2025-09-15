@@ -36,6 +36,8 @@ animations = [{
 }]
 
 [node name="comet" type="Area2D"]
+texture_filter = 1
+scale = Vector2(4, 4)
 script = ExtResource("1_hmwee")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
