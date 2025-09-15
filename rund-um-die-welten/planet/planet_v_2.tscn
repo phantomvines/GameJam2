@@ -1,0 +1,65 @@
+[gd_scene load_steps=11 format=3 uid="uid://bmlfyt1ykh3aq"]
+
+[ext_resource type="Script" uid="uid://cx1bjpadn6wd3" path="res://planet_v_2.gd" id="1_ouy4y"]
+[ext_resource type="Texture2D" uid="uid://dneiw5b2ikvx1" path="res://assets/deathstar-Sheet.png" id="2_b8nw5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b8nw5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bbsm5"]
+atlas = ExtResource("2_b8nw5")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ui15a"]
+atlas = ExtResource("2_b8nw5")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yv8ck"]
+atlas = ExtResource("2_b8nw5")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1de2"]
+atlas = ExtResource("2_b8nw5")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olrr2"]
+atlas = ExtResource("2_b8nw5")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_04t3g"]
+atlas = ExtResource("2_b8nw5")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_itp2c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bbsm5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ui15a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yv8ck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1de2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olrr2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_04t3g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="planet_v2" type="Area2D"]
+script = ExtResource("1_ouy4y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_b8nw5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_itp2c")

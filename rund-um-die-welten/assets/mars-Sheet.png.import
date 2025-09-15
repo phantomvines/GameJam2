@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dneiw5b2ikvx1"
-path="res://.godot/imported/deathstar-Sheet.png-89fe52ca92233a3383df6cc59e3e16bb.ctex"
+uid="uid://beinvbs42eerv"
+path="res://.godot/imported/mars-Sheet.png-b53b78c3574818ead18bdba87c09e60c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/deathstar-Sheet.png"
-dest_files=["res://.godot/imported/deathstar-Sheet.png-89fe52ca92233a3383df6cc59e3e16bb.ctex"]
+source_file="res://assets/mars-Sheet.png"
+dest_files=["res://.godot/imported/mars-Sheet.png-b53b78c3574818ead18bdba87c09e60c.ctex"]
 
 [params]
 
