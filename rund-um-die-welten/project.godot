@@ -23,7 +23,9 @@ GlobalVariables="*res://global/global_variables.gd"
 
 window/size/viewport_width=2300
 window/size/viewport_height=1300
+window/size/mode=3
 window/stretch/mode="viewport"
+window/stretch/scale=0.5
 
 [global_group]
 

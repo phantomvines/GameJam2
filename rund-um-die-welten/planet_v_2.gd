@@ -6,7 +6,7 @@ var center_position
 # for differentiating different planets
 # 0 -> death star
 # 1 -> mars
-@export var planet_type = 0
+@export var planet_type: GlobalVariables.planets
 
 func _ready():
 	# Sprite skalieren falls notwendig?
@@ -19,11 +19,11 @@ func _ready():
 	
 	# change size of collision area and animation based on which planet is chosen
 	match planet_type:
-		0: # death star
+		GlobalVariables.planets.DeathStar:
 			size_scale = 1.0
 			$death_star.play("default")
 			$death_star.visible = true
-		1: # mars
+		GlobalVariables.planets.Mars:
 			size_scale = 1.0
 			$mars.play("default")
 			$mars.visible = true

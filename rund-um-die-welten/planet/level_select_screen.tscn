@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c242dsi7lnqqb"]
+
+[ext_resource type="PackedScene" uid="uid://c11b4i55gx3o5" path="res://planet/level_select_planet.tscn" id="1_0550k"]
+
+[node name="Level-Select-Screen" type="Node2D"]
+
+[node name="Level-Select-Planet" parent="." instance=ExtResource("1_0550k")]
+position = Vector2(941, 720)
