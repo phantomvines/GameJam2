@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ufu0fyp248bh"]
+
+[ext_resource type="Script" uid="uid://cpxx4ekyjncfp" path="res://comet/comet.gd" id="1_hmwee"]
+[ext_resource type="Texture2D" uid="uid://oowscy5wvmjv" path="res://player_temp.png" id="2_01v8e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1lw4w"]
+
+[node name="comet" type="Area2D"]
+script = ExtResource("1_hmwee")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1lw4w")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3.8147e-06, 3.8147e-06)
+scale = Vector2(0.109375, 0.109375)
+texture = ExtResource("2_01v8e")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
