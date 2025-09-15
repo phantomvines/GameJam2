@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c11b4i55gx3o5"]
+
+[ext_resource type="Script" uid="uid://q2jmecetjd5m" path="res://level_1.gd" id="1_uuk0q"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e63r1"]
+
+[node name="Level-Select-Planet" type="Node2D"]
+script = ExtResource("1_uuk0q")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_e63r1")
