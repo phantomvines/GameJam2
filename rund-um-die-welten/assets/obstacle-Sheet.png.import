@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dneiw5b2ikvx1"
-path="res://.godot/imported/deathstar-Sheet.png-89fe52ca92233a3383df6cc59e3e16bb.ctex"
+uid="uid://g7rcca0n4xpv"
+path="res://.godot/imported/obstacle-Sheet.png-ccaca9d5f597ec13c0181c8cd3255803.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/deathstar-Sheet.png"
-dest_files=["res://.godot/imported/deathstar-Sheet.png-89fe52ca92233a3383df6cc59e3e16bb.ctex"]
+source_file="res://assets/obstacle-Sheet.png"
+dest_files=["res://.godot/imported/obstacle-Sheet.png-ccaca9d5f597ec13c0181c8cd3255803.ctex"]
 
 [params]
 
