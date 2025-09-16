@@ -25,7 +25,7 @@ func emit_level_done(win_message: String):
 	
 
 func goto_level_select():
-	get_tree().change_scene_to_file("res://LevelSelectUtility/level_select_screen.tscn")
+	change_level("res://LevelSelectUtility/level_select_screen.tscn")
 	
 func restart_level():
 	target_planet_position = null
