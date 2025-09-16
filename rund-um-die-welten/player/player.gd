@@ -34,6 +34,7 @@ func _physics_process(delta: float) -> void:
 	
 	#print(angle)
 	$Sprite2D.global_rotation = angle+deg_to_rad(180)
+	$CollisionShape2D.global_rotation = angle
 
 
 #Dummy function for player death: 
