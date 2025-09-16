@@ -34,7 +34,7 @@ func _physics_process(delta: float) -> void:
 		position = target_planet_position+Vector2(cos(angle), sin(angle))*radius
 		
 		#print(angle)
-		$Sprite2D.global_rotation = angle+deg_to_rad(180)
+		rotation = angle + deg_to_rad(180)
 
 
 #Dummy function for player death: 

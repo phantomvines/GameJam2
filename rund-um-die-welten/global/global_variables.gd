@@ -4,13 +4,14 @@ var target_planet_position
 enum planets {DeathStar, Mars, Earth, Sun}
 var planet_names = {planets.DeathStar: "Death Star", planets.Mars: "Mars", planets.Earth: "Earth", planets.Sun: "Sun"}
 var selected_level = ""
-
+var global_RNG := RandomNumberGenerator.new()
 
 signal player_died(death_message: String)
 signal game_over(game_over_message: String)
 signal level_done(win_message: String)
 
 func _ready() -> void:
+	global_RNG.seed = 12345
 	pass
 	
 func emit_player_died(death_message: String):
@@ -28,5 +29,5 @@ func goto_level_select():
 	
 func restart_level():
 	target_planet_position = null
-
+	global_RNG.seed = 12345
 	get_tree().reload_current_scene()

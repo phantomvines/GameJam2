@@ -14,7 +14,6 @@ extends Node2D
 @export var num_asteroids = 100
 
 func _ready() -> void:
-	rand_from_seed(seed)
 	
 	#var num_asteroids = 0
 	#for chunk in chunks:
@@ -39,7 +38,7 @@ func spawn_comet():
 		total += chunk[1]-chunk[0]
 	
 	 # Select a chunk based on weighted randomness
-	var r = randf() * total
+	var r = GlobalVariables.global_RNG.randf() * total
 	var current_weight = 0.0
 	var selected_chunk
 	for chunk in chunks:
