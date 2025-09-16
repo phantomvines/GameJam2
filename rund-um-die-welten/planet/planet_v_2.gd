@@ -29,7 +29,14 @@ func _ready():
 			size_scale = 1.0
 			$mars.play("default")
 			$mars.visible = true
-	
+		GlobalVariables.planets.Earth:
+			size_scale = 2.8
+			$earth.play("default")
+			$mars.visible = true
+		GlobalVariables.planets.Sun:
+			size_scale = 3.2
+			$sun.play("default")
+			$mars.visible = true
 	
 	var shape = $CollisionShape2D.shape
 	if shape is CircleShape2D:
