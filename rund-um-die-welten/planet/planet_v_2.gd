@@ -10,6 +10,8 @@ var center_position
 
 @export var win_planet = false
 
+@export var win_message = "You reached the goal"
+
 func _ready():
 	# Sprite skalieren falls notwendig?
 	#$Sprite2D.scale = Vector2(size_scale, size_scale)
@@ -53,5 +55,6 @@ func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("player"):
 		if win_planet:
 			print("win")
+			GlobalVariables.emit_level_done(win_message)
 		else:
 			print("death")

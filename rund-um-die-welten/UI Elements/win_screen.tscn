@@ -1,0 +1,92 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfhxvtjqrh5wo"]
+
+[ext_resource type="Script" uid="uid://dhppy0k265ets" path="res://UI Elements/win_screen.gd" id="1_ar7cn"]
+[ext_resource type="FontFile" uid="uid://d2ucaasj8wmwj" path="res://Fonts/BRIGHTSTER-Bold-1.ttf" id="2_r12a3"]
+
+[sub_resource type="Theme" id="Theme_uhw3s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_scrbe"]
+bg_color = Color(0.303939, 0.67889, 0.576316, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[node name="WinScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ar7cn")
+
+[node name="Background color" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 1200.0
+theme = SubResource("Theme_uhw3s")
+color = Color(0, 0, 0.282353, 0.25098)
+
+[node name="Container" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 1200.0
+
+[node name="Margin" type="MarginContainer" parent="Container"]
+layout_mode = 2
+theme_override_constants/margin_top = 100
+
+[node name="Game Over text" type="Label" parent="Container/Margin"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_r12a3")
+theme_override_font_sizes/font_size = 80
+text = "Level Done"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Container"]
+layout_mode = 2
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="Death-message" type="RichTextLabel" parent="Container/MarginContainer"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+theme_override_colors/default_color = Color(0.972992, 0.0050383, 0.113475, 1)
+theme_override_fonts/normal_font = ExtResource("2_r12a3")
+theme_override_font_sizes/normal_font_size = 50
+text = "You completed your objective by crashing into the sun"
+autowrap_mode = 2
+horizontal_alignment = 1
+
+[node name="HSplitContainer" type="HBoxContainer" parent="Container"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="MarginContainer" type="MarginContainer" parent="Container/HSplitContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+
+[node name="Menu Button" type="Button" parent="Container/HSplitContainer/MarginContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_r12a3")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_scrbe")
+action_mode = 0
+text = "Go to Level Select"
+
+[node name="MarginContainer2" type="MarginContainer" parent="Container/HSplitContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 50
+
+[node name="Respawn Button" type="Button" parent="Container/HSplitContainer/MarginContainer2"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_r12a3")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_scrbe")
+action_mode = 0
+text = "Respawn"
