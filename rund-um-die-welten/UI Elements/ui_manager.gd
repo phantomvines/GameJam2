@@ -8,7 +8,8 @@ func _ready():
 	pause_menu.visible = false
 
 # === Death Screen ===
-func show_death_screen():
+func show_death_screen(game_over_message):
+	death_screen.change_death_message(game_over_message)
 	death_screen.visible = true
 	get_tree().paused = true  # Pause the game
 	# Optional: Play sound or animation

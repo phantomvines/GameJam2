@@ -7,6 +7,7 @@ var direction = 0
 var clockwise = true
 @export var dies_on_screen_leave = false
 @export var respawn_point: Vector2
+@export var auto_respawn = false
 
 func _ready() -> void:
 	$VisibleOnScreenNotifier2D.screen_exited.connect(_on_screen_exited)
@@ -37,7 +38,7 @@ func _physics_process(delta: float) -> void:
 #Dummy function for player death: 
 func player_dies(death_message: String) -> void: 
 	print(death_message)
-	if respawn_point:
+	if auto_respawn:
 		position = respawn_point
 	else:
 		GlobalVariables.emit_game_over(death_message)
