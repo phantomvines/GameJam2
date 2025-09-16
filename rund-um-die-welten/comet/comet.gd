@@ -10,7 +10,7 @@ func _physics_process(delta: float) -> void:
 	var radius = position.distance_to(target_planet_position)
 	var angle = (position-target_planet_position).angle()
 	
-	var angular_speed = speed/radius
+	var angular_speed = speed * 0.0002
 	
 	if clockwise:
 		angle += angular_speed*delta
