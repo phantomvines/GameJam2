@@ -6,6 +6,8 @@ var planet_names = {planets.DeathStar: "Death Star", planets.Mars: "Mars", plane
 var selected_level = ""
 var global_RNG := RandomNumberGenerator.new()
 
+var collectibles = {"Level 1": [0,0,0], "Level 2": [0,0,0], "Level 3": [0,0,0], "Level 4": [0,0,0], "Level 5": [0,0,0], "Level 6": [0,0,0], "Level 7": [0,0,0], "Level 8": [0,0,0], "Level 9": [0,0,0], "Level 10": [0,0,0]}
+
 signal player_died(death_message: String)
 signal game_over(game_over_message: String)
 signal level_done(win_message: String)
