@@ -39,12 +39,7 @@ func _ready():
 			$sun.play("default")
 			$sun.visible = true
 	
-	print("before")#
-	print(self)
-	print(shape.radius)
 	shape.radius *= size_scale
-	print("after")
-	print(shape.radius)
 		
 		
 func _input_event(viewport, event, shape_idx):
