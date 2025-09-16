@@ -31,7 +31,6 @@ level_id = "Level 6"
 
 [node name="player" parent="." instance=ExtResource("2_iojkr")]
 position = Vector2(396, 473)
-target_planet_position = Vector2(250, 500)
 dies_on_screen_leave = true
 respawn_point = Vector2(250, 500)
 

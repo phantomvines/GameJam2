@@ -58,3 +58,4 @@ func _on_area_entered(area: Area2D) -> void:
 			GlobalVariables.emit_level_done(win_message)
 		else:
 			print("death")
+		

@@ -1,6 +1,6 @@
 extends Node
 
-var target_planet_position = Vector2(0,0)
+var target_planet_position
 enum planets {DeathStar, Mars, Earth, Sun}
 var planet_names = {planets.DeathStar: "Death Star", planets.Mars: "Mars", planets.Earth: "Earth", planets.Sun: "Sun"}
 var selected_level = ""
@@ -27,4 +27,6 @@ func goto_level_select():
 	get_tree().change_scene_to_file("res://LevelSelectUtility/level_select_screen.tscn")
 	
 func restart_level():
+	target_planet_position = null
+
 	get_tree().reload_current_scene()

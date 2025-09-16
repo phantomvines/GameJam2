@@ -8,6 +8,8 @@ func _ready():
 	death_screen.visible = false
 	pause_menu.visible = false
 	win_screen.visible = false
+	GlobalVariables.game_over.connect(show_death_screen)
+	GlobalVariables.level_done.connect(show_win_screen)
 
 # === Death Screen ===
 func show_death_screen(game_over_message):
@@ -22,8 +24,8 @@ func hide_death_screen():
 
 
 # === Win Screen ===
-func show_win_screen(game_over_message):
-	win_screen.change_death_message(game_over_message)
+func show_win_screen(win_message):
+	win_screen.change_win_message(win_message)
 	win_screen.visible = true
 	get_tree().paused = true  # Pause the game
 	# Optional: Play sound or animation
