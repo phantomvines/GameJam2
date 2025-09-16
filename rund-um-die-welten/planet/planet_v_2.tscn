@@ -285,6 +285,7 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_nvr4p")
 
 [node name="sun" type="AnimatedSprite2D" parent="."]
+visible = false
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_15lue")
 

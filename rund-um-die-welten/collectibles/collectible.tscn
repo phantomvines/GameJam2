@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://nccnr30bmrud"]
+
+[ext_resource type="Script" uid="uid://cwdmu7oq6mcup" path="res://collectibles/collectible.gd" id="1_m0tds"]
+[ext_resource type="Texture2D" uid="uid://qxiix7nl3nba" path="res://assets/goal.png" id="1_mctxo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m0tds"]
+size = Vector2(113, 38)
+
+[node name="collectible" type="Area2D"]
+script = ExtResource("1_m0tds")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, -9)
+shape = SubResource("RectangleShape2D_m0tds")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mctxo")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
