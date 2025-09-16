@@ -14,3 +14,4 @@ func emit_player_died(death_message: String):
 	
 func emit_game_over(game_over_message: String):
 	game_over.emit(game_over_message)
+	UiManager.show_death_screen()
