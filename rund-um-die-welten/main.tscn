@@ -14,7 +14,6 @@ position = Vector2(1397, 513)
 
 [node name="planet_v2_2" parent="." instance=ExtResource("4_1bvp3")]
 position = Vector2(1597, 741)
-planet_type = 1
 
 [node name="planet_v2" parent="." instance=ExtResource("4_1bvp3")]
 position = Vector2(780, 317)
