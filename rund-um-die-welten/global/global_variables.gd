@@ -1,8 +1,8 @@
 extends Node
 
 var target_planet_position = Vector2(0,0)
-enum planets {DeathStar, Mars}
-var planet_names = {planets.DeathStar: "Death Star", planets.Mars: "Mars"}
+enum planets {DeathStar, Mars, Earth, Sun}
+var planet_names = {planets.DeathStar: "Death Star", planets.Mars: "Mars", planets.Earth: "Earth", planets.Sun: "Sun"}
 var selected_level = ""
 
 
