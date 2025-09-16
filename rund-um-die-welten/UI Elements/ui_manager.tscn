@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cgpe6gqsmywoy"]
+[gd_scene load_steps=4 format=3 uid="uid://cgpe6gqsmywoy"]
 
 [ext_resource type="Script" uid="uid://2g7tin6vwfnh" path="res://UI Elements/ui_manager.gd" id="1_6b5j3"]
 [ext_resource type="PackedScene" uid="uid://d2lnhx65toxbs" path="res://UI Elements/death_screen.tscn" id="2_74anh"]
+[ext_resource type="PackedScene" uid="uid://dfhxvtjqrh5wo" path="res://UI Elements/win_screen.tscn" id="3_74anh"]
 
 [node name="UI manager" type="CanvasLayer"]
 process_mode = 3
@@ -18,3 +19,5 @@ offset_bottom = 40.0
 [node name="DeathScreen" parent="." instance=ExtResource("2_74anh")]
 offset_right = 0.0
 offset_bottom = 0.0
+
+[node name="WinScreen" parent="." instance=ExtResource("3_74anh")]

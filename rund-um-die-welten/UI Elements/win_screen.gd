@@ -15,6 +15,6 @@ func _on_menu_button_pressed():
 	GlobalVariables.goto_level_select()
 	UiManager.hide_death_screen()
 
-func change_death_message(death_message: String):
+func change_win_message(death_message: String):
 	$"Container/MarginContainer/Death-message".text = death_message
 	
