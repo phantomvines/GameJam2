@@ -33,6 +33,7 @@ level_id = "Level 6"
 position = Vector2(396, 473)
 dies_on_screen_leave = true
 respawn_point = Vector2(250, 500)
+auto_respawn = true
 
 [node name="Level-Select-Planet6" parent="." instance=ExtResource("1_offx3")]
 position = Vector2(250, 500)

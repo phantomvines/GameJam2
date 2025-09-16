@@ -15,13 +15,14 @@ position = Vector2(1397, 513)
 
 [node name="planet_v2_2" parent="." instance=ExtResource("4_1bvp3")]
 position = Vector2(1597, 741)
+rotation = 0.0289093
 planet_type = 3
 
 [node name="planet_v2" parent="." instance=ExtResource("4_1bvp3")]
 position = Vector2(780, 317)
+rotation = 0.0540863
 size_scale = 5.0
 planet_type = 1
-win_planet = true
 
 [node name="comet" parent="." instance=ExtResource("4_lquwl")]
 position = Vector2(752, 769)

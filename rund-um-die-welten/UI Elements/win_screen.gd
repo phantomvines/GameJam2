@@ -8,13 +8,13 @@ func _ready() -> void:
 func _on_respawn_button_pressed():
 	print("respawn")
 	GlobalVariables.restart_level()
-	UiManager.hide_death_screen()
+	UiManager.hide_win_screen()
 	
 	
 func _on_menu_button_pressed():
 	GlobalVariables.goto_level_select()
-	UiManager.hide_death_screen()
+	UiManager.hide_win_screen()
 
-func change_win_message(death_message: String):
-	$"Container/MarginContainer/Death-message".text = death_message
+func change_win_message(win_message: String):
+	$"Container/MarginContainer/Death-message".text = win_message
 	

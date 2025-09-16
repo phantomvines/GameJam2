@@ -57,5 +57,6 @@ func _on_area_entered(area: Area2D) -> void:
 			print("win")
 			GlobalVariables.emit_level_done(win_message)
 		else:
+			GlobalVariables.emit_player_died("You crashed into the " + GlobalVariables.planet_names[planet_type])
 			print("death")
 		
