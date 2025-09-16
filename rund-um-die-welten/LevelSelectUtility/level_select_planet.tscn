@@ -1,33 +1,33 @@
-[gd_scene load_steps=20 format=3 uid="uid://bmlfyt1ykh3aq"]
+[gd_scene load_steps=20 format=3 uid="uid://c11b4i55gx3o5"]
 
-[ext_resource type="Script" uid="uid://cx1bjpadn6wd3" path="res://planet/planet_v_2.gd" id="1_ouy4y"]
-[ext_resource type="Texture2D" uid="uid://dneiw5b2ikvx1" path="res://assets/deathstar-Sheet.png" id="2_b8nw5"]
-[ext_resource type="Texture2D" uid="uid://beinvbs42eerv" path="res://assets/mars-Sheet.png" id="3_bbsm5"]
+[ext_resource type="Script" uid="uid://q2jmecetjd5m" path="res://LevelSelectUtility/level_1.gd" id="1_uuk0q"]
+[ext_resource type="Texture2D" uid="uid://dneiw5b2ikvx1" path="res://assets/deathstar-Sheet.png" id="2_2x1y4"]
+[ext_resource type="Texture2D" uid="uid://beinvbs42eerv" path="res://assets/mars-Sheet.png" id="3_1tduj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b8nw5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bbsm5"]
-atlas = ExtResource("2_b8nw5")
+atlas = ExtResource("2_2x1y4")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ui15a"]
-atlas = ExtResource("2_b8nw5")
+atlas = ExtResource("2_2x1y4")
 region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yv8ck"]
-atlas = ExtResource("2_b8nw5")
+atlas = ExtResource("2_2x1y4")
 region = Rect2(320, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s1de2"]
-atlas = ExtResource("2_b8nw5")
+atlas = ExtResource("2_2x1y4")
 region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_olrr2"]
-atlas = ExtResource("2_b8nw5")
+atlas = ExtResource("2_2x1y4")
 region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_04t3g"]
-atlas = ExtResource("2_b8nw5")
+atlas = ExtResource("2_2x1y4")
 region = Rect2(256, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_itp2c"]
@@ -57,31 +57,31 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_itp2c"]
-atlas = ExtResource("3_bbsm5")
+atlas = ExtResource("3_1tduj")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3lv2v"]
-atlas = ExtResource("3_bbsm5")
+atlas = ExtResource("3_1tduj")
 region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gtho3"]
-atlas = ExtResource("3_bbsm5")
+atlas = ExtResource("3_1tduj")
 region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nr5bh"]
-atlas = ExtResource("3_bbsm5")
+atlas = ExtResource("3_1tduj")
 region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nb57l"]
-atlas = ExtResource("3_bbsm5")
+atlas = ExtResource("3_1tduj")
 region = Rect2(256, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p2y8r"]
-atlas = ExtResource("3_bbsm5")
+atlas = ExtResource("3_1tduj")
 region = Rect2(320, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_slxe4"]
-atlas = ExtResource("3_bbsm5")
+atlas = ExtResource("3_1tduj")
 region = Rect2(384, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tqh4j"]
@@ -113,9 +113,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="planet_v2" type="Area2D"]
+[node name="Level-Select-Planet" type="Area2D"]
 scale = Vector2(4, 4)
-script = ExtResource("1_ouy4y")
+script = ExtResource("1_uuk0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_b8nw5")
