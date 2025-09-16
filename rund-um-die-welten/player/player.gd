@@ -11,6 +11,7 @@ var clockwise = true
 func _ready() -> void:
 	$VisibleOnScreenNotifier2D.screen_exited.connect(_on_screen_exited)
 	$VisibleOnScreenNotifier2D.screen_entered.connect(_on_screen_entered)
+	GlobalVariables.player_died.connect(player_dies)
 	
 func _physics_process(delta: float) -> void:
 	# get location to rotate around
@@ -34,8 +35,8 @@ func _physics_process(delta: float) -> void:
 
 
 #Dummy function for player death: 
-func player_dies() -> void: 
-	print("Player died")
+func player_dies(death_message: String) -> void: 
+	print(death_message)
 	position = respawn_point
 
 
@@ -43,7 +44,7 @@ func player_dies() -> void:
 func _on_screen_exited():
 	print("Player left camera area")
 	if dies_on_screen_leave:
-		player_dies()
+		GlobalVariables.emit_player_died("You left the mission area")
 		
 func _on_screen_entered():
 	print("Player entered camera area")
