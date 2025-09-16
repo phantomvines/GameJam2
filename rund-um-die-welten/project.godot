@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GlobalVariables="*res://global/global_variables.gd"
+UiManager="*res://UI Elements/ui_manager.gd"
 
 [display]
 

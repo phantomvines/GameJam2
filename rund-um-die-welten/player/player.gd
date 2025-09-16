@@ -37,7 +37,10 @@ func _physics_process(delta: float) -> void:
 #Dummy function for player death: 
 func player_dies(death_message: String) -> void: 
 	print(death_message)
-	position = respawn_point
+	if respawn_point:
+		position = respawn_point
+	else:
+		GlobalVariables.emit_game_over(death_message)
 
 
 

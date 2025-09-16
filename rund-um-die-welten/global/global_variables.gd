@@ -7,6 +7,10 @@ var selected_level = ""
 
 
 signal player_died(death_message: String)
+signal game_over(game_over_message: String)
 
 func emit_player_died(death_message: String):
 	player_died.emit(death_message)
+	
+func emit_game_over(game_over_message: String):
+	game_over.emit(game_over_message)
