@@ -8,6 +8,8 @@ var center_position
 # 1 -> mars
 @export var planet_type: GlobalVariables.planets
 
+@export var win_planet = false
+
 func _ready():
 	# Sprite skalieren falls notwendig?
 	#$Sprite2D.scale = Vector2(size_scale, size_scale)
@@ -42,4 +44,7 @@ func _input_event(viewport, event, shape_idx):
 func _on_area_entered(area: Area2D) -> void:
 	# if area in player group entered, kill player
 	if area.is_in_group("player"):
-		print("death")
+		if win_planet:
+			print("win")
+		else:
+			print("death")
