@@ -7,7 +7,7 @@
 layer = 10
 script = ExtResource("1_6b5j3")
 
-[node name="Pause Menu" type="Control" parent="."]
+[node name="PauseMenu" type="Control" parent="."]
 visible = false
 layout_mode = 3
 anchors_preset = 0
