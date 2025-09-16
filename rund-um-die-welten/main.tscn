@@ -18,12 +18,14 @@ position = Vector2(1597, 741)
 [node name="planet_v2" parent="." instance=ExtResource("4_1bvp3")]
 position = Vector2(780, 317)
 size_scale = 5.0
+planet_type = 1
+win_planet = true
 
 [node name="comet" parent="." instance=ExtResource("4_lquwl")]
 position = Vector2(752, 769)
 
 [node name="asteroid_belt" parent="." instance=ExtResource("5_lquwl")]
-position = Vector2(1098, 613)
-min_rad = 700
-max_rad = 820
+position = Vector2(2695, 513)
+min_rad = 1000
+max_rad = 1100
 speed = 300
