@@ -30,4 +30,10 @@ func goto_level_select():
 func restart_level():
 	target_planet_position = null
 	global_RNG.seed = 12345
+	get_tree().paused = true
 	get_tree().reload_current_scene()
+	get_tree().paused = false
+	
+func change_level(level_select_path):
+	get_tree().change_scene_to_file(level_select_path)
+	restart_level()

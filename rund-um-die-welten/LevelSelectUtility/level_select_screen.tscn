@@ -1,8 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://c242dsi7lnqqb"]
+[gd_scene load_steps=6 format=3 uid="uid://c242dsi7lnqqb"]
 
 [ext_resource type="PackedScene" uid="uid://c11b4i55gx3o5" path="res://LevelSelectUtility/level_select_planet.tscn" id="1_offx3"]
 [ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="2_iojkr"]
 [ext_resource type="Script" uid="uid://dnqvks40xcnq8" path="res://LevelSelectUtility/selection_cofirm_button.gd" id="3_iojkr"]
+[ext_resource type="FontFile" uid="uid://d2ucaasj8wmwj" path="res://Fonts/BRIGHTSTER-Bold-1.ttf" id="3_m787v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v3ic8"]
+bg_color = Color(0.688281, 0.599222, 0.142667, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
 
 [node name="Level-Select-Screen" type="Node2D"]
 
@@ -40,9 +53,12 @@ position = Vector2(250, 500)
 level_id = "Level 1"
 
 [node name="SelectionCofirmButton" type="Button" parent="."]
-offset_left = 669.0
-offset_top = 823.0
-offset_right = 1255.0
-offset_bottom = 923.0
+offset_left = 348.0
+offset_top = 1055.0
+offset_right = 1785.0
+offset_bottom = 1200.0
+theme_override_fonts/font = ExtResource("3_m787v")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3ic8")
 text = "Confirm Level Selection"
 script = ExtResource("3_iojkr")

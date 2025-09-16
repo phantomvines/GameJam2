@@ -3,7 +3,6 @@ extends Area2D
 @export var speed = 130
 # angle
 var direction = 0
-var target_planet_position
 var clockwise = true
 @export var dies_on_screen_leave = false
 @export var respawn_point: Vector2
@@ -18,11 +17,11 @@ func _ready() -> void:
 	
 func _physics_process(delta: float) -> void:
 	# get location to rotate around
-	target_planet_position = GlobalVariables.target_planet_position
-	if(target_planet_position):
+	GlobalVariables.target_planet_position
+	if(GlobalVariables.target_planet_position):
 		# calculate movement
-		var radius = position.distance_to(target_planet_position)
-		var angle = (position-target_planet_position).angle()
+		var radius = position.distance_to(GlobalVariables.target_planet_position)
+		var angle = (position-GlobalVariables.target_planet_position).angle()
 		
 		var angular_speed = speed/radius
 		
@@ -31,7 +30,7 @@ func _physics_process(delta: float) -> void:
 		else:
 			angle -= angular_speed*delta
 		
-		position = target_planet_position+Vector2(cos(angle), sin(angle))*radius
+		position = GlobalVariables.target_planet_position+Vector2(cos(angle), sin(angle))*radius
 		
 		#print(angle)
 		rotation = angle + deg_to_rad(180)
@@ -39,10 +38,11 @@ func _physics_process(delta: float) -> void:
 
 #Dummy function for player death: 
 func player_dies(death_message: String) -> void: 
+	print("hi")
 	print(death_message)
 	if auto_respawn:
 		position = respawn_point
-	else:
+	elif(GlobalVariables.target_planet_position):
 		GlobalVariables.emit_game_over(death_message)
 
 

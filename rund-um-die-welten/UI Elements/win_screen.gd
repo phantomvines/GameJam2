@@ -4,9 +4,7 @@ func _ready() -> void:
 	$"Container/HSplitContainer/MarginContainer2/Respawn Button".pressed.connect(_on_respawn_button_pressed)
 	$"Container/HSplitContainer/MarginContainer/Menu Button".pressed.connect(_on_menu_button_pressed)
 	
-	print("hi")
 func _on_respawn_button_pressed():
-	print("respawn")
 	GlobalVariables.restart_level()
 	UiManager.hide_win_screen()
 	

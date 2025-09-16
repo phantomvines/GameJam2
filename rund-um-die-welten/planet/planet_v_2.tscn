@@ -262,8 +262,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_b8nw5"]
-radius = 15.7043
+[sub_resource type="CircleShape2D" id="CircleShape2D_s1de2"]
+resource_local_to_scene = true
 
 [node name="planet_v2" type="Area2D"]
 scale = Vector2(4, 4)
@@ -290,6 +290,6 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_15lue")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_b8nw5")
+shape = SubResource("CircleShape2D_s1de2")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
