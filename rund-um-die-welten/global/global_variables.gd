@@ -15,3 +15,9 @@ func emit_player_died(death_message: String):
 func emit_game_over(game_over_message: String):
 	game_over.emit(game_over_message)
 	UiManager.show_death_screen()
+
+func goto_level_select():
+	get_tree().change_scene_to_file("res://LevelSelectUtility/level_select_screen.tscn")
+	
+func restart_level():
+	get_tree().reload_current_scene()

@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d2lnhx65toxbs" path="res://UI Elements/death_screen.tscn" id="2_74anh"]
 
 [node name="UI manager" type="CanvasLayer"]
+process_mode = 3
 layer = 10
 script = ExtResource("1_6b5j3")
 
