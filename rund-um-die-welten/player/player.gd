@@ -10,6 +10,8 @@ var clockwise = true
 @export var auto_respawn = false
 
 func _ready() -> void:
+	$AnimatedSprite2D.play("default")
+	
 	$VisibleOnScreenNotifier2D.screen_exited.connect(_on_screen_exited)
 	$VisibleOnScreenNotifier2D.screen_entered.connect(_on_screen_entered)
 	GlobalVariables.player_died.connect(player_dies)
