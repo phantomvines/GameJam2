@@ -20,6 +20,7 @@ rotation = 0.000899174
 texture = ExtResource("2_m0tds")
 
 [node name="grayscale" type="Sprite2D" parent="."]
+visible = false
 texture_filter = 1
 texture = ExtResource("3_k5esu")
 
