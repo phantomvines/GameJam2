@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4mkwkou85dvq"]
+
+[ext_resource type="Script" uid="uid://b78yuun70mgb3" path="res://main.gd" id="1_evb4r"]
+[ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="2_expes"]
+[ext_resource type="PackedScene" uid="uid://bmlfyt1ykh3aq" path="res://planet/planet_v_2.tscn" id="3_nq3bc"]
+[ext_resource type="PackedScene" uid="uid://ufu0fyp248bh" path="res://comet/comet.tscn" id="4_gt65k"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_evb4r")
+
+[node name="player" parent="." groups=["player"] instance=ExtResource("2_expes")]
+position = Vector2(643, 682)
+dies_on_screen_leave = true
+
+[node name="planet_v2_4" parent="." instance=ExtResource("3_nq3bc")]
+position = Vector2(2103, 700)
+win_planet = true
+
+[node name="planet_v2_3" parent="." instance=ExtResource("3_nq3bc")]
+position = Vector2(287, 222)
+
+[node name="planet_v2" parent="." instance=ExtResource("3_nq3bc")]
+position = Vector2(259, 1172)
+size_scale = 5.0
+
+[node name="comet10" parent="." instance=ExtResource("4_gt65k")]
+position = Vector2(722, 1198)
+
+[node name="comet16" parent="." instance=ExtResource("4_gt65k")]
+position = Vector2(818, 1042)
+
+[node name="comet17" parent="." instance=ExtResource("4_gt65k")]
+position = Vector2(826, 878)
+
+[node name="comet18" parent="." instance=ExtResource("4_gt65k")]
+position = Vector2(814, 298)
+
+[node name="comet19" parent="." instance=ExtResource("4_gt65k")]
+position = Vector2(746, 168)
+
+[node name="comet11" parent="." instance=ExtResource("4_gt65k")]
+position = Vector2(1705, 768)
+
+[node name="comet12" parent="." instance=ExtResource("4_gt65k")]
+position = Vector2(1831, 680)
+
+[node name="comet13" parent="." instance=ExtResource("4_gt65k")]
+position = Vector2(1919, 532)
+
+[node name="comet20" parent="." instance=ExtResource("4_gt65k")]
+position = Vector2(1741, 926)
+
+[node name="comet21" parent="." instance=ExtResource("4_gt65k")]
+position = Vector2(839, 466)
+
+[node name="comet22" parent="." instance=ExtResource("4_gt65k")]
+position = Vector2(1277, 752)
+
+[node name="comet23" parent="." instance=ExtResource("4_gt65k")]
+position = Vector2(1553, 690)
+
+[node name="comet24" parent="." instance=ExtResource("4_gt65k")]
+position = Vector2(1379, 642)

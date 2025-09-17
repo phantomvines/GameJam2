@@ -3,13 +3,17 @@ extends Area2D
 @export var size_scale := 1.0  # Standardgröße (1 = 100%)
 
 # for differentiating different planets
-# 0 -> death star
-# 1 -> mars
 @export var planet_type: GlobalVariables.planets
 
 @export var win_planet = false
 
 @export var win_message = "You reached the goal"
+
+@export var death_message_overwrite: String
+
+@export var speed = 300
+
+@export var clockwise = true
 
 func _ready():
 	var shape = $CollisionShape2D.shape
@@ -39,27 +43,25 @@ func _ready():
 			$sun.play("default")
 			$sun.visible = true
 	
-	print("before")#
-	print(self)
-	print(shape.radius)
 	shape.radius *= size_scale
-	print("after")
-	print(shape.radius)
 		
 		
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		GlobalVariables.target_planet_position = position
+		GlobalVariables.player_speed = speed
+		GlobalVariables.player_clockwise = clockwise
 
 
 func _on_area_entered(area: Area2D) -> void:
 	# if area in player group entered, kill player
 	if area.is_in_group("player"):
 		if win_planet:
-			print("win")
 			GlobalVariables.emit_level_done(win_message)
 		else:
-			GlobalVariables.emit_player_died("You crashed into the " + GlobalVariables.planet_names[planet_type])
-			print("death")
+			if death_message_overwrite:
+				GlobalVariables.emit_player_died(death_message_overwrite)
+			else:
+				GlobalVariables.emit_player_died("You crashed into the " + GlobalVariables.planet_names[planet_type])
 			print(area.position)
 		

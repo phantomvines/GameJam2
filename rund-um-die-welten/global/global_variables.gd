@@ -1,13 +1,21 @@
 extends Node
 
+# Player vars
 var target_planet_position
+var player_speed
+var player_clockwise
+
+# Planet vars
 enum planets {DeathStar, Mars, Earth, Sun}
 var planet_names = {planets.DeathStar: "Death Star", planets.Mars: "Mars", planets.Earth: "Earth", planets.Sun: "Sun"}
 var selected_level = ""
+
+#Doesnt work yet
 var global_RNG := RandomNumberGenerator.new()
 
 var collectibles = {"Level 1": [0,0,0], "Level 2": [0,0,0], "Level 3": [0,0,0], "Level 4": [0,0,0], "Level 5": [0,0,0], "Level 6": [0,0,0], "Level 7": [0,0,0], "Level 8": [0,0,0], "Level 9": [0,0,0], "Level 10": [0,0,0]}
 
+#Signals
 signal player_died(death_message: String)
 signal game_over(game_over_message: String)
 signal level_done(win_message: String)
@@ -32,9 +40,7 @@ func goto_level_select():
 func restart_level():
 	target_planet_position = null
 	global_RNG.seed = 12345
-	get_tree().paused = true
 	get_tree().reload_current_scene()
-	get_tree().paused = false
 	
 func change_level(level_select_path):
 	get_tree().change_scene_to_file(level_select_path)
