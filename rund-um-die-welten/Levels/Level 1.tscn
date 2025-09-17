@@ -7,37 +7,37 @@
 [node name="main" type="Node2D"]
 
 [node name="player" parent="." groups=["player"] instance=ExtResource("2_hi2wx")]
-position = Vector2(446, 874)
+position = Vector2(611, 458)
 dies_on_screen_leave = true
 
 [node name="planet_v2_2" parent="." instance=ExtResource("3_1xjbt")]
-position = Vector2(1869, 946)
+position = Vector2(1453, 461)
 
 [node name="planet_v2_3" parent="." instance=ExtResource("3_1xjbt")]
-position = Vector2(1129, 1225)
+position = Vector2(1052, 926)
 win_planet = true
 
 [node name="planet_v2" parent="." instance=ExtResource("3_1xjbt")]
-position = Vector2(419, 640)
+position = Vector2(374, 301)
 size_scale = 5.0
 
 [node name="comet3" parent="." instance=ExtResource("4_vy3yb")]
-position = Vector2(1179, 424)
+position = Vector2(993, 291)
 
 [node name="comet11" parent="." instance=ExtResource("4_vy3yb")]
-position = Vector2(1235, 909)
+position = Vector2(1006, 699)
 
 [node name="comet4" parent="." instance=ExtResource("4_vy3yb")]
-position = Vector2(1024, 1094)
+position = Vector2(856, 889)
 
 [node name="comet5" parent="." instance=ExtResource("4_vy3yb")]
-position = Vector2(1142, 1012)
+position = Vector2(931, 802)
 
 [node name="comet6" parent="." instance=ExtResource("4_vy3yb")]
-position = Vector2(944, 1225)
+position = Vector2(743, 976)
 
 [node name="comet10" parent="." instance=ExtResource("4_vy3yb")]
-position = Vector2(1236, 589)
+position = Vector2(1027, 426)
 
 [node name="comet7" parent="." instance=ExtResource("4_vy3yb")]
-position = Vector2(1257, 754)
+position = Vector2(1040, 571)
