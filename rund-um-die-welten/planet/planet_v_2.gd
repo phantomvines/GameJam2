@@ -3,13 +3,13 @@ extends Area2D
 @export var size_scale := 1.0  # Standardgröße (1 = 100%)
 
 # for differentiating different planets
-# 0 -> death star
-# 1 -> mars
 @export var planet_type: GlobalVariables.planets
 
 @export var win_planet = false
 
 @export var win_message = "You reached the goal"
+
+@export var death_message_overwrite: String
 
 @export var speed = 300
 
@@ -57,10 +57,11 @@ func _on_area_entered(area: Area2D) -> void:
 	# if area in player group entered, kill player
 	if area.is_in_group("player"):
 		if win_planet:
-			print("win")
 			GlobalVariables.emit_level_done(win_message)
 		else:
-			GlobalVariables.emit_player_died("You crashed into the " + GlobalVariables.planet_names[planet_type])
-			print("death")
+			if death_message_overwrite:
+				GlobalVariables.emit_player_died(death_message_overwrite)
+			else:
+				GlobalVariables.emit_player_died("You crashed into the " + GlobalVariables.planet_names[planet_type])
 			print(area.position)
 		

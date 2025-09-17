@@ -15,8 +15,6 @@ func _ready() -> void:
 	rotation = spawn_rotation
 	
 func _physics_process(delta: float) -> void:
-	# get location to rotate around
-	GlobalVariables.target_planet_position
 	if(GlobalVariables.target_planet_position):
 		# calculate movement
 		var radius = position.distance_to(GlobalVariables.target_planet_position)
@@ -34,6 +32,10 @@ func _physics_process(delta: float) -> void:
 		#print(angle)
 		rotation = angle + deg_to_rad(180)
 
+		if GlobalVariables.player_clockwise:
+			rotation = angle + deg_to_rad(180)
+		else:
+			rotation = angle
 
 #Dummy function for player death: 
 func player_dies(death_message: String) -> void: 

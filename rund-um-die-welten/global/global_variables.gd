@@ -5,11 +5,15 @@ var target_planet_position
 var player_speed
 var player_clockwise
 
+# Planet vars
 enum planets {DeathStar, Mars, Earth, Sun}
 var planet_names = {planets.DeathStar: "Death Star", planets.Mars: "Mars", planets.Earth: "Earth", planets.Sun: "Sun"}
 var selected_level = ""
+
+#Doesnt work yet
 var global_RNG := RandomNumberGenerator.new()
 
+#Signals
 signal player_died(death_message: String)
 signal game_over(game_over_message: String)
 signal level_done(win_message: String)

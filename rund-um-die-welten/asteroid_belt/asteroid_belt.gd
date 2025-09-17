@@ -9,8 +9,6 @@ extends Node2D
 @export var chunks = [[0,10], [30,100], [180,300]]
 
 @export var speed = 500
-
-@export var seed = 12345
 @export var num_asteroids = 100
 
 func _ready() -> void:
@@ -52,10 +50,10 @@ func spawn_comet():
 	# Convert angle to radians and calculate position
 	var rad = deg_to_rad(angle)
 	var radius = lerpf(min_rad, max_rad, randf())
-	var position = Vector2(cos(rad), sin(rad)) * radius
+	var comet_position = Vector2(cos(rad), sin(rad)) * radius
 	
 		# Instantiate and add to scene
 	var comet_instance = comet.instantiate()
-	comet_instance.global_position = position
+	comet_instance.global_position = comet_position
 	comet_instance.speed = speed
 	add_child(comet_instance)
