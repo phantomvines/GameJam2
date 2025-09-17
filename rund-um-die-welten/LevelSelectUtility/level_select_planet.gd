@@ -2,34 +2,37 @@ extends Area2D
 
 
 # for differentiating different planets
-# 0 -> death star
-# 1 -> mars
 @export var planet_type: GlobalVariables.planets
 @export var level_id: String
 var size_scale
 func _ready() -> void:
 	input_pickable = true
-	print(planet_type)
+	var shape = $CollisionShape2D.shape
 	
 	# change size of collision area and animation based on which planet is chosen
 	match planet_type:
 		GlobalVariables.planets.DeathStar:
-			size_scale = 1.0
+			size_scale = 1.5
 			$death_star.play("default")
 			$death_star.visible = true
 		GlobalVariables.planets.Mars:
-			size_scale = 1.0
+			size_scale = 1.5
 			$mars.play("default")
 			$mars.visible = true
-			
+		GlobalVariables.planets.Earth:
+			size_scale = 4.2
+			$earth.play("default")
+			$earth.visible = true
+		GlobalVariables.planets.Sun:
+			size_scale = 4.8
+			$sun.play("default")
+			$sun.visible = true
 	
-	var shape = $CollisionShape2D.shape
-	if shape is CircleShape2D:
-		shape.radius *= size_scale
-	else:
-		print("not implemented")
+	shape.radius *= size_scale
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		print("Level " + GlobalVariables.planet_names[planet_type] + " with ID " + level_id)
-		GlobalVariables.target_planet_position = position
+		GlobalVariables.target_planet_position = get_parent().position
+		GlobalVariables.player_speed = get_parent().speed
+		GlobalVariables.player_clockwise = get_parent().clockwise
 		GlobalVariables.selected_level = level_id

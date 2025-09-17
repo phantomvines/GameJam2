@@ -39,7 +39,6 @@ func _physics_process(delta: float) -> void:
 
 #Dummy function for player death: 
 func player_dies(death_message: String) -> void: 
-	print("hi")
 	print(death_message)
 	if auto_respawn:
 		position = respawn_point
