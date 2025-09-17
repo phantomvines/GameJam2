@@ -31,21 +31,30 @@ func _ready():
 			size_scale = 1.5
 			$death_star.play("default")
 			$death_star.visible = true
+			$goal/mars_goal.visible = true
 		GlobalVariables.planets.Mars:
 			size_scale = 1.5
 			$mars.play("default")
 			$mars.visible = true
+			$goal/mars_goal.visible = true
 		GlobalVariables.planets.Earth:
 			size_scale = 4.2
 			$earth.play("default")
 			$earth.visible = true
+			$goal/earth_goal.visible = true
 		GlobalVariables.planets.Sun:
 			size_scale = 4.8
 			$sun.play("default")
 			$sun.visible = true
+			$goal/sun_goal.visible = true
 	
 	shape.radius *= size_scale
+	
+	# if planet is target, display goal texture
+	if win_planet:
+		$goal.visible = true
 		
+	
 		
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
@@ -67,3 +76,13 @@ func _on_area_entered(area: Area2D) -> void:
 					GlobalVariables.emit_player_died("You crashed into the " + GlobalVariables.planet_names[planet_type])
 				print(area.position)
 		
+
+func _physics_process(delta: float) -> void:
+	print(GlobalVariables.target_planet_position)
+	print(global_position)
+	
+	# set target symbol to visible if current planet is targeted
+	if GlobalVariables.target_planet_position == global_position:
+		$target.visible = true
+	else:
+		$target.visible = false

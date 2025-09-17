@@ -1,10 +1,14 @@
-[gd_scene load_steps=43 format=3 uid="uid://bmlfyt1ykh3aq"]
+[gd_scene load_steps=47 format=3 uid="uid://bmlfyt1ykh3aq"]
 
 [ext_resource type="Script" uid="uid://dmq2ifxkvb5ci" path="res://planet/planet_v_2.gd" id="1_ouy4y"]
 [ext_resource type="Texture2D" uid="uid://dneiw5b2ikvx1" path="res://assets/deathstar-Sheet.png" id="2_b8nw5"]
 [ext_resource type="Texture2D" uid="uid://beinvbs42eerv" path="res://assets/mars-Sheet.png" id="3_bbsm5"]
 [ext_resource type="Texture2D" uid="uid://tc7fdj1vhi77" path="res://assets/earth-Sheet.png" id="4_s1de2"]
 [ext_resource type="Texture2D" uid="uid://dwexh018a47or" path="res://assets/sun-Sheet.png" id="5_olrr2"]
+[ext_resource type="Texture2D" uid="uid://bk4idfu5vf2g7" path="res://assets/death_star_goal.png" id="6_olrr2"]
+[ext_resource type="Texture2D" uid="uid://dr2h23pobgxwt" path="res://assets/earth_goal.png" id="6_yv8ck"]
+[ext_resource type="Texture2D" uid="uid://c6yo05aibftjg" path="res://assets/sun_goal.png" id="8_itp2c"]
+[ext_resource type="Texture2D" uid="uid://cl756ckjgfbqr" path="res://assets/target.png" id="9_itp2c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bbsm5"]
 atlas = ExtResource("2_b8nw5")
@@ -302,5 +306,26 @@ sprite_frames = SubResource("SpriteFrames_15lue")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_s1de2")
+
+[node name="goal" type="Node2D" parent="."]
+visible = false
+
+[node name="earth_goal" type="Sprite2D" parent="goal"]
+visible = false
+texture = ExtResource("6_yv8ck")
+
+[node name="mars_goal" type="Sprite2D" parent="goal"]
+visible = false
+texture_filter = 1
+texture = ExtResource("6_olrr2")
+
+[node name="sun_goal" type="Sprite2D" parent="goal"]
+visible = false
+texture = ExtResource("8_itp2c")
+
+[node name="target" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+texture = ExtResource("9_itp2c")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
