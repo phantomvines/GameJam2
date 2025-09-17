@@ -28,9 +28,12 @@ clockwise = false
 
 [node name="asteroid_belt" parent="." instance=ExtResource("5_lquwl")]
 position = Vector2(2695, 513)
+comet = null
 min_rad = 1000
 max_rad = 1100
+chunks = null
 speed = 300
+num_asteroids = null
 
 [node name="collectible" parent="." instance=ExtResource("4_5i00d")]
 position = Vector2(279, 580)

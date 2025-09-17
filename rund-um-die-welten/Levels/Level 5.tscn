@@ -28,9 +28,12 @@ size_scale = 5.0
 
 [node name="asteroid_belt" parent="." instance=ExtResource("3_4ydby")]
 position = Vector2(1023, -883)
+comet = null
 min_rad = 1700
 max_rad = 1800
 chunks = [[0, 60], [90, 150], [180, 240], [270, 360]]
+speed = null
+num_asteroids = null
 
 [node name="collectible" parent="." instance=ExtResource("4_u7ldv")]
 position = Vector2(218, 357)

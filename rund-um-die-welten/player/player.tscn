@@ -1,7 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://d0h7r8gitcntt"]
+[gd_scene load_steps=10 format=3 uid="uid://d0h7r8gitcntt"]
 
 [ext_resource type="Script" uid="uid://dw7a4ejn3gkop" path="res://player/player.gd" id="1_oul6g"]
 [ext_resource type="Texture2D" uid="uid://ws2nc8w43ys0" path="res://assets/rocket-Sheet.png" id="3_g1dw6"]
+[ext_resource type="Texture2D" uid="uid://b8y87eesj4hgj" path="res://assets/particle.png" id="3_yw30f"]
+
+[sub_resource type="Gradient" id="Gradient_g1dw6"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.12, 0.286667, 0.46, 0.726667, 0.993333)
+colors = PackedColorArray(0.984314, 0.435294, 0, 1, 1, 0.729412, 0.305882, 1, 0.93, 0.7595, 0, 0.796078, 1, 1, 1, 0.756863, 1, 1, 1, 0.552941, 1, 1, 1, 0)
+
+[sub_resource type="Curve" id="Curve_g1dw6"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rkbax"]
 atlas = ExtResource("3_g1dw6")
@@ -31,6 +42,18 @@ size = Vector2(14.5, 18.5)
 [node name="player" type="Area2D"]
 scale = Vector2(4, 4)
 script = ExtResource("1_oul6g")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+texture_filter = 1
+position = Vector2(0.25, 11.75)
+amount = 50
+texture = ExtResource("3_yw30f")
+lifetime = 2.0
+emission_shape = 1
+emission_sphere_radius = 5.0
+gravity = Vector2(0, 0)
+color_ramp = SubResource("Gradient_g1dw6")
+hue_variation_curve = SubResource("Curve_g1dw6")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 
