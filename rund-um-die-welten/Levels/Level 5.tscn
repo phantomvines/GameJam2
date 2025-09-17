@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bkvnips5nck2n"]
+[gd_scene load_steps=6 format=3 uid="uid://bfoh33vvom1mf"]
 
 [ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="1_75a7x"]
-[ext_resource type="Script" path="res://Levels/main.gd" id="1_dkod1"]
+[ext_resource type="Script" uid="uid://tlx7l1b53wm7" path="res://Levels/main.gd" id="1_dkod1"]
 [ext_resource type="PackedScene" uid="uid://bmlfyt1ykh3aq" path="res://planet/planet_v_2.tscn" id="2_dkod1"]
 [ext_resource type="PackedScene" uid="uid://4s3rjs7m32hk" path="res://asteroid_belt/asteroid_belt.tscn" id="3_4ydby"]
 [ext_resource type="PackedScene" uid="uid://nccnr30bmrud" path="res://collectibles/collectible.tscn" id="4_u7ldv"]
