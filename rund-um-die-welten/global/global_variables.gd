@@ -1,6 +1,10 @@
 extends Node
 
+# Player vars
 var target_planet_position
+var player_speed
+var player_clockwise
+
 enum planets {DeathStar, Mars, Earth, Sun}
 var planet_names = {planets.DeathStar: "Death Star", planets.Mars: "Mars", planets.Earth: "Earth", planets.Sun: "Sun"}
 var selected_level = ""

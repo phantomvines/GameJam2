@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://c11b4i55gx3o5"]
 
-[ext_resource type="Script" uid="uid://q2jmecetjd5m" path="res://LevelSelectUtility/level_1.gd" id="1_uuk0q"]
+[ext_resource type="Script" uid="uid://q7o5o8lnbdgx" path="res://LevelSelectUtility/level_select_planet.gd" id="1_m68cd"]
 [ext_resource type="Texture2D" uid="uid://dneiw5b2ikvx1" path="res://assets/deathstar-Sheet.png" id="2_2x1y4"]
 [ext_resource type="Texture2D" uid="uid://beinvbs42eerv" path="res://assets/mars-Sheet.png" id="3_1tduj"]
 
@@ -115,7 +115,7 @@ animations = [{
 
 [node name="Level-Select-Planet" type="Area2D"]
 scale = Vector2(4, 4)
-script = ExtResource("1_uuk0q")
+script = ExtResource("1_m68cd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_b8nw5")

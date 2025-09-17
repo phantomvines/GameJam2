@@ -1,9 +1,7 @@
 extends Area2D
 
-@export var speed = 130
 # angle
-var direction = 0
-var clockwise = true
+@export var spawn_rotation = 0
 @export var dies_on_screen_leave = false
 @export var respawn_point: Vector2
 @export var auto_respawn = false
@@ -14,6 +12,7 @@ func _ready() -> void:
 	$VisibleOnScreenNotifier2D.screen_exited.connect(_on_screen_exited)
 	$VisibleOnScreenNotifier2D.screen_entered.connect(_on_screen_entered)
 	GlobalVariables.player_died.connect(player_dies)
+	rotation = spawn_rotation
 	
 func _physics_process(delta: float) -> void:
 	# get location to rotate around
@@ -23,9 +22,9 @@ func _physics_process(delta: float) -> void:
 		var radius = position.distance_to(GlobalVariables.target_planet_position)
 		var angle = (position-GlobalVariables.target_planet_position).angle()
 		
-		var angular_speed = speed/radius
+		var angular_speed = GlobalVariables.player_speed/radius
 		
-		if clockwise:
+		if GlobalVariables.player_clockwise:
 			angle += angular_speed*delta
 		else:
 			angle -= angular_speed*delta

@@ -11,6 +11,10 @@ extends Area2D
 
 @export var win_message = "You reached the goal"
 
+@export var speed = 300
+
+@export var clockwise = true
+
 func _ready():
 	var shape = $CollisionShape2D.shape
 	# Sprite skalieren falls notwendig?
@@ -45,6 +49,8 @@ func _ready():
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		GlobalVariables.target_planet_position = position
+		GlobalVariables.player_speed = speed
+		GlobalVariables.player_clockwise = clockwise
 
 
 func _on_area_entered(area: Area2D) -> void:
