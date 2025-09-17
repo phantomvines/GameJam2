@@ -1,6 +1,8 @@
+
 [gd_scene load_steps=5 format=3 uid="uid://bovxwf77p74pn"]
 
 [ext_resource type="Script" uid="uid://tlx7l1b53wm7" path="res://Levels/main.gd" id="1_xtg75"]
+
 [ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="2_hi2wx"]
 [ext_resource type="PackedScene" uid="uid://bmlfyt1ykh3aq" path="res://planet/planet_v_2.tscn" id="3_1xjbt"]
 [ext_resource type="PackedScene" uid="uid://ufu0fyp248bh" path="res://comet/comet.tscn" id="4_vy3yb"]

@@ -1,12 +1,13 @@
+
 [gd_scene load_steps=5 format=3 uid="uid://ddpjl40d2mgvp"]
 
 [ext_resource type="Script" uid="uid://tlx7l1b53wm7" path="res://Levels/main.gd" id="1_evb4r"]
+
 [ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="2_expes"]
 [ext_resource type="PackedScene" uid="uid://bmlfyt1ykh3aq" path="res://planet/planet_v_2.tscn" id="3_nq3bc"]
 [ext_resource type="PackedScene" uid="uid://ufu0fyp248bh" path="res://comet/comet.tscn" id="4_gt65k"]
 
 [node name="main" type="Node2D"]
-script = ExtResource("1_evb4r")
 
 [node name="player" parent="." groups=["player"] instance=ExtResource("2_expes")]
 position = Vector2(643, 682)
