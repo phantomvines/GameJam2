@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://bmlfyt1ykh3aq"]
+[gd_scene load_steps=48 format=3 uid="uid://bmlfyt1ykh3aq"]
 
 [ext_resource type="Script" uid="uid://dmq2ifxkvb5ci" path="res://planet/planet_v_2.gd" id="1_ouy4y"]
 [ext_resource type="Texture2D" uid="uid://dneiw5b2ikvx1" path="res://assets/deathstar-Sheet.png" id="2_b8nw5"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dr2h23pobgxwt" path="res://assets/earth_goal.png" id="6_yv8ck"]
 [ext_resource type="Texture2D" uid="uid://c6yo05aibftjg" path="res://assets/sun_goal.png" id="8_itp2c"]
 [ext_resource type="Texture2D" uid="uid://cl756ckjgfbqr" path="res://assets/target.png" id="9_itp2c"]
+[ext_resource type="PackedScene" uid="uid://boss86i1awyuk" path="res://planet/rotation_indicator.tscn" id="10_3lv2v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bbsm5"]
 atlas = ExtResource("2_b8nw5")
@@ -309,6 +310,7 @@ shape = SubResource("CircleShape2D_s1de2")
 
 [node name="goal" type="Node2D" parent="."]
 visible = false
+texture_filter = 1
 
 [node name="earth_goal" type="Sprite2D" parent="goal"]
 visible = false
@@ -327,5 +329,8 @@ texture = ExtResource("8_itp2c")
 visible = false
 texture_filter = 1
 texture = ExtResource("9_itp2c")
+
+[node name="rotation_indicator" parent="." instance=ExtResource("10_3lv2v")]
+scale = Vector2(1, 1)
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

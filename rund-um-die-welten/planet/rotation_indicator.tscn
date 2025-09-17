@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://boss86i1awyuk"]
+
+[ext_resource type="Script" uid="uid://r3hli2epberv" path="res://planet/rotation_indicator.gd" id="1_tuu6l"]
+[ext_resource type="Texture2D" uid="uid://cbbdbeppwu6e2" path="res://assets/right-arrow.png" id="2_qlssn"]
+[ext_resource type="Texture2D" uid="uid://cuk7k70x2b2kw" path="res://assets/left-arrow.png" id="3_qlssn"]
+
+[node name="rotation_indicator" type="Node2D"]
+texture_filter = 1
+scale = Vector2(4, 4)
+script = ExtResource("1_tuu6l")
+
+[node name="right_1" type="Sprite2D" parent="."]
+visible = false
+rotation = 3.14159
+texture = ExtResource("2_qlssn")
+
+[node name="right_2" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_qlssn")
+
+[node name="left_1" type="Sprite2D" parent="."]
+visible = false
+rotation = 3.14159
+texture = ExtResource("3_qlssn")
+
+[node name="left_2" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_qlssn")

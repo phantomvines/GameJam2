@@ -25,6 +25,9 @@ func _ready():
 	# Reaktion auf Klick
 	input_pickable = true
 	
+	# set rotation direction of rotation indicator
+	$rotation_indicator.clockwise = clockwise
+	
 	# change size of collision area and animation based on which planet is chosen
 	match planet_type:
 		GlobalVariables.planets.DeathStar:
@@ -32,28 +35,34 @@ func _ready():
 			$death_star.play("default")
 			$death_star.visible = true
 			$goal/mars_goal.visible = true
+			$rotation_indicator.radius = 30
 		GlobalVariables.planets.Mars:
 			size_scale = 1.5
 			$mars.play("default")
 			$mars.visible = true
 			$goal/mars_goal.visible = true
+			$rotation_indicator.radius = 30
 		GlobalVariables.planets.Earth:
 			size_scale = 4.2
 			$earth.play("default")
 			$earth.visible = true
 			$goal/earth_goal.visible = true
+			$rotation_indicator.radius = 55
 		GlobalVariables.planets.Sun:
 			size_scale = 4.8
 			$sun.play("default")
 			$sun.visible = true
 			$goal/sun_goal.visible = true
+			$rotation_indicator.radius = 65
 	
 	shape.radius *= size_scale
 	
 	# if planet is target, display goal texture
 	if win_planet:
 		$goal.visible = true
-		
+	
+	# set info of direction indicator, for updating
+	$rotation_indicator.set_info()
 	
 		
 func _input_event(viewport, event, shape_idx):
@@ -78,9 +87,6 @@ func _on_area_entered(area: Area2D) -> void:
 		
 
 func _physics_process(delta: float) -> void:
-	print(GlobalVariables.target_planet_position)
-	print(global_position)
-	
 	# set target symbol to visible if current planet is targeted
 	if GlobalVariables.target_planet_position == global_position:
 		$target.visible = true
