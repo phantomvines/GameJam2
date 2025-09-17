@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bmlfyt1ykh3aq" path="res://planet/planet_v_2.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://4s3rjs7m32hk" path="res://asteroid_belt/asteroid_belt.tscn" id="5_lquwl"]
 
-[node name="main" type="Node2D"]
+[node name="main2" type="Node2D"]
 
 [node name="player" parent="." groups=["player"] instance=ExtResource("2_h2yge")]
 position = Vector2(1198, 419)
