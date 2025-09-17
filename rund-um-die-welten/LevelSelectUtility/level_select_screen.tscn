@@ -25,30 +25,35 @@ offset_top = 324.0
 offset_right = 1029.0
 offset_bottom = 324.0
 planet_type = 2
+level_id = "Level 3"
 
 [node name="Level-Select-Planet2" parent="." instance=ExtResource("1_offx3")]
 offset_left = 1395.0
 offset_top = 406.0
 offset_right = 1395.0
 offset_bottom = 406.0
+level_id = "Level 6"
 
 [node name="Level-Select-Planet3" parent="." instance=ExtResource("1_offx3")]
 offset_left = 545.0
 offset_top = 299.0
 offset_right = 545.0
 offset_bottom = 299.0
+level_id = "Level 2"
 
 [node name="Level-Select-Planet4" parent="." instance=ExtResource("1_offx3")]
 offset_left = 927.0
 offset_top = 612.0
 offset_right = 927.0
 offset_bottom = 612.0
+level_id = "Level 5"
 
 [node name="Level-Select-Planet5" parent="." instance=ExtResource("1_offx3")]
 offset_left = 1466.0
 offset_top = 672.0
 offset_right = 1466.0
 offset_bottom = 672.0
+level_id = "Level 7"
 
 [node name="player" parent="." instance=ExtResource("2_iojkr")]
 position = Vector2(396, 473)

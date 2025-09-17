@@ -10,7 +10,14 @@ extends Control
 	get:
 		return $planet_body.level_id
 	set(value):
+		print($level_name_text.text)
 		$planet_body.level_id = value
 		$level_name_text.text = value
+		print($level_name_text.text)
 @export var speed = 100
 @export var clockwise = true
+
+
+func scale_text_location(scale):
+	$level_name_text.position.y *= scale
+	

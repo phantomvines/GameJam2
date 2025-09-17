@@ -29,6 +29,7 @@ func _ready() -> void:
 			$sun.visible = true
 	
 	shape.radius *= size_scale
+	get_parent().scale_text_location(size_scale)
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		print("Level " + GlobalVariables.planet_names[planet_type] + " with ID " + level_id)
