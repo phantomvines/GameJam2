@@ -23,6 +23,4 @@ clockwise = false
 
 [node name="asteroid_belt" parent="." instance=ExtResource("5_lquwl")]
 position = Vector2(2695, 513)
-min_rad = 1000
-max_rad = 1100
 speed = 300

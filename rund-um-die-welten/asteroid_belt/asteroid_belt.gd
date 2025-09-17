@@ -2,14 +2,15 @@ extends Node2D
 
 @export var comet: PackedScene = preload("res://comet/comet.tscn")
 
-@export var min_rad = 1300
-@export var max_rad = 1520
-
-# degrees in which asteroids are present, not mentioned are spaces
-@export var chunks = [[0,10], [30,100], [180,300]]
+#@export var min_rad = 1300
+#@export var max_rad = 1520
 
 @export var speed = 500
-@export var num_asteroids = 100
+@export var asteroid_density = 100
+
+@export var number_of_holes: int
+@export var hole_size_in_deg: int
+@export var start_rotation_in_deg = 0
 
 func _ready() -> void:
 	
@@ -20,40 +21,17 @@ func _ready() -> void:
 	#num_asteroids *= max_rad-min_rad
 	#
 	#num_asteroids /= 700
+	spawn_comets()
 	
-	for i in range(num_asteroids):
-		spawn_comet()
-	
+func spawn_comets():
+	assert (number_of_holes * hole_size_in_deg <= 360)
+	if(number_of_holes > 0):
+		var hole_positions = calc_hole_positions()
+		total_comet_deg = calc_total_comet_degrees(hole_positions)
 
-func spawn_comet():
-	# Choose a random chunk
-	#var chunk = chunks[randi() % chunks.size()]
-	#var angle = lerpf(chunk[0], chunk[1], randf())
-	
-	# sum of all chunks, for weighting
-	var total = 0
-	for chunk in chunks:
-		total += chunk[1]-chunk[0]
-	
-	 # Select a chunk based on weighted randomness
-	var r = GlobalVariables.global_RNG.randf() * total
-	var current_weight = 0.0
-	var selected_chunk
-	for chunk in chunks:
-		current_weight += chunk[1] - chunk[0]
-		if r <= current_weight:
-			selected_chunk = chunk
-			break
-	
-	var angle = lerpf(selected_chunk[0], selected_chunk[1], randf())
-	
-	# Convert angle to radians and calculate position
-	var rad = deg_to_rad(angle)
-	var radius = lerpf(min_rad, max_rad, randf())
-	var comet_position = Vector2(cos(rad), sin(rad)) * radius
-	
-		# Instantiate and add to scene
-	var comet_instance = comet.instantiate()
-	comet_instance.global_position = comet_position
-	comet_instance.speed = speed
-	add_child(comet_instance)
+func calc_hole_positions():
+	var hole_positions = []
+	for i in range(number_of_holes):
+		hole_positions.append(360/number_of_holes*i + start_rotation_in_deg)
+		hole_positions.append(hole_positions[2*i] + hole_size_in_deg)
+	return hole_positions
