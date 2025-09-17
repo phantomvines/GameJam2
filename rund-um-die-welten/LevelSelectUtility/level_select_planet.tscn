@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://c11b4i55gx3o5"]
 
-[ext_resource type="Script" uid="uid://q7o5o8lnbdgx" path="res://LevelSelectUtility/level_select_planet.gd" id="1_m68cd"]
+[ext_resource type="Script" path="res://LevelSelectUtility/level_select_planet.gd" id="1_m68cd"]
 [ext_resource type="Texture2D" uid="uid://dneiw5b2ikvx1" path="res://assets/deathstar-Sheet.png" id="2_2x1y4"]
 [ext_resource type="Texture2D" uid="uid://beinvbs42eerv" path="res://assets/mars-Sheet.png" id="3_1tduj"]
 
