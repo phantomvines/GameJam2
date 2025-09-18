@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqq3j6mvijcg4"]
+
+[ext_resource type="Script" uid="uid://b4jfjnwxnqfyl" path="res://planet/button_planet.gd" id="1_a80ru"]
+[ext_resource type="PackedScene" uid="uid://bmlfyt1ykh3aq" path="res://planet/planet_v_2.tscn" id="2_eooxo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a80ru"]
+resource_local_to_scene = true
+
+[node name="button_planet" type="Node2D"]
+script = ExtResource("1_a80ru")
+
+[node name="planet_v2" parent="." instance=ExtResource("2_eooxo")]
+
+[node name="activation_area" type="Area2D" parent="."]
+input_pickable = false
+
+[node name="shape" type="CollisionShape2D" parent="activation_area"]
+shape = SubResource("CircleShape2D_a80ru")
