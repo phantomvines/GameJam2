@@ -166,7 +166,7 @@ text = "3"
 icon = ExtResource("5_7xgfl")
 script = ExtResource("5_v3ic8")
 threshold = 24
-skin = "enterprise"
+skin = "battlecruiser"
 
 [node name="Enterpise-Button6" type="Button" parent="."]
 offset_left = 1709.0

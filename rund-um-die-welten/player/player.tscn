@@ -1,6 +1,7 @@
-[gd_scene load_steps=20 format=3 uid="uid://d0h7r8gitcntt"]
+[gd_scene load_steps=22 format=3 uid="uid://d0h7r8gitcntt"]
 
 [ext_resource type="Script" uid="uid://dw7a4ejn3gkop" path="res://player/player.gd" id="1_oul6g"]
+[ext_resource type="Texture2D" uid="uid://cv5wtgdylxnb8" path="res://assets/battlecruiser-Sheet.png" id="3_boad6"]
 [ext_resource type="Texture2D" uid="uid://ws2nc8w43ys0" path="res://assets/rocket-Sheet.png" id="3_g1dw6"]
 [ext_resource type="Texture2D" uid="uid://b8y87eesj4hgj" path="res://assets/particle.png" id="3_yw30f"]
 [ext_resource type="Texture2D" uid="uid://dfdiudiwcupuo" path="res://assets/enterprise-Sheet.png" id="4_qjkh3"]
@@ -16,6 +17,14 @@ colors = PackedColorArray(0.984314, 0.435294, 0, 1, 1, 0.729412, 0.305882, 1, 0.
 _limits = [-1.0, 1.0, 0.0, 1.0]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yllr7"]
+atlas = ExtResource("3_boad6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kb6p2"]
+atlas = ExtResource("3_boad6")
+region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rkbax"]
 atlas = ExtResource("3_g1dw6")
@@ -51,6 +60,17 @@ region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g6k8r"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yllr7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kb6p2")
+}],
+"loop": true,
+"name": &"battlecruiser",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rkbax")
@@ -120,7 +140,7 @@ hue_variation_curve = SubResource("Curve_g1dw6")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_g6k8r")
-animation = &"falcon"
+animation = &"battlecruiser"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.25, -0.25)
