@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://c11b4i55gx3o5"]
+
+[ext_resource type="Script" uid="uid://x3vheg2j1vqn" path="res://LevelSelectUtility/level_planet_util.gd" id="1_d5qlm"]
+[ext_resource type="Script" uid="uid://q7o5o8lnbdgx" path="res://LevelSelectUtility/level_select_planet.gd" id="1_m68cd"]
+[ext_resource type="FontFile" uid="uid://d2ucaasj8wmwj" path="res://Fonts/BRIGHTSTER-Bold-1.ttf" id="4_d5qlm"]
+[ext_resource type="PackedScene" uid="uid://dmfmk86fb3akt" path="res://collectibles/collectible-icon.tscn" id="5_nkaah"]
+[ext_resource type="PackedScene" uid="uid://bmlfyt1ykh3aq" path="res://planet/planet_v_2.tscn" id="5_o652v"]
+
+[node name="Level-Select-Planet" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_d5qlm")
+
+[node name="planet_body" parent="." instance=ExtResource("5_o652v")]
+script = ExtResource("1_m68cd")
+level_id = ""
+grayscale = true
+
+[node name="level_name_text" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = -75.0
+offset_top = 50.0
+offset_right = 75.0
+offset_bottom = 70.0
+theme_override_fonts/normal_font = ExtResource("4_d5qlm")
+theme_override_font_sizes/normal_font_size = 15
+text = "Level x"
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="collectible0" parent="." instance=ExtResource("5_nkaah")]
+visible = false
+position = Vector2(-70, 0)
+scale = Vector2(2, 2)
+
+[node name="collectible1" parent="." instance=ExtResource("5_nkaah")]
+visible = false
+position = Vector2(0, -70)
+scale = Vector2(2, 2)
+
+[node name="collectible2" parent="." instance=ExtResource("5_nkaah")]
+visible = false
+position = Vector2(70, 0)
+scale = Vector2(2, 2)
