@@ -12,7 +12,7 @@ Monde <- Leona/Felix
 Collectibles im level select kreisen lassen <- Leona/Felix
 Level abschluss anzeige <- Leona
 Hintergründe <- Daniel
-	-sprite menu
+	-sprite menu - Done
 	-sprite level?
 
 

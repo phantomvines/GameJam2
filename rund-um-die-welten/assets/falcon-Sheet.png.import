@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://difib2v8ernuu"
-path="res://.godot/imported/Menu.png-0168ecb990c83f7a2a0783ea3d8e7e2f.ctex"
+uid="uid://bbbbqfabbltie"
+path="res://.godot/imported/falcon-Sheet.png-d1a3d2f6278cf1dd0c96538d27185e1d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Menu.png"
-dest_files=["res://.godot/imported/Menu.png-0168ecb990c83f7a2a0783ea3d8e7e2f.ctex"]
+source_file="res://assets/falcon-Sheet.png"
+dest_files=["res://.godot/imported/falcon-Sheet.png-d1a3d2f6278cf1dd0c96538d27185e1d.ctex"]
 
 [params]
 
