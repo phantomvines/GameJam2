@@ -16,10 +16,12 @@ dies_on_screen_leave = true
 
 [node name="planet_v2_4" parent="." instance=ExtResource("3_rflju")]
 position = Vector2(960, 960)
+planet_type = 1
 win_planet = true
 
 [node name="planet_v2_3" parent="." instance=ExtResource("3_rflju")]
-position = Vector2(992, 224)
+position = Vector2(960, 544)
+planet_type = 3
 clockwise = false
 
 [node name="planet_v2" parent="." instance=ExtResource("3_rflju")]
@@ -27,28 +29,25 @@ position = Vector2(288, 621)
 size_scale = 5.0
 
 [node name="planet_v3" parent="." instance=ExtResource("3_rflju")]
-position = Vector2(1728, 640)
+position = Vector2(1664, 640)
 size_scale = 5.0
 
 [node name="collectible" parent="." instance=ExtResource("5_ioa6s")]
-position = Vector2(218, 357)
+position = Vector2(1408, 224)
 
 [node name="collectible2" parent="." instance=ExtResource("5_ioa6s")]
-position = Vector2(1600, 621)
+position = Vector2(1536, 640)
 id = 2
 
 [node name="collectible3" parent="." instance=ExtResource("5_ioa6s")]
-position = Vector2(416, 621)
+position = Vector2(160, 621)
 id = 1
 
 [node name="comet" parent="." instance=ExtResource("6_furn4")]
-position = Vector2(960, 736)
-
-[node name="comet2" parent="." instance=ExtResource("6_furn4")]
-position = Vector2(832, 640)
+position = Vector2(960, 832)
 
 [node name="comet4" parent="." instance=ExtResource("6_furn4")]
-position = Vector2(705, 557)
+position = Vector2(608, 576)
 
 [node name="comet3" parent="." instance=ExtResource("6_furn4")]
 position = Vector2(641, 704)
@@ -57,16 +56,10 @@ position = Vector2(641, 704)
 position = Vector2(769, 800)
 
 [node name="comet9" parent="." instance=ExtResource("6_furn4")]
-position = Vector2(1247, 576)
-
-[node name="comet6" parent="." instance=ExtResource("6_furn4")]
-position = Vector2(1087, 672)
-
-[node name="comet10" parent="." instance=ExtResource("6_furn4")]
-position = Vector2(1087, 544)
+position = Vector2(1312, 576)
 
 [node name="comet7" parent="." instance=ExtResource("6_furn4")]
-position = Vector2(1118, 800)
+position = Vector2(1151, 800)
 
 [node name="comet8" parent="." instance=ExtResource("6_furn4")]
-position = Vector2(1215, 736)
+position = Vector2(1279, 704)
