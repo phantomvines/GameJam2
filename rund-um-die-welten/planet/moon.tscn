@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=3 uid="uid://cgeeatxwjsuf8"]
+
+[ext_resource type="Script" uid="uid://0fd2s1p88bty" path="res://planet/moon.gd" id="1_7vi6w"]
+[ext_resource type="Texture2D" uid="uid://bduikpbf2cn7v" path="res://assets/moon-Sheet.png" id="2_me4u8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7tpi7"]
+atlas = ExtResource("2_me4u8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gx5av"]
+atlas = ExtResource("2_me4u8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1mwm"]
+atlas = ExtResource("2_me4u8")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7m2jd"]
+atlas = ExtResource("2_me4u8")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ux8so"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7tpi7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gx5av")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1mwm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7m2jd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7vi6w"]
+
+[node name="moon" type="Area2D"]
+texture_filter = 1
+script = ExtResource("1_7vi6w")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ux8so")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7vi6w")
