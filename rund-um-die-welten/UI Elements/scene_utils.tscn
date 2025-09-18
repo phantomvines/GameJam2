@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://b72obu30gqg1g"]
+
+[ext_resource type="PackedScene" uid="uid://c7lkpcfoqf0xu" path="res://UI Elements/boost_cooldown.tscn" id="2_mcwqx"]
+[ext_resource type="Texture2D" uid="uid://d2mvgcdqag2dh" path="res://assets/border.png" id="2_o0c6u"]
+
+[node name="scene_utils" type="Node2D"]
+texture_filter = 1
+scale = Vector2(4, 4)
+metadata/_edit_vertical_guides_ = [-666.0]
+
+[node name="border" type="Node2D" parent="."]
+top_level = true
+scale = Vector2(4, 4)
+
+[node name="Sprite2D2" type="Sprite2D" parent="border"]
+position = Vector2(252.5, 5)
+scale = Vector2(2.02734, 1)
+texture = ExtResource("2_o0c6u")
+
+[node name="Sprite2D3" type="Sprite2D" parent="border"]
+position = Vector2(5, 137.475)
+rotation = -1.5708
+scale = Vector2(1.14824, 1)
+texture = ExtResource("2_o0c6u")
+
+[node name="Sprite2D4" type="Sprite2D" parent="border"]
+position = Vector2(475, 136.739)
+rotation = 1.5708
+scale = Vector2(1.13711, 1)
+texture = ExtResource("2_o0c6u")
+
+[node name="Sprite2D" type="Sprite2D" parent="border"]
+position = Vector2(242.417, 265)
+rotation = 3.14159
+scale = Vector2(1.94271, 1)
+texture = ExtResource("2_o0c6u")
+
+[node name="boost_cooldown" parent="." instance=ExtResource("2_mcwqx")]
+top_level = true
+position = Vector2(-66, 805)
