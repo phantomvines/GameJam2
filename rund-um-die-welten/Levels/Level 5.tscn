@@ -1,4 +1,5 @@
-[gd_scene load_steps=6 format=3 uid="uid://bfoh33vvom1mf"]
+
+[gd_scene load_steps=7 format=3 uid="uid://bkvnips5nck2n"]
 
 [ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="1_75a7x"]
 [ext_resource type="Script" uid="uid://tlx7l1b53wm7" path="res://Levels/main.gd" id="1_dkod1"]
@@ -6,8 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://4s3rjs7m32hk" path="res://asteroid_belt/asteroid_belt.tscn" id="3_4ydby"]
 [ext_resource type="PackedScene" uid="uid://nccnr30bmrud" path="res://collectibles/collectible.tscn" id="4_u7ldv"]
 
+[ext_resource type="PackedScene" uid="uid://ufu0fyp248bh" path="res://comet/comet.tscn" id="6_4ydby"]
+
 [node name="main" type="Node2D"]
 script = ExtResource("1_dkod1")
+level_name = "Level 5"
 
 [node name="player" parent="." groups=["player"] instance=ExtResource("1_75a7x")]
 position = Vector2(297, 1008)
@@ -16,7 +20,6 @@ dies_on_screen_leave = true
 [node name="planet_v2_4" parent="." instance=ExtResource("2_dkod1")]
 position = Vector2(1615, 813)
 win_planet = true
-clockwise = false
 
 [node name="planet_v2_3" parent="." instance=ExtResource("2_dkod1")]
 position = Vector2(1024, 256)
@@ -27,7 +30,11 @@ position = Vector2(416, 748)
 size_scale = 5.0
 
 [node name="asteroid_belt" parent="." instance=ExtResource("3_4ydby")]
-position = Vector2(1023, -883)
+
+position = Vector2(1024, -1216)
+min_rad = 1700
+max_rad = 1800
+chunks = [[0, 60], [90, 150], [180, 240], [270, 360]]
 
 [node name="collectible" parent="." instance=ExtResource("4_u7ldv")]
 position = Vector2(218, 357)
@@ -39,3 +46,12 @@ id = 2
 [node name="collectible3" parent="." instance=ExtResource("4_u7ldv")]
 position = Vector2(1023, 89)
 id = 1
+
+[node name="comet" parent="." instance=ExtResource("6_4ydby")]
+position = Vector2(1088, 896)
+
+[node name="comet2" parent="." instance=ExtResource("6_4ydby")]
+position = Vector2(960, 813)
+
+[node name="comet3" parent="." instance=ExtResource("6_4ydby")]
+position = Vector2(1023, 1024)

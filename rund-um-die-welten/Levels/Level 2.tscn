@@ -1,69 +1,47 @@
-[gd_scene load_steps=5 format=3 uid="uid://c654mqpmy055j"]
+[gd_scene load_steps=6 format=3 uid="uid://c654mqpmy055j"]
 
-[ext_resource type="Script" path="res://Levels/main.gd" id="1_wyhqr"]
+[ext_resource type="Script" uid="uid://tlx7l1b53wm7" path="res://Levels/main.gd" id="1_wyhqr"]
 [ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="2_yt4wa"]
 [ext_resource type="PackedScene" uid="uid://bmlfyt1ykh3aq" path="res://planet/planet_v_2.tscn" id="3_f7mle"]
 [ext_resource type="PackedScene" uid="uid://ufu0fyp248bh" path="res://comet/comet.tscn" id="4_xgid4"]
+[ext_resource type="PackedScene" uid="uid://nccnr30bmrud" path="res://collectibles/collectible.tscn" id="4_yt4wa"]
 
 [node name="main3" type="Node2D"]
 script = ExtResource("1_wyhqr")
+level_name = "Level 2"
 
-[node name="player" parent="." groups=["player"] instance=ExtResource("2_yt4wa")]
-position = Vector2(2039, 372)
+[node name="player2" parent="." groups=["player"] instance=ExtResource("2_yt4wa")]
+position = Vector2(160, 704)
 dies_on_screen_leave = true
 
-[node name="planet_v2_2" parent="." instance=ExtResource("3_f7mle")]
-position = Vector2(1657, 680)
-
-[node name="planet_v2_3" parent="." instance=ExtResource("3_f7mle")]
-position = Vector2(1573, 206)
+[node name="planet_v2_4" parent="." instance=ExtResource("3_f7mle")]
+position = Vector2(1600, 704)
 win_planet = true
 
-[node name="planet_v2" parent="." instance=ExtResource("3_f7mle")]
-position = Vector2(549, 612)
+[node name="planet_v2_5" parent="." instance=ExtResource("3_f7mle")]
+position = Vector2(1023, 256)
+clockwise = false
+
+[node name="planet_v3" parent="." instance=ExtResource("3_f7mle")]
+position = Vector2(448, 703)
 size_scale = 5.0
 
-[node name="comet" parent="." instance=ExtResource("4_xgid4")]
-position = Vector2(312, 701)
+[node name="collectible" parent="." instance=ExtResource("4_yt4wa")]
+position = Vector2(448, 928)
 
-[node name="comet2" parent="." instance=ExtResource("4_xgid4")]
-position = Vector2(397, 568)
+[node name="collectible2" parent="." instance=ExtResource("4_yt4wa")]
+position = Vector2(1728, 836)
+id = 2
 
-[node name="comet3" parent="." instance=ExtResource("4_xgid4")]
-position = Vector2(540, 470)
+[node name="collectible3" parent="." instance=ExtResource("4_yt4wa")]
+position = Vector2(1023, 128)
+id = 1
 
-[node name="comet4" parent="." instance=ExtResource("4_xgid4")]
-position = Vector2(681, 479)
+[node name="comet16" parent="." instance=ExtResource("4_xgid4")]
+position = Vector2(1023, 736)
 
-[node name="comet5" parent="." instance=ExtResource("4_xgid4")]
-position = Vector2(818, 568)
+[node name="comet17" parent="." instance=ExtResource("4_xgid4")]
+position = Vector2(1023, 992)
 
-[node name="comet6" parent="." instance=ExtResource("4_xgid4")]
-position = Vector2(929, 655)
-
-[node name="comet7" parent="." instance=ExtResource("4_xgid4")]
-position = Vector2(1050, 733)
-
-[node name="comet8" parent="." instance=ExtResource("4_xgid4")]
-position = Vector2(1201, 760)
-
-[node name="comet9" parent="." instance=ExtResource("4_xgid4")]
-position = Vector2(1350, 740)
-
-[node name="comet10" parent="." instance=ExtResource("4_xgid4")]
-position = Vector2(1498, 688)
-
-[node name="comet11" parent="." instance=ExtResource("4_xgid4")]
-position = Vector2(1611, 564)
-
-[node name="comet12" parent="." instance=ExtResource("4_xgid4")]
-position = Vector2(1704, 447)
-
-[node name="comet13" parent="." instance=ExtResource("4_xgid4")]
-position = Vector2(1769, 327)
-
-[node name="comet14" parent="." instance=ExtResource("4_xgid4")]
-position = Vector2(1827, 198)
-
-[node name="comet15" parent="." instance=ExtResource("4_xgid4")]
-position = Vector2(1886, 70)
+[node name="comet18" parent="." instance=ExtResource("4_xgid4")]
+position = Vector2(1023, 868)
