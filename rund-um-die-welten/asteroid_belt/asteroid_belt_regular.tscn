@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://d15jbpvlfufya"]
-
-[ext_resource type="Script" uid="uid://dt2mu7g6vej1" path="res://asteroid_belt/asteroid_belt.gd" id="1_ws1n0"]
-
-[node name="asteroid_belt" type="Node2D"]
-script = ExtResource("1_ws1n0")

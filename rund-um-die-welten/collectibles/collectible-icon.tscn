@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmfmk86fb3akt"]
+
+[ext_resource type="Texture2D" uid="uid://cflf7xj1mpj3s" path="res://assets/sparkle.png" id="2_lodkm"]
+[ext_resource type="Texture2D" uid="uid://doc1xr8oi36nd" path="res://assets/collectable.png" id="3_e3quf"]
+[ext_resource type="Texture2D" uid="uid://dkv5rmn2o2k5v" path="res://assets/collectable_grayscale.png" id="4_ygsaa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m0tds"]
+size = Vector2(27, 28)
+
+[node name="collectible" type="Area2D"]
+scale = Vector2(4, 4)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_lodkm")
+lifetime = 0.5
+emission_shape = 1
+emission_sphere_radius = 24.27
+direction = Vector2(1, 1)
+spread = 180.0
+gravity = Vector2(0, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_m0tds")
+
+[node name="colour" type="Sprite2D" parent="."]
+texture_filter = 1
+rotation = 0.000899174
+texture = ExtResource("3_e3quf")
+
+[node name="grayscale" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+texture = ExtResource("4_ygsaa")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
