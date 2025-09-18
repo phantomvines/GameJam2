@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://nccnr30bmrud"]
+[gd_scene load_steps=7 format=3 uid="uid://nccnr30bmrud"]
 
 [ext_resource type="Script" uid="uid://cwdmu7oq6mcup" path="res://collectibles/collectible.gd" id="1_m0tds"]
 [ext_resource type="Texture2D" uid="uid://doc1xr8oi36nd" path="res://assets/collectable.png" id="2_m0tds"]
 [ext_resource type="Texture2D" uid="uid://cflf7xj1mpj3s" path="res://assets/sparkle.png" id="2_pjpvi"]
 [ext_resource type="Texture2D" uid="uid://dkv5rmn2o2k5v" path="res://assets/collectable_grayscale.png" id="3_k5esu"]
+[ext_resource type="Texture2D" uid="uid://4w1vcko1r2o7" path="res://assets/light-texture.png" id="5_aa1be"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m0tds"]
 size = Vector2(27, 28)
@@ -34,5 +35,10 @@ texture = ExtResource("2_m0tds")
 visible = false
 texture_filter = 1
 texture = ExtResource("3_k5esu")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.9999998, 0.97505933, 0.23940217, 1)
+energy = 1.63
+texture = ExtResource("5_aa1be")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

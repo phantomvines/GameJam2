@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://d0h7r8gitcntt"]
+[gd_scene load_steps=20 format=3 uid="uid://d0h7r8gitcntt"]
 
 [ext_resource type="Script" uid="uid://dw7a4ejn3gkop" path="res://player/player.gd" id="1_oul6g"]
 [ext_resource type="Texture2D" uid="uid://ws2nc8w43ys0" path="res://assets/rocket-Sheet.png" id="3_g1dw6"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dfdiudiwcupuo" path="res://assets/enterprise-Sheet.png" id="4_qjkh3"]
 [ext_resource type="Texture2D" uid="uid://bbbbqfabbltie" path="res://assets/falcon-Sheet.png" id="5_boad6"]
 [ext_resource type="Texture2D" uid="uid://deenw7xttt8ub" path="res://assets/x-wing-Sheet.png" id="5_g6k8r"]
+[ext_resource type="Texture2D" uid="uid://4w1vcko1r2o7" path="res://assets/light-texture.png" id="7_boad6"]
 
 [sub_resource type="Gradient" id="Gradient_g1dw6"]
 offsets = PackedFloat32Array(0, 0.12, 0.286667, 0.46, 0.726667, 0.993333)
@@ -130,6 +131,13 @@ one_shot = true
 
 [node name="boost_duration" type="Timer" parent="."]
 one_shot = true
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(1, 11.75)
+color = Color(0.9975453, 0.93713456, 0.5307796, 1)
+energy = 2.27
+texture = ExtResource("7_boad6")
+texture_scale = 0.55
 
 [connection signal="timeout" from="boost_cooldown" to="." method="_on_boost_cooldown_timeout"]
 [connection signal="timeout" from="boost_duration" to="." method="_on_boost_duration_timeout"]
