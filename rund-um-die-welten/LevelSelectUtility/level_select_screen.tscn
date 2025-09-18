@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://dnqvks40xcnq8" path="res://LevelSelectUtility/selection_cofirm_button.gd" id="3_iojkr"]
 [ext_resource type="FontFile" uid="uid://d2ucaasj8wmwj" path="res://Fonts/BRIGHTSTER-Bold-1.ttf" id="3_m787v"]
 [ext_resource type="Texture2D" uid="uid://dj3nxkkx8gvre" path="res://assets/enterprise1.png" id="5_7xgfl"]
-[ext_resource type="Script" uid="uid://djyqftdc3hb27" path="res://LevelSelectUtility/unlock-button.gd" id="5_v3ic8"]
+[ext_resource type="Script" path="res://LevelSelectUtility/unlock-button.gd" id="5_v3ic8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v3ic8"]
 bg_color = Color(0.688281, 0.599222, 0.142667, 1)

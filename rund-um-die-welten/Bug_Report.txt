@@ -1,0 +1,1 @@
+- Collectibles werden bei Level 3 (Erde) nicht richtig angezeigt, nur eine Collectible links, auch wenn alle eingesammelt wurden
