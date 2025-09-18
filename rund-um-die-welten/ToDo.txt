@@ -1,26 +1,22 @@
-mehr level
-Scene utils in alle level
-Sounds 
+Sounds <- Linus&Daniel
 	-flug
-	-crash
 	-neuer center
-	-collectable
 	-center charge
 	-win
 	-screen leave
-todeslaserdrehdings
+todeslaserdrehdings <- Felix
+noch mehr level <- Linus
+button-sprite	<- Felix/Linus
+Mehr Planeten <-Leona
+Monde <- Leona/Felix
 	-sprite
-button-sprite	
-Mehr Planeten
-	-sprite
-Monde
-	-sprite
-Collectibles im level select kreisen lassen
-Level abschluss sprite
-	-sprite
-Hintergründe
+Collectibles im level select kreisen lassen <- Leona/Felix
+Level abschluss anzeige <- Leona
+Hintergründe <- Daniel
 	-sprite menu
 	-sprite level?
+
+
 Skin auswahl
 Skin unlock
 galaxien
