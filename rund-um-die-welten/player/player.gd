@@ -6,6 +6,14 @@ extends Area2D
 @export var respawn_point: Vector2
 @export var auto_respawn = false
 
+@export var center_boost_cooldown = 10
+@export var center_boost_force = 200
+@export var center_boost_duration = 1
+# can player boost? 
+var boostable = true
+var boosting = false
+@export var center_boost_disable = false
+
 func _ready() -> void:
 	$AnimatedSprite2D.play("default")
 	
@@ -13,6 +21,10 @@ func _ready() -> void:
 	$VisibleOnScreenNotifier2D.screen_entered.connect(_on_screen_entered)
 	GlobalVariables.player_died.connect(player_dies)
 	rotation = spawn_rotation
+	
+	# set boost cooldown
+	$boost_cooldown.wait_time = center_boost_cooldown
+	$boost_duration.wait_time = center_boost_duration
 	
 func _physics_process(delta: float) -> void:
 	if(GlobalVariables.target_planet_position):
@@ -26,16 +38,34 @@ func _physics_process(delta: float) -> void:
 			angle += angular_speed*delta
 		else:
 			angle -= angular_speed*delta
+			
+		if Input.is_action_just_pressed("center_boost") and boostable and not center_boost_disable:
+			boostable = false
+			boosting = true
+			$boost_duration.start()
+			$boost_cooldown.start()
+		
+		if boosting:
+			radius -= delta*center_boost_force
 		
 		position = GlobalVariables.target_planet_position+Vector2(cos(angle), sin(angle))*radius
 		
+		
 		#print(angle)
 		rotation = angle + deg_to_rad(180)
+		
+		if boosting:
+			rotation *= 1.5
 
 		if GlobalVariables.player_clockwise:
 			rotation = angle + deg_to_rad(180)
+			if boosting:
+				rotation += 1
 		else:
 			rotation = angle
+			if boosting:
+				rotation -= 1
+			
 
 #Dummy function for player death: 
 func player_dies(death_message: String) -> void: 
@@ -54,3 +84,11 @@ func _on_screen_exited():
 		
 func _on_screen_entered():
 	print("Player entered camera area")
+
+
+func _on_boost_cooldown_timeout() -> void:
+	boostable = true
+
+
+func _on_boost_duration_timeout() -> void:
+	boosting = false

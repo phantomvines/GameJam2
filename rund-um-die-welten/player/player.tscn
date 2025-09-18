@@ -63,3 +63,12 @@ sprite_frames = SubResource("SpriteFrames_g6k8r")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.25, -0.25)
 shape = SubResource("RectangleShape2D_g1dw6")
+
+[node name="boost_cooldown" type="Timer" parent="."]
+one_shot = true
+
+[node name="boost_duration" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="boost_cooldown" to="." method="_on_boost_cooldown_timeout"]
+[connection signal="timeout" from="boost_duration" to="." method="_on_boost_duration_timeout"]
