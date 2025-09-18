@@ -31,6 +31,9 @@ func _ready() -> void:
 	pass
 	
 func emit_player_died(death_message: String):
+	if death_message != "You left the mission area":
+		print("test")
+		Audioplayer.play_sound(preload("res://sfx/death.wav"))
 	player_died.emit(death_message)
 	
 func emit_game_over(game_over_message: String):
