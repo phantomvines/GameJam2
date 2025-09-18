@@ -1,13 +1,12 @@
-
-[gd_scene load_steps=7 format=3 uid="uid://bkvnips5nck2n"]
+[gd_scene load_steps=8 format=3 uid="uid://bkvnips5nck2n"]
 
 [ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="1_75a7x"]
 [ext_resource type="Script" uid="uid://tlx7l1b53wm7" path="res://Levels/main.gd" id="1_dkod1"]
 [ext_resource type="PackedScene" uid="uid://bmlfyt1ykh3aq" path="res://planet/planet_v_2.tscn" id="2_dkod1"]
 [ext_resource type="PackedScene" uid="uid://4s3rjs7m32hk" path="res://asteroid_belt/asteroid_belt.tscn" id="3_4ydby"]
 [ext_resource type="PackedScene" uid="uid://nccnr30bmrud" path="res://collectibles/collectible.tscn" id="4_u7ldv"]
-
 [ext_resource type="PackedScene" uid="uid://ufu0fyp248bh" path="res://comet/comet.tscn" id="6_4ydby"]
+[ext_resource type="PackedScene" path="res://UI Elements/scene_utils.tscn" id="7_u7ldv"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_dkod1")
@@ -54,3 +53,5 @@ position = Vector2(1024, -928)
 number_of_holes = 8
 hole_size_in_deg = 28
 circle_radius = 1500
+
+[node name="scene_utils" parent="." instance=ExtResource("7_u7ldv")]

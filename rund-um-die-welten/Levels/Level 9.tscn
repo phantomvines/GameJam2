@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b7fle48jc3csq"]
+[gd_scene load_steps=8 format=3 uid="uid://b7fle48jc3csq"]
 
 [ext_resource type="Script" uid="uid://tlx7l1b53wm7" path="res://Levels/main.gd" id="1_fomsg"]
 [ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="2_0bhtg"]
@@ -6,10 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://4s3rjs7m32hk" path="res://asteroid_belt/asteroid_belt.tscn" id="4_lmusb"]
 [ext_resource type="PackedScene" uid="uid://nccnr30bmrud" path="res://collectibles/collectible.tscn" id="5_7pmxy"]
 [ext_resource type="PackedScene" uid="uid://ufu0fyp248bh" path="res://comet/comet.tscn" id="6_cxty8"]
+[ext_resource type="PackedScene" path="res://UI Elements/scene_utils.tscn" id="7_0bhtg"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_fomsg")
-level_name = "Level 5"
+level_name = "Level 9"
 
 [node name="player" parent="." groups=["player"] instance=ExtResource("2_0bhtg")]
 position = Vector2(320, 384)
@@ -107,3 +108,5 @@ position = Vector2(1440, 544)
 
 [node name="comet17" parent="." instance=ExtResource("6_cxty8")]
 position = Vector2(1600, 704)
+
+[node name="scene_utils" parent="." instance=ExtResource("7_0bhtg")]
