@@ -1,8 +1,5 @@
 raumschiff ideen hier adden
-	-y-wing
 	-cowboy bebop ship
-	-milenium
-	-
 music does not loop <- Felix-Done
 sfx adden
 todeslaserdrehdings <- Felix
