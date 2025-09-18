@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://dak18svbsah1d"
-path="res://.godot/imported/collectable.wav-03824f1b987a851ce1a9697db8aa5598.sample"
+uid="uid://co4upytexwvaq"
+path="res://.godot/imported/death2.wav-62b8eb991b121f37de9372a3f25ecf50.sample"
 
 [deps]
 
-source_file="res://sfx/collectable.wav"
-dest_files=["res://.godot/imported/collectable.wav-03824f1b987a851ce1a9697db8aa5598.sample"]
+source_file="res://sfx/death2.wav"
+dest_files=["res://.godot/imported/death2.wav-62b8eb991b121f37de9372a3f25ecf50.sample"]
 
 [params]
 
