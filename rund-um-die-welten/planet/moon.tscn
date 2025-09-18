@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://cgeeatxwjsuf8"]
 
 [ext_resource type="Script" uid="uid://0fd2s1p88bty" path="res://planet/moon.gd" id="1_7vi6w"]
-[ext_resource type="Texture2D" uid="uid://bduikpbf2cn7v" path="res://assets/moon-Sheet.png" id="2_me4u8"]
+[ext_resource type="Texture2D" uid="uid://b47xi3pxt0cnv" path="res://assets/moon-Sheet.png" id="2_me4u8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7tpi7"]
 atlas = ExtResource("2_me4u8")
@@ -43,6 +43,7 @@ animations = [{
 
 [node name="moon" type="Area2D"]
 texture_filter = 1
+scale = Vector2(4, 4)
 script = ExtResource("1_7vi6w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

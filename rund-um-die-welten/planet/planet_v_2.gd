@@ -31,7 +31,7 @@ extends Area2D
 
 @export var collision_enabled = true
 
-@export var moon = false
+@export var moon = true
 
 var planet_radius = 40
 func _ready():
@@ -55,6 +55,7 @@ func _ready():
 	$rotation_indicator.set_info()
 	
 	if moon:
+		print("show moon")
 		$moon.visible = true
 	
 		
