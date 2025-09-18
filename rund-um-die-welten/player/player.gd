@@ -15,7 +15,7 @@ var boosting = false
 @export var center_boost_disable = false
 
 func _ready() -> void:
-	$AnimatedSprite2D.play("default")
+	$AnimatedSprite2D.play(GlobalVariables.player_skin)
 	
 	$VisibleOnScreenNotifier2D.screen_exited.connect(_on_screen_exited)
 	$VisibleOnScreenNotifier2D.screen_entered.connect(_on_screen_entered)
