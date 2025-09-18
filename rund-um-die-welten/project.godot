@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GlobalVariables="*res://global/global_variables.gd"
 UiManager="*res://UI Elements/ui_manager.tscn"
+Audioplayer="*res://sfx/audioplayer.gd"
 
 [display]
 
