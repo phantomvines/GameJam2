@@ -1,13 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://ba40rhxjx3y7f"]
 
-[ext_resource type="PackedScene" path="res://asteroid_belt/asteroid_belt_regular.tscn" id="1_jat1o"]
+[ext_resource type="PackedScene" uid="uid://4s3rjs7m32hk" path="res://asteroid_belt/asteroid_belt.tscn" id="1_jat1o"]
 
 [node name="Testtest" type="Node2D"]
 
-[node name="asteroid_belt" parent="." instance=ExtResource("1_jat1o")]
-position = Vector2(932, 545)
-number_of_holes = 1
-hole_size_in_deg = 30
-start_rotation_in_deg = 1
-comet_radius = 30
-circle_radius = 500
+[node name="asteroid_belt2" parent="." instance=ExtResource("1_jat1o")]
