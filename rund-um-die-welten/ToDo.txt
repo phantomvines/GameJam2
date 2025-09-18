@@ -14,6 +14,8 @@ button
 	-sprite
 Screen border
 	
+Mehr Planeten
+	-sprite
 Monde
 	-sprite
 Collectibles im level select kreisen lassen
