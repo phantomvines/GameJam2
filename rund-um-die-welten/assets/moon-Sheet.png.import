@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://d2klwydf0jjsy"
+=======
+uid="uid://btlmsxxufqnol"
+>>>>>>> a4c734dc7750a43a02c017d9b26025cbd2bd9248
 path="res://.godot/imported/moon-Sheet.png-b3c190ca20a53e0853cb7d87ca579f66.ctex"
 metadata={
 "vram_texture": false

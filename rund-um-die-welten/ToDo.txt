@@ -19,8 +19,6 @@ Hintergründe <- Daniel
 
 Button Anzeige für welche Laser an sind
 
-Skin auswahl
-Skin unlock
 galaxien
 
 Level mit time trouble

@@ -8,6 +8,7 @@ var unlocked = false
 func _ready():
 	check_unlock()
 	update_icon()
+	update_text()
 	connect("pressed", Callable(self, "_on_pressed"))
 
 func check_unlock():
@@ -44,3 +45,7 @@ func load_scaled_icon(path: String) -> Texture2D:
 	img.resize(img.get_width() * scale, img.get_height() * scale, Image.INTERPOLATE_NEAREST)
 	var tex = ImageTexture.create_from_image(img)
 	return tex
+
+func update_text():
+	text = str(threshold)
+	add_theme_font_size_override("font_size", 60)
