@@ -9,7 +9,6 @@ todeslaserdrehdings <- Felix
 noch mehr level <- Linus
 Mehr Planeten <-Leona
 Monde <- Leona/Felix
-	-sprite
 Collectibles im level select kreisen lassen <- Leona/Felix
 Level abschluss anzeige <- Leona
 Hintergründe <- Daniel
