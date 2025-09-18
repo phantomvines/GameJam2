@@ -1,13 +1,13 @@
 extends Area2D
 
-var speed = 130
+var speed = 100
 var direction = Vector2(1,0)
 
 var target_planet_position
 var clockwise = true
 
 func _physics_process(delta: float) -> void:
-	var radius = 60
+	var radius = 150
 	var angle = (position-target_planet_position).angle()
 	
 	var angular_speed = speed * delta

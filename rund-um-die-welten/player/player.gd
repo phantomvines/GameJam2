@@ -27,6 +27,7 @@ func _ready() -> void:
 	$boost_duration.wait_time = center_boost_duration
 	
 func _physics_process(delta: float) -> void:
+	$AnimatedSprite2D.play(GlobalVariables.player_skin)
 	if(GlobalVariables.target_planet_position):
 		# calculate movement
 		var radius = position.distance_to(GlobalVariables.target_planet_position)

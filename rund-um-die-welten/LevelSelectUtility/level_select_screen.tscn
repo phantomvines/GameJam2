@@ -6,8 +6,7 @@
 [ext_resource type="FontFile" uid="uid://d2ucaasj8wmwj" path="res://Fonts/BRIGHTSTER-Bold-1.ttf" id="3_m787v"]
 [ext_resource type="Texture2D" uid="uid://dj3nxkkx8gvre" path="res://assets/enterprise1.png" id="5_7xgfl"]
 [ext_resource type="Script" uid="uid://djyqftdc3hb27" path="res://LevelSelectUtility/unlock-button.gd" id="5_v3ic8"]
-
-[ext_resource type="PackedScene" uid="uid://cr840jx5klwj6" path="res://UI Elements/menu_background.tscn" id="7_avbc4"]
+[ext_resource type="PackedScene" path="res://UI Elements/menu_background.tscn" id="7_avbc4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v3ic8"]
 bg_color = Color(0.688281, 0.599222, 0.142667, 1)
@@ -39,6 +38,8 @@ offset_right = 1395.0
 offset_bottom = 406.0
 level_id = "Level 6"
 clockwise = false
+
+[node name="menu_background" parent="." instance=ExtResource("7_avbc4")]
 
 [node name="Level-Select-Planet3" parent="." instance=ExtResource("1_offx3")]
 offset_left = 545.0
@@ -133,7 +134,7 @@ text = "3"
 icon = ExtResource("5_7xgfl")
 script = ExtResource("5_v3ic8")
 threshold = 18
-skin = "enterprise"
+skin = "falcon"
 
 [node name="Enterpise-Button5" type="Button" parent="."]
 offset_left = 1709.0
@@ -158,3 +159,4 @@ threshold = 30
 skin = "enterprise"
 
 [node name="menu_background" parent="." instance=ExtResource("7_avbc4")]
+z_index = -1

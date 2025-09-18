@@ -384,6 +384,7 @@ resource_local_to_scene = true
 texture_filter = 1
 scale = Vector2(4, 4)
 script = ExtResource("1_ouy4y")
+moon = false
 
 [node name="death_star" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -452,5 +453,6 @@ scale = Vector2(1, 1)
 
 [node name="moon" parent="." instance=ExtResource("14_p2y8r")]
 visible = false
+top_level = true
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
