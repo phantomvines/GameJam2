@@ -29,7 +29,8 @@ func _ready() -> void:
 			$sun.visible = true
 	
 	shape.radius *= size_scale
-	get_parent().scale_text_location(size_scale)
+	get_parent().scale_locations(size_scale)
+	
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		print("Level " + GlobalVariables.planet_names[planet_type] + " with ID " + level_id)
@@ -37,3 +38,10 @@ func _input_event(viewport, event, shape_idx):
 		GlobalVariables.player_speed = get_parent().speed
 		GlobalVariables.player_clockwise = get_parent().clockwise
 		GlobalVariables.selected_level = level_id
+		
+func _physics_process(delta: float) -> void:
+	# set target symbol to visible if current planet is targeted
+	if GlobalVariables.target_planet_position == global_position:
+		$target.visible = true
+	else:
+		$target.visible = false
