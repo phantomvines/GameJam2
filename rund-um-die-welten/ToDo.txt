@@ -1,5 +1,5 @@
-Level fix
 mehr level
+Scene utils in alle level
 Sounds 
 	-flug
 	-crash
@@ -10,10 +10,7 @@ Sounds
 	-screen leave
 todeslaserdrehdings
 	-sprite
-button
-	-sprite
-Screen border
-	
+button-sprite	
 Mehr Planeten
 	-sprite
 Monde
@@ -24,8 +21,6 @@ Level abschluss sprite
 Hintergründe
 	-sprite menu
 	-sprite level?
-Center charge cooldown bar
-	-sprite
 Skin auswahl
 Skin unlock
 galaxien

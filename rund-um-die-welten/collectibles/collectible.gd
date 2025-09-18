@@ -18,5 +18,5 @@ func _on_area_entered(area: Area2D) -> void:
 		var parent = get_parent()
 		if GlobalVariables.collectibles[level][id] != 1:
 			parent.collectibles[id] = 1
-		
+		Audioplayer.play_sound(preload("res://sfx/collectable.wav"))
 		queue_free()
