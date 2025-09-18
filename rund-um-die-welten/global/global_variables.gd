@@ -16,7 +16,7 @@ var global_RNG := RandomNumberGenerator.new()
 
 # Level vars
 var collectibles = {"Level 1": [1,0,0], "Level 2": [1,0,0], "Level 3": [0,0,0], "Level 4": [0,0,0], "Level 5": [0,0,0], "Level 6": [0,0,0], "Level 7": [0,0,0], "Level 8": [0,0,0], "Level 9": [0,0,0], "Level 10": [0,0,0]}
-var active_buttons = {"red": false, "blue": false, "green": false}
+var active_buttons = {"pink": false, "green": false, "orange": false}
 var levels = {"Level 1": 0, "Level 2": 0, "Level 3": 0, "Level 4": 0, "Level 5": 0, "Level 6": 0, "Level 7": 0, "Level 8": 0, "Level 9": 0, "Level 10": 0}
 
 # Signals
@@ -26,7 +26,7 @@ signal game_over(game_over_message: String)
 signal level_done(win_message: String)
 
 # Other Signals
-signal button_changed_stage(button_name: String)
+signal button_changed_stage()
 
 func _ready() -> void:
 	global_RNG.seed = 12345
@@ -58,22 +58,19 @@ func change_level(level_select_path):
 	get_tree().change_scene_to_file(level_select_path)
 	restart_level()
 	Audioplayer.play_music("res://sfx/Soundtrack.mp3")
+	reset_all_buttons()
 
 
 # Button utils
 func reset_all_buttons():
 	for i in active_buttons:
 		active_buttons[i] = false
-	button_changed_stage.emit("all")
+	button_changed_stage.emit()
 
-func set_button(button_name: String):
-	active_buttons[button_name] = true
-	button_changed_stage.emit(button_name)
-	
-func reset_button(button_name: String):
-	active_buttons[button_name] = false
-	button_changed_stage.emit(button_name)
+func set_button_to(button_name: String, value):
+	active_buttons[button_name] = value
+	button_changed_stage.emit()
 	
 func toggle_button(button_name: String):
 	active_buttons[button_name] = !active_buttons[button_name]
-	button_changed_stage.emit(button_name)
+	button_changed_stage.emit()

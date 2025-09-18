@@ -33,8 +33,6 @@ extends Area2D
 
 var planet_radius = 40
 func _ready():
-	planet_radius 
-	fit_planet_type(planet_type)
 	
 	# Collision anpassen (wenn z. B. CircleShape2D)
 	# Reaktion auf Klick
@@ -55,7 +53,6 @@ func _ready():
 		
 
 func fit_planet_type(new_planet_type):
-	print($collision)
 	var shape = $CollisionShape2D.shape
 	# change size of collision area and animation based on which planet is chosen
 	match new_planet_type:

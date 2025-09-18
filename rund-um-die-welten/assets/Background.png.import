@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb8mmj8ebnaxj"
-path="res://.godot/imported/space-station-orangeexport.png-857762591d49b3f2f4e2e8a0c8c91ea1.ctex"
+uid="uid://b645w4bad52ab"
+path="res://.godot/imported/Background.png-6d72d35f07f42b3845e8764c552bb4fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/space-station-orangeexport.png"
-dest_files=["res://.godot/imported/space-station-orangeexport.png-857762591d49b3f2f4e2e8a0c8c91ea1.ctex"]
+source_file="res://assets/Background.png"
+dest_files=["res://.godot/imported/Background.png-6d72d35f07f42b3845e8764c552bb4fb.ctex"]
 
 [params]
 

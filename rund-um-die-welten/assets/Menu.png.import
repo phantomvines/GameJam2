@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rubo33mvvvc6"
-path="res://.godot/imported/laser-pink-Sheet.png-424c7236df8530b98d97655f1b5a9ad3.ctex"
+uid="uid://dhsjnrhfmqa4w"
+path="res://.godot/imported/Menu.png-0168ecb990c83f7a2a0783ea3d8e7e2f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/laser-pink-Sheet.png"
-dest_files=["res://.godot/imported/laser-pink-Sheet.png-424c7236df8530b98d97655f1b5a9ad3.ctex"]
+source_file="res://assets/Menu.png"
+dest_files=["res://.godot/imported/Menu.png-0168ecb990c83f7a2a0783ea3d8e7e2f.ctex"]
 
 [params]
 
