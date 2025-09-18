@@ -33,11 +33,21 @@ func spawn_comets():
 			var hole_end_deg = hole_positions[2*i+1]
 			var next_hole_start = hole_positions[(2*i+2)%len(hole_positions)]
 			var comet_radius_in_deg = rad_to_deg(comet_radius/circle_radius)
-			if((hole_end_deg+2*comet_radius_in_deg)%360 < next_hole_start):
+			if(int(hole_end_deg+2*comet_radius_in_deg)%360 < next_hole_start):
 				spawn_comet(hole_end_deg + comet_radius_in_deg)
+
 func calc_hole_positions():
 	var hole_positions = []
 	for i in range(number_of_holes):
 		hole_positions.append(360/number_of_holes*i + start_rotation_in_deg)
 		hole_positions.append(hole_positions[2*i] + hole_size_in_deg)
 	return hole_positions
+
+func spawn_comet(deg) -> void:
+	print("spawn")
+	var comet_instance = comet.instantiate()
+	var pos = Vector2(cos(deg), sin(deg)) * circle_radius
+	comet_instance.position = pos
+	comet_instance.speed = speed
+
+	add_child(comet_instance)
