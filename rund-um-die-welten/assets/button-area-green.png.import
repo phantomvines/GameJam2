@@ -2,18 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-
-uid="uid://dsrfhl3ite17a"
-
-path="res://.godot/imported/moon-Sheet.png-b3c190ca20a53e0853cb7d87ca579f66.ctex"
+uid="uid://dqn57b1rfvctf"
+path="res://.godot/imported/button-area-green.png-8c1090829fff17ef98c9845e4b863e10.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/moon-Sheet.png"
-dest_files=["res://.godot/imported/moon-Sheet.png-b3c190ca20a53e0853cb7d87ca579f66.ctex"]
+source_file="res://assets/button-area-green.png"
+dest_files=["res://.godot/imported/button-area-green.png-8c1090829fff17ef98c9845e4b863e10.ctex"]
 
 [params]
 

@@ -1,17 +1,14 @@
-Sounds <- Linus&Daniel
-	-flug
-	-neuer center
-	-center charge
-	-win
-	-screen leave
+raumschiff ideen hier adden
+	-y-wing
+	-cowboy bebop ship
+	-milenium
+	-
+music does not loop <- Felix
+sfx adden
 todeslaserdrehdings <- Felix
 noch mehr level <- Linus
-button-sprite	<- Felix/Linus
 Mehr Planeten <-Leona
-Monde <- Leona/Felix
-	-sprite
 Collectibles im level select kreisen lassen <- Leona/Felix
-Level abschluss anzeige <- Leona
 Hintergründe <- Daniel
 	-sprite menu
 	-sprite level?
@@ -19,8 +16,6 @@ Hintergründe <- Daniel
 
 Button Anzeige für welche Laser an sind
 
-Skin auswahl
-Skin unlock
 galaxien
 
 Level mit time trouble

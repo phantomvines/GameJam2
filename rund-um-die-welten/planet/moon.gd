@@ -1,16 +1,16 @@
 extends Area2D
 
-var speed = 0
+var speed = 100
 var direction = Vector2(1,0)
 
-var target_planet_position = Vector2.ZERO
+var target_planet_position
 var clockwise = true
 
 func _physics_process(delta: float) -> void:
-	var radius = position.distance_to(target_planet_position)
+	var radius = 150
 	var angle = (position-target_planet_position).angle()
 	
-	var angular_speed = speed * 0.0002
+	var angular_speed = speed * delta
 	
 	if clockwise:
 		angle += angular_speed*delta
@@ -20,6 +20,7 @@ func _physics_process(delta: float) -> void:
 	position = target_planet_position+Vector2(cos(angle), sin(angle))*radius
 
 func _ready() -> void:
+	target_planet_position = get_parent().global_position
 	$AnimatedSprite2D.play()
 
 func _on_area_entered(area: Area2D) -> void:
