@@ -3,6 +3,10 @@ raumschiff ideen hier adden
 	-cowboy bebop ship
 music does not loop <- Felix-Done
 sfx adden
+	- für buttons
+	- level cleared
+	- weitere?
+
 todeslaserdrehdings <- Felix
 noch mehr level <- Linus
 Hintergründe <- Daniel
