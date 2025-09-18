@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqq3j6mvijcg4"]
+
+[ext_resource type="PackedScene" uid="uid://bmlfyt1ykh3aq" path="res://planet/planet_v_2.tscn" id="1_qkp1g"]
+
+[node name="button_planet" type="Node2D"]
+
+[node name="planet_v2" parent="." instance=ExtResource("1_qkp1g")]
+script = null
