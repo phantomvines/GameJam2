@@ -5,6 +5,9 @@ extends Area2D
 @export var planet_type: GlobalVariables.planets
 @export var level_id: String
 var size_scale
+
+var grayscale = true
+
 func _ready() -> void:
 	input_pickable = true
 	var shape = $CollisionShape2D.shape
@@ -31,6 +34,12 @@ func _ready() -> void:
 	shape.radius *= size_scale
 	get_parent().scale_locations(size_scale)
 	
+	GlobalVariables.level_done.connect(planet_won)
+
+func planet_won(win_message):
+	if GlobalVariables.selected_level == level_id:
+		grayscale = false
+
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		print("Level " + GlobalVariables.planet_names[planet_type] + " with ID " + level_id)
@@ -45,3 +54,24 @@ func _physics_process(delta: float) -> void:
 		$target.visible = true
 	else:
 		$target.visible = false
+		
+	if grayscale:
+		match planet_type:
+			GlobalVariables.planets.DeathStar:
+				$death_star.modulate = Color(0.3, 0.3, 0.3)
+			GlobalVariables.planets.Mars:
+				$mars.modulate = Color(0.3, 0.3, 0.3)
+			GlobalVariables.planets.Earth:
+				$earth.modulate = Color(0.3, 0.3, 0.3)
+			GlobalVariables.planets.Sun:
+				$sun.modulate = Color(0.3, 0.3, 0.3)
+	else:
+		match planet_type:
+			GlobalVariables.planets.DeathStar:
+				$death_star.modulate = Color(1.0, 1.0, 1.0)
+			GlobalVariables.planets.Mars:
+				$mars.modulate = Color(1.0, 1.0, 1.0)
+			GlobalVariables.planets.Earth:
+				$earth.modulate = Color(1.0, 1.0, 1.0)
+			GlobalVariables.planets.Sun:
+				$sun.modulate = Color(1.0, 1.0, 1.0)
