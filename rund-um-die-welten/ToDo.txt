@@ -1,6 +1,4 @@
 Sounds <- Linus&Daniel
-	-flug
-	-neuer center
 	-center charge
 	-win
 	-screen leave
