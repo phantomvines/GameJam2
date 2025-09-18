@@ -1,0 +1,109 @@
+[gd_scene load_steps=7 format=3 uid="uid://b7fle48jc3csq"]
+
+[ext_resource type="Script" uid="uid://tlx7l1b53wm7" path="res://Levels/main.gd" id="1_fomsg"]
+[ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="2_0bhtg"]
+[ext_resource type="PackedScene" uid="uid://bmlfyt1ykh3aq" path="res://planet/planet_v_2.tscn" id="3_5i8n3"]
+[ext_resource type="PackedScene" uid="uid://4s3rjs7m32hk" path="res://asteroid_belt/asteroid_belt.tscn" id="4_lmusb"]
+[ext_resource type="PackedScene" uid="uid://nccnr30bmrud" path="res://collectibles/collectible.tscn" id="5_7pmxy"]
+[ext_resource type="PackedScene" uid="uid://ufu0fyp248bh" path="res://comet/comet.tscn" id="6_cxty8"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_fomsg")
+level_name = "Level 5"
+
+[node name="player" parent="." groups=["player"] instance=ExtResource("2_0bhtg")]
+position = Vector2(320, 384)
+dies_on_screen_leave = true
+
+[node name="planet_v2" parent="." instance=ExtResource("3_5i8n3")]
+position = Vector2(320, 544)
+size_scale = 5.0
+
+[node name="planet_v11" parent="." instance=ExtResource("3_5i8n3")]
+position = Vector2(320, 224)
+size_scale = 5.0
+
+[node name="planet_v3" parent="." instance=ExtResource("3_5i8n3")]
+position = Vector2(640, 864)
+size_scale = 5.0
+
+[node name="planet_v10" parent="." instance=ExtResource("3_5i8n3")]
+position = Vector2(640, 544)
+size_scale = 5.0
+
+[node name="planet_v9" parent="." instance=ExtResource("3_5i8n3")]
+position = Vector2(320, 864)
+size_scale = 5.0
+
+[node name="planet_v4" parent="." instance=ExtResource("3_5i8n3")]
+position = Vector2(960, 544)
+size_scale = 5.0
+
+[node name="planet_v5" parent="." instance=ExtResource("3_5i8n3")]
+position = Vector2(1280, 864)
+size_scale = 5.0
+
+[node name="planet_v12" parent="." instance=ExtResource("3_5i8n3")]
+position = Vector2(1280, 544)
+size_scale = 5.0
+
+[node name="planet_v17" parent="." instance=ExtResource("3_5i8n3")]
+position = Vector2(1600, 224)
+size_scale = 5.0
+win_planet = true
+
+[node name="planet_v14" parent="." instance=ExtResource("3_5i8n3")]
+position = Vector2(640, 224)
+size_scale = 5.0
+
+[node name="planet_v7" parent="." instance=ExtResource("3_5i8n3")]
+position = Vector2(960, 224)
+size_scale = 5.0
+
+[node name="planet_v16" parent="." instance=ExtResource("3_5i8n3")]
+position = Vector2(1280, 224)
+size_scale = 5.0
+
+[node name="planet_v13" parent="." instance=ExtResource("3_5i8n3")]
+position = Vector2(960, 864)
+size_scale = 5.0
+
+[node name="planet_v6" parent="." instance=ExtResource("3_5i8n3")]
+position = Vector2(1600, 544)
+size_scale = 5.0
+
+[node name="planet_v15" parent="." instance=ExtResource("3_5i8n3")]
+position = Vector2(1600, 864)
+size_scale = 5.0
+
+[node name="asteroid_belt" parent="." instance=ExtResource("4_lmusb")]
+position = Vector2(1024, -1216)
+
+[node name="collectible" parent="." instance=ExtResource("5_7pmxy")]
+position = Vector2(128, 864)
+
+[node name="collectible2" parent="." instance=ExtResource("5_7pmxy")]
+position = Vector2(1760, 864)
+id = 2
+
+[node name="collectible3" parent="." instance=ExtResource("5_7pmxy")]
+position = Vector2(960, 384)
+id = 1
+
+[node name="comet11" parent="." instance=ExtResource("6_cxty8")]
+position = Vector2(128, 672)
+
+[node name="comet12" parent="." instance=ExtResource("6_cxty8")]
+position = Vector2(640, 384)
+
+[node name="comet13" parent="." instance=ExtResource("6_cxty8")]
+position = Vector2(800, 224)
+
+[node name="comet14" parent="." instance=ExtResource("6_cxty8")]
+position = Vector2(800, 544)
+
+[node name="comet15" parent="." instance=ExtResource("6_cxty8")]
+position = Vector2(1440, 544)
+
+[node name="comet17" parent="." instance=ExtResource("6_cxty8")]
+position = Vector2(1600, 704)

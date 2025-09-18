@@ -12,43 +12,58 @@ script = ExtResource("1_4kixr")
 level_name = "Level 5"
 
 [node name="player" parent="." groups=["player"] instance=ExtResource("2_fj3hk")]
-position = Vector2(297, 1008)
+position = Vector2(192, 544)
 dies_on_screen_leave = true
 
 [node name="planet_v2_4" parent="." instance=ExtResource("3_j18h2")]
-position = Vector2(1615, 813)
+position = Vector2(1632, 576)
+planet_type = 2
 win_planet = true
 
-[node name="planet_v2_3" parent="." instance=ExtResource("3_j18h2")]
-position = Vector2(1024, 256)
-clockwise = false
-
 [node name="planet_v2" parent="." instance=ExtResource("3_j18h2")]
-position = Vector2(416, 748)
+position = Vector2(416, 544)
 size_scale = 5.0
 
 [node name="asteroid_belt" parent="." instance=ExtResource("4_j24tp")]
 position = Vector2(1024, -1216)
-min_rad = 1700
-max_rad = 1800
-chunks = [[0, 60], [90, 150], [180, 240], [270, 360]]
 
 [node name="collectible" parent="." instance=ExtResource("5_6q0h5")]
-position = Vector2(218, 357)
+position = Vector2(416, 928)
 
 [node name="collectible2" parent="." instance=ExtResource("5_6q0h5")]
-position = Vector2(1619, 964)
+position = Vector2(1632, 864)
 id = 2
 
 [node name="collectible3" parent="." instance=ExtResource("5_6q0h5")]
 position = Vector2(1023, 89)
 id = 1
 
-[node name="comet" parent="." instance=ExtResource("6_gq8ki")]
-position = Vector2(1088, 896)
-
-[node name="comet2" parent="." instance=ExtResource("6_gq8ki")]
-position = Vector2(960, 813)
-
 [node name="comet3" parent="." instance=ExtResource("6_gq8ki")]
-position = Vector2(1023, 1024)
+position = Vector2(480, 147)
+
+[node name="comet4" parent="." instance=ExtResource("6_gq8ki")]
+position = Vector2(1216, 691)
+
+[node name="comet5" parent="." instance=ExtResource("6_gq8ki")]
+position = Vector2(1088, 608)
+
+[node name="comet6" parent="." instance=ExtResource("6_gq8ki")]
+position = Vector2(1151, 819)
+
+[node name="comet7" parent="." instance=ExtResource("6_gq8ki")]
+position = Vector2(1087, 352)
+
+[node name="comet8" parent="." instance=ExtResource("6_gq8ki")]
+position = Vector2(1344, 128)
+
+[node name="comet9" parent="." instance=ExtResource("6_gq8ki")]
+position = Vector2(1087, 960)
+
+[node name="comet10" parent="." instance=ExtResource("6_gq8ki")]
+position = Vector2(224, 992)
+
+[node name="comet11" parent="." instance=ExtResource("6_gq8ki")]
+position = Vector2(224, 864)
+
+[node name="comet12" parent="." instance=ExtResource("6_gq8ki")]
+position = Vector2(288, 768)

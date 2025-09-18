@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddpjl40d2mgvp"]
+[gd_scene load_steps=6 format=3 uid="uid://ddpjl40d2mgvp"]
 
 [ext_resource type="Script" uid="uid://tlx7l1b53wm7" path="res://Levels/main.gd" id="1_evb4r"]
 [ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="2_expes"]
 [ext_resource type="PackedScene" uid="uid://bmlfyt1ykh3aq" path="res://planet/planet_v_2.tscn" id="3_nq3bc"]
 [ext_resource type="PackedScene" uid="uid://nccnr30bmrud" path="res://collectibles/collectible.tscn" id="5_expes"]
+[ext_resource type="PackedScene" uid="uid://4s3rjs7m32hk" path="res://asteroid_belt/asteroid_belt.tscn" id="5_nq3bc"]
 
 [node name="main4" type="Node2D"]
 script = ExtResource("1_evb4r")
@@ -16,21 +17,18 @@ dies_on_screen_leave = true
 [node name="planet_v2_4" parent="." instance=ExtResource("3_nq3bc")]
 position = Vector2(1655, 545)
 win_planet = true
-
-[node name="planet_v2_5" parent="." instance=ExtResource("3_nq3bc")]
-position = Vector2(1655, 545)
-win_planet = true
+clockwise = false
 
 [node name="planet_v2_3" parent="." instance=ExtResource("3_nq3bc")]
 position = Vector2(311, 259)
+clockwise = false
 
 [node name="planet_v2" parent="." instance=ExtResource("3_nq3bc")]
 position = Vector2(308, 786)
 size_scale = 5.0
-clockwise = false
 
 [node name="collectible" parent="." instance=ExtResource("5_expes")]
-position = Vector2(148, 784)
+position = Vector2(1006, 748)
 
 [node name="collectible2" parent="." instance=ExtResource("5_expes")]
 position = Vector2(1004, 293)
@@ -39,3 +37,9 @@ id = 1
 [node name="collectible3" parent="." instance=ExtResource("5_expes")]
 position = Vector2(1649, 362)
 id = 2
+
+[node name="asteroid_belt" parent="." instance=ExtResource("5_nq3bc")]
+position = Vector2(-989, 705)
+number_of_holes = 8
+hole_size_in_deg = 20
+circle_radius = 2000
