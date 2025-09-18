@@ -45,6 +45,7 @@ func emit_level_done(win_message: String):
 
 func goto_level_select():
 	change_level("res://LevelSelectUtility/level_select_screen.tscn")
+	Audioplayer.stop_music()
 	
 func restart_level():
 	target_planet_position = null
@@ -54,6 +55,7 @@ func restart_level():
 func change_level(level_select_path):
 	get_tree().change_scene_to_file(level_select_path)
 	restart_level()
+	Audioplayer.play_music("res://sfx/Soundtrack.mp3")
 
 
 # Button utils
