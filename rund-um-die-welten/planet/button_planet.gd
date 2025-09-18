@@ -1,6 +1,9 @@
 extends Node2D
 
-@export var max_activation_dist = 100
+@export var max_activation_dist = 100:
+	set(value):
+		max_activation_dist = value
+		$activation_area/shape.shape.radius = $planet_v2.planet_radius + max_activation_dist
 var block_trigger = false
 @export var button_color: String
 

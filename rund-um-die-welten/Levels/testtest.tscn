@@ -1,25 +1,30 @@
-[gd_scene load_steps=5 format=3 uid="uid://ba40rhxjx3y7f"]
+[gd_scene load_steps=6 format=3 uid="uid://ba40rhxjx3y7f"]
 
-[ext_resource type="PackedScene" uid="uid://4s3rjs7m32hk" path="res://asteroid_belt/asteroid_belt.tscn" id="1_jat1o"]
-[ext_resource type="PackedScene" path="res://planet/button_planet.tscn" id="2_r4tu6"]
+[ext_resource type="PackedScene" uid="uid://bqq3j6mvijcg4" path="res://planet/button_planet.tscn" id="2_r4tu6"]
 [ext_resource type="PackedScene" uid="uid://bmlfyt1ykh3aq" path="res://planet/planet_v_2.tscn" id="3_b84rl"]
+[ext_resource type="PackedScene" uid="uid://dxufmneynppid" path="res://planet/Deathlaser.tscn" id="3_mkjgl"]
 [ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="4_1hlkx"]
+[ext_resource type="PackedScene" uid="uid://b72obu30gqg1g" path="res://UI Elements/scene_utils.tscn" id="5_b84rl"]
 
 [node name="Testtest" type="Node2D"]
 
-[node name="asteroid_belt2" parent="." instance=ExtResource("1_jat1o")]
-position = Vector2(2081, 591)
-speed = 0
-
 [node name="button_planet" parent="." instance=ExtResource("2_r4tu6")]
 position = Vector2(640, 598)
-max_activation_dist = 300
-button_color = "red"
+button_color = "pink"
 clockwise = false
-
-[node name="planet_v2" parent="." instance=ExtResource("3_b84rl")]
-position = Vector2(1203, 385)
-win_planet = true
 
 [node name="player" parent="." groups=["player"] instance=ExtResource("4_1hlkx")]
 position = Vector2(355, 608)
+
+[node name="Deathlaser" parent="." instance=ExtResource("3_mkjgl")]
+position = Vector2(1101, 580)
+rotation_speed_in_deg_per_second = 10
+
+[node name="planet_v2" parent="." instance=ExtResource("3_b84rl")]
+position = Vector2(1556, 258)
+clockwise = false
+
+[node name="planet_v3" parent="." instance=ExtResource("3_b84rl")]
+position = Vector2(1603, 784)
+
+[node name="scene_utils" parent="." instance=ExtResource("5_b84rl")]
