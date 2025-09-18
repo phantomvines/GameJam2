@@ -17,6 +17,8 @@ Hintergründe <- Daniel
 	-sprite level?
 
 
+Button Anzeige für welche Laser an sind
+
 Skin auswahl
 Skin unlock
 galaxien
