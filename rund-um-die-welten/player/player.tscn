@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://d0h7r8gitcntt"]
+[gd_scene load_steps=19 format=3 uid="uid://d0h7r8gitcntt"]
 
 [ext_resource type="Script" uid="uid://dw7a4ejn3gkop" path="res://player/player.gd" id="1_oul6g"]
 [ext_resource type="Texture2D" uid="uid://ws2nc8w43ys0" path="res://assets/rocket-Sheet.png" id="3_g1dw6"]
 [ext_resource type="Texture2D" uid="uid://b8y87eesj4hgj" path="res://assets/particle.png" id="3_yw30f"]
 [ext_resource type="Texture2D" uid="uid://dfdiudiwcupuo" path="res://assets/enterprise-Sheet.png" id="4_qjkh3"]
+[ext_resource type="Texture2D" uid="uid://bbbbqfabbltie" path="res://assets/falcon-Sheet.png" id="5_boad6"]
 [ext_resource type="Texture2D" uid="uid://deenw7xttt8ub" path="res://assets/x-wing-Sheet.png" id="5_g6k8r"]
 
 [sub_resource type="Gradient" id="Gradient_g1dw6"]
@@ -30,6 +31,14 @@ region = Rect2(0, 0, 64, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_rgyib"]
 atlas = ExtResource("4_qjkh3")
 region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ieo8"]
+atlas = ExtResource("5_boad6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebec5"]
+atlas = ExtResource("5_boad6")
+region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hg6s5"]
 atlas = ExtResource("5_g6k8r")
@@ -61,6 +70,17 @@ animations = [{
 }],
 "loop": true,
 "name": &"enterprise",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ieo8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ebec5")
+}],
+"loop": true,
+"name": &"falcon",
 "speed": 5.0
 }, {
 "frames": [{
@@ -99,7 +119,7 @@ hue_variation_curve = SubResource("Curve_g1dw6")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_g6k8r")
-animation = &"x-wing"
+animation = &"falcon"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.25, -0.25)
