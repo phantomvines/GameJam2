@@ -1,7 +1,3 @@
-Sounds <- Linus&Daniel
-	-center charge
-	-win
-	-screen leave
 music does not loop <- Felix
 todeslaserdrehdings <- Felix
 noch mehr level <- Linus
