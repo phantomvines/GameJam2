@@ -8,11 +8,9 @@ sfx adden
 todeslaserdrehdings <- Felix
 noch mehr level <- Linus
 Mehr Planeten <-Leona
-Monde <- Leona/Felix
 Collectibles im level select kreisen lassen <- Leona/Felix
-Level abschluss anzeige <- Leona
 Hintergründe <- Daniel
-	-sprite menu - Done
+	-sprite menu
 	-sprite level?
 
 
