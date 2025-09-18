@@ -1,0 +1,32 @@
+Level fix
+mehr level
+Sounds 
+	-flug
+	-crash
+	-neuer center
+	-collectable
+	-center charge
+	-win
+	-screen leave
+todeslaserdrehdings
+	-sprite
+button
+	-sprite
+Screen border
+	
+Monde
+	-sprite
+Collectibles im level select kreisen lassen
+Level abschluss sprite
+	-sprite
+Hintergründe
+	-sprite menu
+	-sprite level?
+Center charge cooldown bar
+	-sprite
+Skin auswahl
+Skin unlock
+galaxien
+
+Level mit time trouble
+Podracing

@@ -78,12 +78,11 @@ func player_dies(death_message: String) -> void:
 
 
 func _on_screen_exited():
-	print("Player left camera area")
 	if dies_on_screen_leave:
 		GlobalVariables.emit_player_died("You left the mission area")
 		
 func _on_screen_entered():
-	print("Player entered camera area")
+	pass
 
 
 func _on_boost_cooldown_timeout() -> void:
