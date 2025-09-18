@@ -5,3 +5,5 @@
 [node name="Testtest" type="Node2D"]
 
 [node name="asteroid_belt2" parent="." instance=ExtResource("1_jat1o")]
+position = Vector2(883, 542)
+speed = 0

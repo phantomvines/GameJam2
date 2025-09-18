@@ -30,25 +30,29 @@ func spawn_comets():
 	assert (number_of_holes * hole_size_in_deg <= 360)
 	var comet_radius_in_deg = rad_to_deg(comet_radius/float(circle_radius))
 	var comet_margin_in_deg = rad_to_deg(comet_margin/float(circle_radius))
+	var hole_positions
 	if(number_of_holes > 0):
-		var hole_positions = calc_hole_positions()
-		for i in range(number_of_holes):
-			var hole_end_deg = hole_positions[2*i+1]
-			var next_hole_start = hole_positions[(2*i+2)%(number_of_holes*2)]
-			var last_comet_end_deg = hole_end_deg
-			var end_nh_left_of_th = (hole_end_deg>next_hole_start)
-			if end_nh_left_of_th:
-				next_hole_start+=360
-			while(last_comet_end_deg<360):
-				var left_of_next_hole = last_comet_end_deg+2*comet_radius_in_deg<next_hole_start
-				if(left_of_next_hole):
-					print(str(last_comet_end_deg))
-					spawn_comet(last_comet_end_deg + comet_radius_in_deg)
-					last_comet_end_deg +=2*comet_radius_in_deg + comet_margin_in_deg
-					print(str(last_comet_end_deg))
-				else:
-					break
-
+		hole_positions = calc_hole_positions()
+		
+	else:
+		number_of_holes = 1
+		hole_positions = [0, 0]
+	for i in range(number_of_holes):
+		var hole_end_deg = hole_positions[2*i+1]
+		var next_hole_start = hole_positions[(2*i+2)%(number_of_holes*2)]
+		var last_comet_end_deg = hole_end_deg
+		var end_nh_left_of_th = (hole_end_deg>=next_hole_start)
+		if end_nh_left_of_th:
+			next_hole_start+=360
+		while(last_comet_end_deg<360):
+			var left_of_next_hole = last_comet_end_deg+2*comet_radius_in_deg<next_hole_start
+			if(left_of_next_hole):
+				print(str(last_comet_end_deg))
+				spawn_comet(last_comet_end_deg + comet_radius_in_deg)
+				last_comet_end_deg +=2*comet_radius_in_deg + comet_margin_in_deg
+				print(str(last_comet_end_deg))
+			else:
+				break
 func calc_hole_positions():
 	var hole_positions = []
 	for i in range(number_of_holes):
