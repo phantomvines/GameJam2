@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh614y12otcbc"
-path="res://.godot/imported/laser-orange-Sheet.png-e4a5c8feaa49899325e68094f3c71ae9.ctex"
+uid="uid://csagma0te5qqs"
+path="res://.godot/imported/space-station-green-export.png-498a3bb13c9166cdf8b58ba3a38d7d55.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/laser-orange-Sheet.png"
-dest_files=["res://.godot/imported/laser-orange-Sheet.png-e4a5c8feaa49899325e68094f3c71ae9.ctex"]
+source_file="res://assets/DeathLaserRessources/space-station-green-export.png"
+dest_files=["res://.godot/imported/space-station-green-export.png-498a3bb13c9166cdf8b58ba3a38d7d55.ctex"]
 
 [params]
 

@@ -6,11 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://4s3rjs7m32hk" path="res://asteroid_belt/asteroid_belt.tscn" id="4_pafc6"]
 [ext_resource type="PackedScene" uid="uid://nccnr30bmrud" path="res://collectibles/collectible.tscn" id="5_bht0k"]
 [ext_resource type="PackedScene" uid="uid://ufu0fyp248bh" path="res://comet/comet.tscn" id="6_o6gpf"]
-[ext_resource type="PackedScene" path="res://UI Elements/scene_utils.tscn" id="7_amp3d"]
+[ext_resource type="PackedScene" uid="uid://b72obu30gqg1g" path="res://UI Elements/scene_utils.tscn" id="7_amp3d"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_u11um")
 level_name = "Level 10"
+
+[node name="scene_utils" parent="." instance=ExtResource("7_amp3d")]
 
 [node name="player" parent="." groups=["player"] instance=ExtResource("2_amp3d")]
 position = Vector2(608, 800)
@@ -34,6 +36,7 @@ size_scale = 5.0
 position = Vector2(1376, 320)
 size_scale = 5.0
 planet_type = 1
+win_planet = true
 clockwise = false
 
 [node name="asteroid_belt" parent="." instance=ExtResource("4_pafc6")]
@@ -79,5 +82,3 @@ position = Vector2(352, 563)
 
 [node name="comet11" parent="." instance=ExtResource("6_o6gpf")]
 position = Vector2(512, 608)
-
-[node name="scene_utils" parent="." instance=ExtResource("7_amp3d")]

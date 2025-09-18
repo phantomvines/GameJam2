@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://4s3rjs7m32hk" path="res://asteroid_belt/asteroid_belt.tscn" id="4_lmusb"]
 [ext_resource type="PackedScene" uid="uid://nccnr30bmrud" path="res://collectibles/collectible.tscn" id="5_7pmxy"]
 [ext_resource type="PackedScene" uid="uid://ufu0fyp248bh" path="res://comet/comet.tscn" id="6_cxty8"]
-[ext_resource type="PackedScene" path="res://UI Elements/scene_utils.tscn" id="7_0bhtg"]
+[ext_resource type="PackedScene" uid="uid://b72obu30gqg1g" path="res://UI Elements/scene_utils.tscn" id="7_0bhtg"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_fomsg")
