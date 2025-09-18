@@ -12,6 +12,8 @@
 script = ExtResource("1_u11um")
 level_name = "Level 10"
 
+[node name="scene_utils" parent="." instance=ExtResource("7_amp3d")]
+
 [node name="player" parent="." groups=["player"] instance=ExtResource("2_amp3d")]
 position = Vector2(608, 800)
 spawn_rotation = 270
@@ -34,6 +36,7 @@ size_scale = 5.0
 position = Vector2(1376, 320)
 size_scale = 5.0
 planet_type = 1
+win_planet = true
 clockwise = false
 
 [node name="asteroid_belt" parent="." instance=ExtResource("4_pafc6")]
@@ -79,5 +82,3 @@ position = Vector2(352, 563)
 
 [node name="comet11" parent="." instance=ExtResource("6_o6gpf")]
 position = Vector2(512, 608)
-
-[node name="scene_utils" parent="." instance=ExtResource("7_amp3d")]
