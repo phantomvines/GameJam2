@@ -6,8 +6,8 @@ var player_speed
 var player_clockwise
 
 # Planet vars
-enum planets {DeathStar, Mars, Earth, Sun}
-var planet_names = {planets.DeathStar: "Death Star", planets.Mars: "Mars", planets.Earth: "Earth", planets.Sun: "Sun"}
+enum planets {DeathStar, Mars, Earth, Sun, Soap, Plant}
+var planet_names = {planets.DeathStar: "Death Star", planets.Mars: "Mars", planets.Earth: "Earth", planets.Sun: "Sun", planets.Soap: "Soap", planets.Plant: "Plant"}
 var selected_level = ""
 
 #Doesnt work yet

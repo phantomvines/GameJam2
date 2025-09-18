@@ -6,7 +6,7 @@ extends Area2D
 @export var planet_type: GlobalVariables.planets:
 	set(value):
 		planet_type = value
-		fit_planet_type(value)
+		#fit_planet_type(value)
 
 @export var win_planet = false:
 	set(value):
@@ -43,7 +43,7 @@ func _ready():
 	# set rotation direction of rotation indicator
 	$rotation_indicator.clockwise = clockwise
 	
-	
+	fit_planet_type(planet_type)
 	
 	# if planet is target, display goal texture
 	if win_planet:
@@ -55,6 +55,7 @@ func _ready():
 		
 
 func fit_planet_type(new_planet_type):
+	print($collision)
 	var shape = $CollisionShape2D.shape
 	# change size of collision area and animation based on which planet is chosen
 	match new_planet_type:
@@ -82,6 +83,18 @@ func fit_planet_type(new_planet_type):
 			$sun.visible = true
 			$goal/sun_goal.visible = true
 			$rotation_indicator.radius = 65
+		GlobalVariables.planets.Plant:
+			size_scale = 2.0
+			$plant.play("default")
+			$plant.visible = true
+			$goal/plant_goal.visible = true
+			$rotation_indicator.radius = 30
+		GlobalVariables.planets.Soap:
+			size_scale = 1.9
+			$soap.play("default")
+			$soap.visible = true
+			$goal/plant_goal.visible = true
+			$rotation_indicator.radius = 30
 	
 	shape.radius = 10 * size_scale
 	planet_radius = 10 * size_scale

@@ -30,6 +30,14 @@ func _ready() -> void:
 			size_scale = 4.8
 			$sun.play("default")
 			$sun.visible = true
+		GlobalVariables.planets.Plant:
+			size_scale = 2.0
+			$plant.play("default")
+			$plant.visible = true
+		GlobalVariables.planets.Soap:
+			size_scale = 1.9
+			$soap.play("default")
+			$soap.visible = true
 	
 	shape.radius *= size_scale
 	get_parent().scale_locations(size_scale)
@@ -68,6 +76,10 @@ func _physics_process(delta: float) -> void:
 				$earth.modulate = Color(0.3, 0.3, 0.3)
 			GlobalVariables.planets.Sun:
 				$sun.modulate = Color(0.3, 0.3, 0.3)
+			GlobalVariables.planets.Plant:
+				$plant.modulate = Color(0.3, 0.3, 0.3)
+			GlobalVariables.planets.Soap:
+				$soap.modulate = Color(0.3, 0.3, 0.3)
 	else:
 		match planet_type:
 			GlobalVariables.planets.DeathStar:
@@ -78,3 +90,7 @@ func _physics_process(delta: float) -> void:
 				$earth.modulate = Color(1.0, 1.0, 1.0)
 			GlobalVariables.planets.Sun:
 				$sun.modulate = Color(1.0, 1.0, 1.0)
+			GlobalVariables.planets.Plant:
+				$plant.modulate = Color(1.0, 1.0, 1.0)
+			GlobalVariables.planets.Soap:
+				$soap.modulate = Color(1.0, 1.0, 1.0)
