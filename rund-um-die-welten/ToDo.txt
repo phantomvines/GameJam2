@@ -7,7 +7,6 @@ music does not loop <- Felix
 sfx adden
 todeslaserdrehdings <- Felix
 noch mehr level <- Linus
-button-sprite	<- Felix/Linus
 Mehr Planeten <-Leona
 Monde <- Leona/Felix
 	-sprite
