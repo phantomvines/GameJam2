@@ -49,6 +49,7 @@ func play_music(path: String):
 	music_player.process_mode = Node.PROCESS_MODE_ALWAYS
 	music_player.volume_db = 0  # Adjust volume if needed
 	add_child(music_player)
+	music_player.stream.set_loop(true);
 	music_player.play()
 
 
