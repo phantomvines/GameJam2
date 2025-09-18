@@ -6,7 +6,7 @@ var level
 
 func _ready() -> void:
 	level = get_parent().level_name
-	if GlobalVariables.collectibles[level][id] == 1:
+	if GlobalVariables.collectibles[GlobalVariables.selected_level][id] == 1:
 		$grayscale.visible = true
 		$colour.visible = false
 		$CPUParticles2D.emitting = false

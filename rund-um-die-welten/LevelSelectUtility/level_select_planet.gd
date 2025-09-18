@@ -6,7 +6,7 @@ extends Area2D
 @export var level_id: String
 var size_scale
 
-var grayscale = true
+@export var grayscale = true
 
 func _ready() -> void:
 	input_pickable = true
@@ -54,7 +54,10 @@ func _physics_process(delta: float) -> void:
 		$target.visible = true
 	else:
 		$target.visible = false
-		
+	
+	if GlobalVariables.levels[level_id] == 1:
+		grayscale = false
+	
 	if grayscale:
 		match planet_type:
 			GlobalVariables.planets.DeathStar:

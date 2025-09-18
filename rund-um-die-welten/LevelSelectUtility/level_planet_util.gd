@@ -31,6 +31,7 @@ func _ready():
 		
 	for i in range (number_collectibles):
 		var collectible_name = "collectible"+str(i)
+		print(collectible_name)
 		get_node(collectible_name).visible = true
 func sum_array(arr: Array) -> float:
 	var total = 0
