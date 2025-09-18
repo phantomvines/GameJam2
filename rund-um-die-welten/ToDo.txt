@@ -1,10 +1,12 @@
+bowling und magma planet
 raumschiff ideen hier adden
-	-y-wing
 	-cowboy bebop ship
-	-milenium
-	-
 music does not loop <- Felix-Done
 sfx adden
+	- für buttons
+	- level cleared
+	- weitere?
+
 todeslaserdrehdings <- Felix
 noch mehr level <- Linus
 Hintergründe <- Daniel

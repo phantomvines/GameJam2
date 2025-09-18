@@ -38,6 +38,8 @@ func update_icon():
 			icon = load_scaled_icon("res://assets/enterprise1.png")
 		"falcon":
 			icon = load_scaled_icon("res://assets/falcon1.png")
+		"battlecruiser":
+			icon = load_scaled_icon("res://assets/battlecruiser1.png")
 		_:
 			icon = null
 
