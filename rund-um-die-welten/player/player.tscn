@@ -120,7 +120,6 @@ hue_variation_curve = SubResource("Curve_g1dw6")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_g6k8r")
-animation = &"falcon"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.25, -0.25)

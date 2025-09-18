@@ -71,6 +71,7 @@ func _physics_process(delta: float) -> void:
 #Dummy function for player death: 
 func player_dies(death_message: String) -> void: 
 	print(death_message)
+	add_child(load("res://player/death_animation.tscn").instantiate())
 	if auto_respawn:
 		position = respawn_point
 	elif(GlobalVariables.target_planet_position):

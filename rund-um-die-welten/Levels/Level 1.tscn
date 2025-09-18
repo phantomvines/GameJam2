@@ -17,14 +17,17 @@ dies_on_screen_leave = true
 
 [node name="planet_v2_2" parent="." instance=ExtResource("3_1xjbt")]
 position = Vector2(1453, 461)
+moon = true
 
 [node name="planet_v2_3" parent="." instance=ExtResource("3_1xjbt")]
 position = Vector2(1052, 926)
 win_planet = true
+moon = true
 
 [node name="planet_v2" parent="." instance=ExtResource("3_1xjbt")]
 position = Vector2(374, 301)
 size_scale = 5.0
+moon = true
 
 [node name="comet3" parent="." instance=ExtResource("4_vy3yb")]
 position = Vector2(993, 291)

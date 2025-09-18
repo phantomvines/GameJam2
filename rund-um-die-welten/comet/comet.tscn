@@ -48,7 +48,7 @@ sprite_frames = SubResource("SpriteFrames_wuyh1")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 color = Color(0.9999934, 0.27299294, 0.22236878, 1)
-energy = 2.41
+energy = 1.62
 texture = ExtResource("3_t8vxv")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
