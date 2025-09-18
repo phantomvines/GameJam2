@@ -7,8 +7,6 @@ music does not loop <- Felix-Done
 sfx adden
 todeslaserdrehdings <- Felix
 noch mehr level <- Linus
-Mehr Planeten <-Leona
-Collectibles im level select kreisen lassen <- Leona/Felix
 Hintergründe <- Daniel
 	-sprite menu
 	-sprite level?

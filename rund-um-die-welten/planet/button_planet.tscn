@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cx3txojpcod4x"]
 
-[ext_resource type="Script" path="res://planet/button_planet.gd" id="1_a80ru"]
+[ext_resource type="Script" uid="uid://b4jfjnwxnqfyl" path="res://planet/button_planet.gd" id="1_a80ru"]
 [ext_resource type="PackedScene" uid="uid://bmlfyt1ykh3aq" path="res://planet/planet_v_2.tscn" id="2_eooxo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a80ru"]

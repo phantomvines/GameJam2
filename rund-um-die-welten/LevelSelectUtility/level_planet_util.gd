@@ -15,6 +15,11 @@ extends Control
 @export var speed = 100
 @export var clockwise = true
 
+# for collectible rotating
+var rotation_speed = 1000
+var pos_scale = 100
+var current_angles = [0, 120, 240]
+
 func scale_locations(scale):
 	$level_name_text.position.y *= scale
 	for i in range(3):
@@ -33,8 +38,41 @@ func _ready():
 		var collectible_name = "collectible"+str(i)
 		print(collectible_name)
 		get_node(collectible_name).visible = true
+
 func sum_array(arr: Array) -> float:
 	var total = 0
 	for value in arr:
 		total += value
 	return floor(total)
+
+func _physics_process(delta: float) -> void:
+	## rotate collectibles around planet
+	#for i in range(3):
+		#var collectible_name = "collectible"+str(i)
+		#var collectible = get_node(collectible_name)
+		#
+		#var radius = scale
+		#var center = $planet_body.global_position
+		#var angle = (position-center).angle()
+		#
+		#var angular_speed = speed * 0.0002
+		#angle += angular_speed*delta
+		#
+		#collectible.position = center+Vector2(cos(angle), sin(angle))*radius
+		#print(collectible.position)
+	var angular_speed = rotation_speed * delta  # Adjust multiplier as needed
+
+	# Update each collectible's position
+	for i in range(3):
+		var collectible_name = "collectible"+str(i)
+		var collectible = get_node(collectible_name)
+		if collectible.visible:
+			# Update angle
+			current_angles[i] += angular_speed * delta
+
+			# Calculate new position
+			var center = $planet_body.global_position
+			collectible.global_position = center + Vector2(
+				cos(deg_to_rad(current_angles[i])),
+				sin(deg_to_rad(current_angles[i]))
+			) * pos_scale
