@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cr840jx5klwj6"]
+
+[ext_resource type="Texture2D" uid="uid://qfpxjy52sobd" path="res://assets/Menu.png" id="1_hluep"]
+
+[node name="menu_background" type="Node2D"]
+texture_filter = 1
+scale = Vector2(4, 4)
+metadata/_edit_vertical_guides_ = [-666.0]
+
+[node name="background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(240, 135)
+texture = ExtResource("1_hluep")
