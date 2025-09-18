@@ -48,4 +48,6 @@ func load_scaled_icon(path: String) -> Texture2D:
 
 func update_text():
 	text = str(threshold)
+	if threshold < 9:
+		text = "0" + text
 	add_theme_font_size_override("font_size", 60)
