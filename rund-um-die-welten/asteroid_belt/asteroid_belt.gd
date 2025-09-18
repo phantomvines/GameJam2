@@ -11,6 +11,8 @@ extends Node2D
 @export var number_of_holes: int
 @export var hole_size_in_deg: int
 @export var start_rotation_in_deg = 0
+@export var comet_radius = 40
+@export var circle_radius = 400
 
 func _ready() -> void:
 	
@@ -27,8 +29,12 @@ func spawn_comets():
 	assert (number_of_holes * hole_size_in_deg <= 360)
 	if(number_of_holes > 0):
 		var hole_positions = calc_hole_positions()
-		total_comet_deg = calc_total_comet_degrees(hole_positions)
-
+		for i in range(number_of_holes):
+			var hole_end_deg = hole_positions[2*i+1]
+			var next_hole_start = hole_positions[(2*i+2)%len(hole_positions)]
+			var comet_radius_in_deg = rad_to_deg(comet_radius/circle_radius)
+			if((hole_end_deg+2*comet_radius_in_deg)%360 < next_hole_start):
+				spawn_comet(hole_end_deg + comet_radius_in_deg)
 func calc_hole_positions():
 	var hole_positions = []
 	for i in range(number_of_holes):
