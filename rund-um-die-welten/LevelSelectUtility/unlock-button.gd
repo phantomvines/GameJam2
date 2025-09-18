@@ -44,9 +44,9 @@ func update_icon():
 			icon = null
 
 func load_scaled_icon(path: String) -> Texture2D:
-	var scale = 4
+	var icon_scale = 4
 	var img = load(path).get_image()
-	img.resize(img.get_width() * scale, img.get_height() * scale, Image.INTERPOLATE_NEAREST)
+	img.resize(img.get_width() * icon_scale, img.get_height() * icon_scale, Image.INTERPOLATE_NEAREST)
 	var tex = ImageTexture.create_from_image(img)
 	return tex
 

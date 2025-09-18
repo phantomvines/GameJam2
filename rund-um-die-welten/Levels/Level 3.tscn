@@ -66,8 +66,10 @@ position = Vector2(520, 699)
 
 [node name="collectible2" parent="." instance=ExtResource("5_3ixoe")]
 position = Vector2(1289, 209)
+id = 1
 
 [node name="collectible3" parent="." instance=ExtResource("5_3ixoe")]
 position = Vector2(1564, 819)
+id = 2
 
 [node name="scene_utils" parent="." instance=ExtResource("6_jnn57")]

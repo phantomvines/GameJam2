@@ -8,7 +8,7 @@
 size = Vector2(27, 28)
 
 [node name="collectible" type="Area2D"]
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 texture_filter = 1
