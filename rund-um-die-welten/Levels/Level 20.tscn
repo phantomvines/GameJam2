@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cgh0nmijibux2"]
+[gd_scene load_steps=8 format=3 uid="uid://chwumgn2ncccw"]
 
 [ext_resource type="Script" uid="uid://tlx7l1b53wm7" path="res://Levels/main.gd" id="1_7ewbn"]
 [ext_resource type="PackedScene" uid="uid://b72obu30gqg1g" path="res://UI Elements/scene_utils.tscn" id="2_2k3q2"]
@@ -59,18 +59,21 @@ moon = true
 moon_radius = 250
 
 [node name="Deathlaser" parent="." instance=ExtResource("6_ohws3")]
-position = Vector2(1600, 91)
-rotation_speed_in_deg_per_second = 500
+position = Vector2(1595, 315)
+rotation = 2.0944
+rotation_speed_in_deg_per_second = 0
 laser_color = "green"
 
 [node name="Deathlaser2" parent="." instance=ExtResource("6_ohws3")]
-position = Vector2(1664, 192)
-rotation_speed_in_deg_per_second = 500
+position = Vector2(1595, 221)
+rotation = 2.0944
+rotation_speed_in_deg_per_second = 0
 laser_color = "orange"
 
 [node name="Deathlaser3" parent="." instance=ExtResource("6_ohws3")]
-position = Vector2(1792, 255)
-rotation_speed_in_deg_per_second = 500
+position = Vector2(1595, 141)
+rotation = 2.0944
+rotation_speed_in_deg_per_second = 0
 
 [node name="button_planet" parent="." instance=ExtResource("7_6yhfu")]
 position = Vector2(1664, 832)
