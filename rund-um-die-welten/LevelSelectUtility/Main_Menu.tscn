@@ -17,6 +17,7 @@ world_file_name = "level_select_screen"
 
 [node name="World 2" parent="." instance=ExtResource("2_d8tt0")]
 position = Vector2(1067, 485)
+world_file_name = "level_select_screen_world_2"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_left = 480.0

@@ -62,6 +62,18 @@ func fit_planet_type(new_planet_type):
 			$soap.visible = true
 			$goal/plant_goal.visible = true
 			$rotation_indicator.radius = 30
+		GlobalVariables.planets.Magma:
+			size_scale = 1.4
+			$magma.play("default")
+			$magma.visible = true
+			$goal/mars_goal.visible = true
+			$rotation_indicator.radius = 30
+		GlobalVariables.planets.Bowling:
+			size_scale = 1.5
+			$bowling.play("default")
+			$bowling.visible = true
+			$goal/mars_goal.visible = true
+			$rotation_indicator.radius = 30
 	
 	var shape = $CollisionShape2D.shape
 	shape.radius = planet_base_radius* size_scale
@@ -106,6 +118,10 @@ func _physics_process(_delta: float) -> void:
 				$plant.modulate = Color(0.3, 0.3, 0.3)
 			GlobalVariables.planets.Soap:
 				$soap.modulate = Color(0.3, 0.3, 0.3)
+			GlobalVariables.planets.Magma:
+				$magma.modulate = Color(0.3, 0.3, 0.3)
+			GlobalVariables.planets.Bowling:
+				$bowling.modulate = Color(0.3, 0.3, 0.3)
 	else:
 		match planet_type:
 			GlobalVariables.planets.DeathStar:
@@ -120,3 +136,7 @@ func _physics_process(_delta: float) -> void:
 				$plant.modulate = Color(1.0, 1.0, 1.0)
 			GlobalVariables.planets.Soap:
 				$soap.modulate = Color(1.0, 1.0, 1.0)
+			GlobalVariables.planets.Magma:
+				$magma.modulate = Color(1.0, 1.0, 1.0)
+			GlobalVariables.planets.Bowling:
+				$bowling.modulate = Color(1.0, 1.0, 1.0)
