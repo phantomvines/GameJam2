@@ -1,6 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://cmkq2o30yiefk"]
+[gd_scene load_steps=13 format=3 uid="uid://c242dsi7lnqqb"]
 
-[ext_resource type="PackedScene" path="res://UI Elements/menu_background.tscn" id="1_03edo"]
+[ext_resource type="PackedScene" uid="uid://cr840jx5klwj6" path="res://UI Elements/menu_background.tscn" id="1_03edo"]
 [ext_resource type="PackedScene" uid="uid://c11b4i55gx3o5" path="res://LevelSelectUtility/level_select_planet.tscn" id="2_ywexb"]
 [ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="3_dtlly"]
 [ext_resource type="FontFile" uid="uid://d2ucaasj8wmwj" path="res://Fonts/BRIGHTSTER-Bold-1.ttf" id="4_ht4d8"]
@@ -38,7 +38,7 @@ corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 
-[node name="Level-Select-Screen" type="Node2D"]
+[node name="Level-Select-Screen2" type="Node2D"]
 
 [node name="menu_background" parent="." instance=ExtResource("1_03edo")]
 
