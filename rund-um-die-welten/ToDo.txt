@@ -8,6 +8,8 @@ sfx adden
 	- weitere?
 
 todeslaserdrehdings <- Felix
+	- Richtungen einstellen
+	- sollte man ihn anclicken können?
 noch mehr level <- Linus
 Hintergründe <- Daniel
 	-sprite menu
