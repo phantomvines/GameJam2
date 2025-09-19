@@ -28,6 +28,10 @@ func _ready() -> void:
 	
 func _physics_process(delta: float) -> void:
 	$AnimatedSprite2D.play(GlobalVariables.player_skin)
+	
+	if(Input.is_action_just_pressed("escape") and not GlobalVariables.in_main_menu):
+		player_dies("You chose the easy way out")
+	
 	if(GlobalVariables.target_planet_position):
 		# calculate movement
 		var radius = position.distance_to(GlobalVariables.target_planet_position)
@@ -73,11 +77,12 @@ func player_dies(death_message: String) -> void:
 	print(death_message)
 	if auto_respawn:
 		position = respawn_point
-	elif(GlobalVariables.target_planet_position):
+	elif(GlobalVariables.target_planet_position or death_message == "You chose the easy way out"):
 		add_child(load("res://player/death_animation.tscn").instantiate())
 		$AnimatedSprite2D.visible = false
 		$CPUParticles2D.emitting = false
-		GlobalVariables.death_counter += 1
+		if(death_message != "You chose the easy way out"):
+			GlobalVariables.death_counter += 1
 		GlobalVariables.emit_game_over(death_message)
 
 
