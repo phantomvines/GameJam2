@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://LevelSelectUtility/main_menu.gd" id="1_h3vtm"]
 [ext_resource type="Texture2D" uid="uid://b645w4bad52ab" path="res://assets/Background.png" id="1_sg3w2"]
-[ext_resource type="PackedScene" uid="uid://byhm4i6oum1dp" path="res://LevelSelectUtility/world_select_star_system.tscn" id="2_d8tt0"]
+[ext_resource type="PackedScene" uid="uid://b81fnypg0r01i" path="res://LevelSelectUtility/world_select_star_system.tscn" id="2_d8tt0"]
 [ext_resource type="FontFile" uid="uid://d2ucaasj8wmwj" path="res://Fonts/BRIGHTSTER-Bold-1.ttf" id="3_d8tt0"]
 
 [node name="MainMenu" type="Node2D"]
@@ -20,6 +20,7 @@ world_file_name = "world 1"
 
 [node name="World 2" parent="." instance=ExtResource("2_d8tt0")]
 position = Vector2(1067, 485)
+inverted = true
 world_file_name = "world 2"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
