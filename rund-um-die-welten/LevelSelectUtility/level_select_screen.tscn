@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c242dsi7lnqqb"]
+[gd_scene load_steps=11 format=3 uid="uid://c242dsi7lnqqb"]
 
 [ext_resource type="PackedScene" uid="uid://c11b4i55gx3o5" path="res://LevelSelectUtility/level_select_planet.tscn" id="1_offx3"]
 [ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="2_iojkr"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dj3nxkkx8gvre" path="res://assets/enterprise1.png" id="5_7xgfl"]
 [ext_resource type="Script" uid="uid://djyqftdc3hb27" path="res://LevelSelectUtility/unlock-button.gd" id="5_v3ic8"]
 [ext_resource type="PackedScene" path="res://UI Elements/menu_background.tscn" id="7_avbc4"]
+[ext_resource type="Script" uid="uid://cv3b0iuf5w5c2" path="res://LevelSelectUtility/label.gd" id="8_ygamd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v3ic8"]
 bg_color = Color(0.688281, 0.599222, 0.142667, 1)
@@ -19,6 +20,10 @@ corner_radius_top_left = 30
 corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_avbc4"]
+font = ExtResource("3_m787v")
+font_size = 32
 
 [node name="Level-Select-Screen" type="Node2D"]
 
@@ -178,3 +183,13 @@ icon = ExtResource("5_7xgfl")
 script = ExtResource("5_v3ic8")
 threshold = 30
 skin = "enterprise"
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = 26.0
+offset_top = 20.0
+offset_right = 351.0
+offset_bottom = 51.0
+text = "Death Count: 0"
+label_settings = SubResource("LabelSettings_avbc4")
+script = ExtResource("8_ygamd")

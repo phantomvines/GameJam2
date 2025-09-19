@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://ba40rhxjx3y7f"]
 
-[ext_resource type="PackedScene" uid="uid://cx3txojpcod4x" path="res://planet/button_planet.tscn" id="2_r4tu6"]
+[ext_resource type="PackedScene" path="res://planet/button_planet.tscn" id="2_r4tu6"]
 [ext_resource type="PackedScene" uid="uid://bmlfyt1ykh3aq" path="res://planet/planet_v_2.tscn" id="3_b84rl"]
-[ext_resource type="PackedScene" uid="uid://dxufmneynppid" path="res://planet/Deathlaser.tscn" id="3_mkjgl"]
+[ext_resource type="PackedScene" path="res://planet/Deathlaser.tscn" id="3_mkjgl"]
 [ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="4_1hlkx"]
-[ext_resource type="PackedScene" path="res://UI Elements/scene_utils.tscn" id="5_b84rl"]
+[ext_resource type="PackedScene" uid="uid://b72obu30gqg1g" path="res://UI Elements/scene_utils.tscn" id="5_b84rl"]
 
 [node name="Testtest" type="Node2D"]
 
@@ -22,25 +22,10 @@ rotation_speed_in_deg_per_second = 10
 
 [node name="planet_v2" parent="." instance=ExtResource("3_b84rl")]
 position = Vector2(1556, 258)
-size_scale = 1.0
-planet_type = 0
-win_planet = false
-win_message = "You reached the goal"
-death_message_overwrite = ""
-speed = 300
 clockwise = false
-collision_enabled = true
 
 [node name="planet_v3" parent="." instance=ExtResource("3_b84rl")]
 position = Vector2(1603, 784)
-size_scale = 1.0
-planet_type = 0
-win_planet = false
-win_message = "You reached the goal"
-death_message_overwrite = ""
-speed = 300
-clockwise = true
-collision_enabled = true
 
 [node name="scene_utils" parent="." instance=ExtResource("5_b84rl")]
 script = null
