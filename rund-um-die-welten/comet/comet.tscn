@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cpxx4ekyjncfp" path="res://comet/comet.gd" id="1_hmwee"]
 [ext_resource type="Texture2D" uid="uid://g7rcca0n4xpv" path="res://assets/obstacle-Sheet.png" id="3_o6e77"]
-[ext_resource type="Texture2D" uid="uid://4w1vcko1r2o7" path="res://assets/light-texture.png" id="3_t8vxv"]
+[ext_resource type="Texture2D" uid="uid://vn8hx6amejdh" path="res://assets/light-texture.png" id="3_t8vxv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1lw4w"]
 
@@ -47,7 +47,7 @@ shape = SubResource("CircleShape2D_1lw4w")
 sprite_frames = SubResource("SpriteFrames_wuyh1")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-color = Color(0.9999934, 0.27299294, 0.22236878, 1)
+color = Color(0.999993, 0.272993, 0.222369, 1)
 energy = 1.62
 texture = ExtResource("3_t8vxv")
 

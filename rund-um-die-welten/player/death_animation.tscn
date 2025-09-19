@@ -1,6 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://ccjf0qao2g1q4"]
+[gd_scene load_steps=11 format=3 uid="uid://cfpgrukw6wm54"]
 
-[ext_resource type="Script" uid="uid://do4io23yt6ouq" path="res://player/death_animation.gd" id="1_g67hj"]
+[ext_resource type="Script" uid="uid://iprsjefi33q0" path="res://player/death_animation.gd" id="1_g67hj"]
 [ext_resource type="Texture2D" uid="uid://be8rbanobce5e" path="res://assets/ship-destroyed-Sheet.png" id="1_ynxyy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ynxyy"]
@@ -61,9 +61,13 @@ animations = [{
 }]
 
 [node name="death_animation" type="Node2D"]
+process_mode = 3
+texture_filter = 1
 script = ExtResource("1_g67hj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_1jhdg")
 frame = 1
-frame_progress = 0.44437134
+frame_progress = 0.444371
+
+[connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]

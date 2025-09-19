@@ -71,6 +71,8 @@ func _physics_process(delta: float) -> void:
 #Dummy function for player death: 
 func player_dies(death_message: String) -> void: 
 	print(death_message)
+	$AnimatedSprite2D.visible = false
+	$CPUParticles2D.emitting = false
 	add_child(load("res://player/death_animation.tscn").instantiate())
 	if auto_respawn:
 		position = respawn_point

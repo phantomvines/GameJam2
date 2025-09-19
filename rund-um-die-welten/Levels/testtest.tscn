@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://ba40rhxjx3y7f"]
 
-[ext_resource type="PackedScene" uid="uid://bqq3j6mvijcg4" path="res://planet/button_planet.tscn" id="2_r4tu6"]
+[ext_resource type="PackedScene" path="res://planet/button_planet.tscn" id="2_r4tu6"]
 [ext_resource type="PackedScene" uid="uid://bmlfyt1ykh3aq" path="res://planet/planet_v_2.tscn" id="3_b84rl"]
-[ext_resource type="PackedScene" uid="uid://dxufmneynppid" path="res://planet/Deathlaser.tscn" id="3_mkjgl"]
+[ext_resource type="PackedScene" path="res://planet/Deathlaser.tscn" id="3_mkjgl"]
 [ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="4_1hlkx"]
 [ext_resource type="PackedScene" uid="uid://b72obu30gqg1g" path="res://UI Elements/scene_utils.tscn" id="5_b84rl"]
 
@@ -28,3 +28,4 @@ clockwise = false
 position = Vector2(1603, 784)
 
 [node name="scene_utils" parent="." instance=ExtResource("5_b84rl")]
+script = null
