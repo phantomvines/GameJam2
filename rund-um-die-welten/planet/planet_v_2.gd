@@ -98,6 +98,18 @@ func fit_planet_type(new_planet_type):
 			$soap.visible = true
 			$goal/plant_goal.visible = true
 			$rotation_indicator.radius = 30
+		GlobalVariables.planets.Magma:
+			size_scale = 1.4
+			$magma.play("default")
+			$magma.visible = true
+			$goal/mars_goal.visible = true
+			$rotation_indicator.radius = 30
+		GlobalVariables.planets.Bowling:
+			size_scale = 1.5
+			$bowling.play("default")
+			$bowling.visible = true
+			$goal/mars_goal.visible = true
+			$rotation_indicator.radius = 30
 	
 	shape.radius = 10 * size_scale
 	planet_radius = 10 * size_scale

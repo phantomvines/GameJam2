@@ -22,10 +22,25 @@ rotation_speed_in_deg_per_second = 10
 
 [node name="planet_v2" parent="." instance=ExtResource("3_b84rl")]
 position = Vector2(1556, 258)
+size_scale = 1.0
+planet_type = 0
+win_planet = false
+win_message = "You reached the goal"
+death_message_overwrite = ""
+speed = 300
 clockwise = false
+collision_enabled = true
 
 [node name="planet_v3" parent="." instance=ExtResource("3_b84rl")]
 position = Vector2(1603, 784)
+size_scale = 1.0
+planet_type = 0
+win_planet = false
+win_message = "You reached the goal"
+death_message_overwrite = ""
+speed = 300
+clockwise = true
+collision_enabled = true
 
 [node name="scene_utils" parent="." instance=ExtResource("5_b84rl")]
 script = null

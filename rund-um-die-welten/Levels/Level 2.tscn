@@ -17,15 +17,36 @@ dies_on_screen_leave = true
 
 [node name="planet_v2_4" parent="." instance=ExtResource("3_f7mle")]
 position = Vector2(1600, 704)
+size_scale = 1.0
+planet_type = 0
 win_planet = true
+win_message = "You reached the goal"
+death_message_overwrite = ""
+speed = 300
+clockwise = true
+collision_enabled = true
 
 [node name="planet_v2_5" parent="." instance=ExtResource("3_f7mle")]
 position = Vector2(1023, 256)
+size_scale = 1.0
+planet_type = 0
+win_planet = false
+win_message = "You reached the goal"
+death_message_overwrite = ""
+speed = 300
 clockwise = false
+collision_enabled = true
 
 [node name="planet_v3" parent="." instance=ExtResource("3_f7mle")]
 position = Vector2(448, 703)
 size_scale = 5.0
+planet_type = 0
+win_planet = false
+win_message = "You reached the goal"
+death_message_overwrite = ""
+speed = 300
+clockwise = true
+collision_enabled = true
 
 [node name="collectible" parent="." instance=ExtResource("4_yt4wa")]
 position = Vector2(448, 928)
