@@ -1,7 +1,7 @@
 extends Button
 
 var rootfolder = "res://"
-var subfolder = "Levels/"
+var subfolder = "LevelSelectUtility/"
 func _ready():
 	# Signal verbinden
 	self.pressed.connect(_on_pressed)
