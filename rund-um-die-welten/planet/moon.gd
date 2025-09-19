@@ -1,6 +1,5 @@
 extends Area2D
 
-var speed = 100
 var direction = Vector2(1,0)
 
 var target_planet_position
@@ -8,18 +7,20 @@ var clockwise = true
 
 var vis = false
 
+@export var circle_radius = 150
+@export var circle_speed = 50
+
 func _physics_process(delta: float) -> void:
-	var radius = 150
 	var angle = (position-target_planet_position).angle()
 	
-	var angular_speed = speed * delta
+	var angular_speed = circle_speed * delta
 	
 	if clockwise:
 		angle += angular_speed*delta
 	else:
 		angle -= angular_speed*delta
 	
-	position = target_planet_position+Vector2(cos(angle), sin(angle))*radius
+	position = target_planet_position+Vector2(cos(angle), sin(angle))*circle_radius
 
 func _ready() -> void:
 	target_planet_position = get_parent().global_position

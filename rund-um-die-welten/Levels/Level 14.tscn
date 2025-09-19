@@ -1,0 +1,86 @@
+[gd_scene load_steps=8 format=3 uid="uid://dh5rbf21o3qm2"]
+
+[ext_resource type="Script" uid="uid://tlx7l1b53wm7" path="res://Levels/main.gd" id="1_pynbg"]
+[ext_resource type="PackedScene" uid="uid://b72obu30gqg1g" path="res://UI Elements/scene_utils.tscn" id="2_m3nsf"]
+[ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="3_767u2"]
+[ext_resource type="PackedScene" uid="uid://bmlfyt1ykh3aq" path="res://planet/planet_v_2.tscn" id="4_tgpgy"]
+[ext_resource type="PackedScene" uid="uid://4s3rjs7m32hk" path="res://asteroid_belt/asteroid_belt.tscn" id="5_2g4tn"]
+[ext_resource type="PackedScene" uid="uid://nccnr30bmrud" path="res://collectibles/collectible.tscn" id="6_c2dne"]
+[ext_resource type="PackedScene" uid="uid://ufu0fyp248bh" path="res://comet/comet.tscn" id="7_4ms1j"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_pynbg")
+level_name = "Level 13"
+
+[node name="scene_utils" parent="." instance=ExtResource("2_m3nsf")]
+metadata/_edit_lock_ = true
+
+[node name="player" parent="." groups=["player"] instance=ExtResource("3_767u2")]
+position = Vector2(256, 928)
+spawn_rotation = 270
+dies_on_screen_leave = true
+
+[node name="planet_v3" parent="." instance=ExtResource("4_tgpgy")]
+position = Vector2(352, 384)
+size_scale = 5.0
+planet_type = 7
+moon = true
+moon_radius = 250
+moon_speed = 85
+
+[node name="planet_v6" parent="." instance=ExtResource("4_tgpgy")]
+position = Vector2(832, 544)
+size_scale = 5.0
+moon = true
+moon_radius = 200
+moon_speed = 100
+
+[node name="planet_v7" parent="." instance=ExtResource("4_tgpgy")]
+position = Vector2(1216, 544)
+size_scale = 5.0
+planet_type = 6
+moon = true
+moon_radius = 200
+moon_speed = 80
+
+[node name="planet_v8" parent="." instance=ExtResource("4_tgpgy")]
+position = Vector2(1664, 608)
+size_scale = 5.0
+planet_type = 7
+win_planet = true
+moon = true
+moon_radius = 200
+moon_speed = 80
+
+[node name="planet_v4" parent="." instance=ExtResource("4_tgpgy")]
+position = Vector2(384, 544)
+size_scale = 5.0
+planet_type = 5
+clockwise = false
+moon_radius = 1000
+
+[node name="asteroid_belt" parent="." instance=ExtResource("5_2g4tn")]
+position = Vector2(1024, -1216)
+
+[node name="collectible" parent="." instance=ExtResource("6_c2dne")]
+position = Vector2(330, 256)
+
+[node name="collectible2" parent="." instance=ExtResource("6_c2dne")]
+position = Vector2(1504, 864)
+id = 2
+
+[node name="collectible3" parent="." instance=ExtResource("6_c2dne")]
+position = Vector2(1216, 128)
+id = 1
+
+[node name="comet3" parent="." instance=ExtResource("7_4ms1j")]
+position = Vector2(832, 805)
+
+[node name="comet8" parent="." instance=ExtResource("7_4ms1j")]
+position = Vector2(832, 256)
+
+[node name="comet11" parent="." instance=ExtResource("7_4ms1j")]
+position = Vector2(832, 960)
+
+[node name="comet10" parent="." instance=ExtResource("7_4ms1j")]
+position = Vector2(832, 96)

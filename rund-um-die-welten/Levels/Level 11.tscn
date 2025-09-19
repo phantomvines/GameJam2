@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bnld7y1nv2a6w"]
+[gd_scene load_steps=9 format=3 uid="uid://ce5ys5akyc5nx"]
 
 [ext_resource type="Script" uid="uid://tlx7l1b53wm7" path="res://Levels/main.gd" id="1_6v3dq"]
 [ext_resource type="PackedScene" uid="uid://b72obu30gqg1g" path="res://UI Elements/scene_utils.tscn" id="2_shews"]
@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://4s3rjs7m32hk" path="res://asteroid_belt/asteroid_belt.tscn" id="5_745wd"]
 [ext_resource type="PackedScene" uid="uid://nccnr30bmrud" path="res://collectibles/collectible.tscn" id="6_lead3"]
 [ext_resource type="PackedScene" uid="uid://ufu0fyp248bh" path="res://comet/comet.tscn" id="8_olvgy"]
-[ext_resource type="PackedScene" path="res://planet/Deathlaser.tscn" id="8_shews"]
+[ext_resource type="PackedScene" uid="uid://dxufmneynppid" path="res://planet/Deathlaser.tscn" id="8_shews"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_6v3dq")

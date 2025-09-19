@@ -1,0 +1,128 @@
+[gd_scene load_steps=8 format=3 uid="uid://ct7lm067om71s"]
+
+[ext_resource type="Script" uid="uid://tlx7l1b53wm7" path="res://Levels/main.gd" id="1_51fkc"]
+[ext_resource type="PackedScene" uid="uid://b72obu30gqg1g" path="res://UI Elements/scene_utils.tscn" id="2_kclku"]
+[ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="3_u3e61"]
+[ext_resource type="PackedScene" uid="uid://bmlfyt1ykh3aq" path="res://planet/planet_v_2.tscn" id="4_alaeb"]
+[ext_resource type="PackedScene" uid="uid://4s3rjs7m32hk" path="res://asteroid_belt/asteroid_belt.tscn" id="5_fp155"]
+[ext_resource type="PackedScene" uid="uid://nccnr30bmrud" path="res://collectibles/collectible.tscn" id="6_4sbyj"]
+[ext_resource type="PackedScene" uid="uid://ufu0fyp248bh" path="res://comet/comet.tscn" id="7_rfeeu"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_51fkc")
+level_name = "Level 13"
+
+[node name="scene_utils" parent="." instance=ExtResource("2_kclku")]
+metadata/_edit_lock_ = true
+
+[node name="player" parent="." groups=["player"] instance=ExtResource("3_u3e61")]
+position = Vector2(256, 928)
+spawn_rotation = 270
+dies_on_screen_leave = true
+
+[node name="planet_v2_5" parent="." instance=ExtResource("4_alaeb")]
+position = Vector2(768, 256)
+planet_type = 4
+clockwise = false
+moon = true
+moon_radius = 200
+moon_speed = 90
+
+[node name="planet_v3" parent="." instance=ExtResource("4_alaeb")]
+position = Vector2(352, 384)
+size_scale = 5.0
+planet_type = 7
+moon = true
+moon_radius = 200
+moon_speed = 85
+
+[node name="planet_v6" parent="." instance=ExtResource("4_alaeb")]
+position = Vector2(1024, 608)
+size_scale = 5.0
+moon = true
+moon_radius = 200
+moon_speed = 100
+
+[node name="planet_v7" parent="." instance=ExtResource("4_alaeb")]
+position = Vector2(1440, 888)
+size_scale = 5.0
+planet_type = 6
+moon = true
+moon_radius = 200
+moon_speed = 80
+
+[node name="planet_v8" parent="." instance=ExtResource("4_alaeb")]
+position = Vector2(1664, 608)
+size_scale = 5.0
+planet_type = 7
+moon = true
+moon_radius = 200
+moon_speed = 80
+
+[node name="planet_v5" parent="." instance=ExtResource("4_alaeb")]
+position = Vector2(1664, 256)
+size_scale = 5.0
+win_planet = true
+
+[node name="planet_v4" parent="." instance=ExtResource("4_alaeb")]
+position = Vector2(352, 832)
+size_scale = 5.0
+planet_type = 5
+clockwise = false
+moon_radius = 1000
+
+[node name="asteroid_belt" parent="." instance=ExtResource("5_fp155")]
+position = Vector2(1024, -1216)
+
+[node name="collectible" parent="." instance=ExtResource("6_4sbyj")]
+position = Vector2(896, 448)
+
+[node name="collectible2" parent="." instance=ExtResource("6_4sbyj")]
+position = Vector2(1568, 160)
+id = 2
+
+[node name="collectible3" parent="." instance=ExtResource("6_4sbyj")]
+position = Vector2(1568, 736)
+id = 1
+
+[node name="comet" parent="." instance=ExtResource("7_rfeeu")]
+position = Vector2(608, 824)
+
+[node name="comet5" parent="." instance=ExtResource("7_rfeeu")]
+position = Vector2(800, 864)
+
+[node name="comet2" parent="." instance=ExtResource("7_rfeeu")]
+position = Vector2(704, 672)
+
+[node name="comet4" parent="." instance=ExtResource("7_rfeeu")]
+position = Vector2(736, 1016)
+
+[node name="comet3" parent="." instance=ExtResource("7_rfeeu")]
+position = Vector2(608, 480)
+
+[node name="comet6" parent="." instance=ExtResource("7_rfeeu")]
+position = Vector2(576, 640)
+
+[node name="comet7" parent="." instance=ExtResource("7_rfeeu")]
+position = Vector2(1152, 96)
+
+[node name="comet8" parent="." instance=ExtResource("7_rfeeu")]
+position = Vector2(1248, 192)
+
+[node name="comet9" parent="." instance=ExtResource("7_rfeeu")]
+position = Vector2(1312, 352)
+
+[node name="comet11" parent="." instance=ExtResource("7_rfeeu")]
+position = Vector2(1312, 480)
+
+[node name="comet12" parent="." instance=ExtResource("7_rfeeu")]
+position = Vector2(1376, 608)
+
+[node name="comet13" parent="." instance=ExtResource("7_rfeeu")]
+position = Vector2(96, 96)
+
+[node name="comet14" parent="." instance=ExtResource("7_rfeeu")]
+position = Vector2(224, 128)
+
+[node name="comet10" parent="." instance=ExtResource("7_rfeeu")]
+position = Vector2(1152, 320)
