@@ -16,14 +16,7 @@ position = Vector2(1198, 419)
 [node name="planet_v2_2" parent="." instance=ExtResource("4_1bvp3")]
 position = Vector2(1597, 741)
 rotation = 0.0289093
-size_scale = 1.0
 planet_type = 3
-win_planet = false
-win_message = "You reached the goal"
-death_message_overwrite = ""
-speed = 300
-clockwise = true
-collision_enabled = true
 
 [node name="planet_v2" parent="." instance=ExtResource("4_1bvp3")]
 position = Vector2(780, 317)
@@ -31,11 +24,7 @@ rotation = 0.0554074
 size_scale = 5.0
 planet_type = 7
 win_planet = true
-win_message = "You reached the goal"
-death_message_overwrite = ""
-speed = 300
 clockwise = false
-collision_enabled = true
 moon = true
 
 [node name="asteroid_belt" parent="." instance=ExtResource("5_lquwl")]

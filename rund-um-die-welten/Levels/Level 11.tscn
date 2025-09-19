@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://ce5ys5akyc5nx"]
+
+[ext_resource type="Script" uid="uid://tlx7l1b53wm7" path="res://Levels/main.gd" id="1_6v3dq"]
+[ext_resource type="PackedScene" uid="uid://b72obu30gqg1g" path="res://UI Elements/scene_utils.tscn" id="2_shews"]
+[ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="3_olvgy"]
+[ext_resource type="PackedScene" uid="uid://bmlfyt1ykh3aq" path="res://planet/planet_v_2.tscn" id="4_o27a1"]
+[ext_resource type="PackedScene" uid="uid://4s3rjs7m32hk" path="res://asteroid_belt/asteroid_belt.tscn" id="5_745wd"]
+[ext_resource type="PackedScene" uid="uid://nccnr30bmrud" path="res://collectibles/collectible.tscn" id="6_lead3"]
+[ext_resource type="PackedScene" uid="uid://dxufmneynppid" path="res://planet/Deathlaser.tscn" id="8_shews"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_6v3dq")
+level_name = "Level 10"
+
+[node name="scene_utils" parent="." instance=ExtResource("2_shews")]
+metadata/_edit_lock_ = true
+
+[node name="player" parent="." groups=["player"] instance=ExtResource("3_olvgy")]
+position = Vector2(608, 800)
+spawn_rotation = 270
+dies_on_screen_leave = true
+
+[node name="planet_v2" parent="." instance=ExtResource("4_o27a1")]
+position = Vector2(512, 384)
+size_scale = 5.0
+
+[node name="planet_v4" parent="." instance=ExtResource("4_o27a1")]
+position = Vector2(960, 928)
+size_scale = 5.0
+planet_type = 2
+
+[node name="planet_v3" parent="." instance=ExtResource("4_o27a1")]
+position = Vector2(1536, 512)
+size_scale = 5.0
+win_planet = true
+
+[node name="planet_v5" parent="." instance=ExtResource("4_o27a1")]
+position = Vector2(1568, 864)
+size_scale = 5.0
+win_planet = true
+clockwise = false
+
+[node name="asteroid_belt" parent="." instance=ExtResource("5_745wd")]
+position = Vector2(1024, -1216)
+
+[node name="collectible" parent="." instance=ExtResource("6_lead3")]
+position = Vector2(896, 576)
+
+[node name="collectible2" parent="." instance=ExtResource("6_lead3")]
+position = Vector2(1216, 704)
+id = 2
+
+[node name="collectible3" parent="." instance=ExtResource("6_lead3")]
+position = Vector2(256, 512)
+id = 1
+
+[node name="Deathlaser" parent="." instance=ExtResource("8_shews")]
+position = Vector2(960, 448)
+rotation_speed_in_deg_per_second = 60
