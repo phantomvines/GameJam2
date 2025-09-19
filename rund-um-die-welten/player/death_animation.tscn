@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://cfpgrukw6wm54"]
 
-[ext_resource type="Script" path="res://player/death_animation.gd" id="1_g67hj"]
+[ext_resource type="Script" uid="uid://iprsjefi33q0" path="res://player/death_animation.gd" id="1_g67hj"]
 [ext_resource type="Texture2D" uid="uid://be8rbanobce5e" path="res://assets/ship-destroyed-Sheet.png" id="1_ynxyy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ynxyy"]
