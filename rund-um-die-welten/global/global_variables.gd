@@ -9,7 +9,7 @@ var player_skin = "default"
 # Planet vars
 enum planets {DeathStar, Mars, Earth, Sun, Soap, Plant}
 var planet_names = {planets.DeathStar: "Death Star", planets.Mars: "Mars", planets.Earth: "Earth", planets.Sun: "Sun", planets.Soap: "Soap", planets.Plant: "Plant"}
-var selected_level = ""
+var selected_level = "Level 1"
 
 #Doesnt work yet
 var global_RNG := RandomNumberGenerator.new()
