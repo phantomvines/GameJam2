@@ -10,6 +10,7 @@ var player_skin = "default"
 enum planets {DeathStar, Mars, Earth, Sun, Soap, Plant, Magma, Bowling}
 var planet_names = {planets.DeathStar: "Death Star", planets.Mars: "Mars", planets.Earth: "Earth", planets.Sun: "Sun", planets.Soap: "Soap", planets.Plant: "Plant", planets.Magma: "Magma", planets.Bowling: "Bowling"}
 var selected_level = "Level 1"
+var current_world = ""
 var in_main_menu = true
 
 
@@ -50,7 +51,7 @@ func emit_level_done(win_message: String):
 	
 
 func goto_level_select():
-	change_level("res://LevelSelectUtility/level_select_screen.tscn", true)
+	change_level("res://LevelSelectUtility/" + current_world + ".tscn", true)
 	
 func restart_level():
 	target_planet_position = null
