@@ -52,6 +52,8 @@ func _ready():
 	# set info of direction indicator, for updating
 	$rotation_indicator.set_info()
 	
+	$moon.vis = moon
+	
 	if moon:
 		print("show moon")
 		$moon.visible = true

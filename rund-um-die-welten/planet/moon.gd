@@ -6,6 +6,8 @@ var direction = Vector2(1,0)
 var target_planet_position
 var clockwise = true
 
+var vis = false
+
 func _physics_process(delta: float) -> void:
 	var radius = 150
 	var angle = (position-target_planet_position).angle()
@@ -25,6 +27,6 @@ func _ready() -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	# if area in player group entered, kill player
-	if area.is_in_group("player"):
+	if area.is_in_group("player") and vis:
 		#Comet = Meteroid with dust trail
 		GlobalVariables.emit_player_died("You missed your target and crashed into a moon")
