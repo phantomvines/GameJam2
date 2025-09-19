@@ -69,49 +69,49 @@ func fit_planet_type(new_planet_type):
 			$death_star.play("default")
 			$death_star.visible = true
 			$goal/mars_goal.visible = true
-			$rotation_indicator.radius = 30
+			$rotation_indicator.radius = 23
 		GlobalVariables.planets.Mars:
 			size_scale = 1.5
 			$mars.play("default")
 			$mars.visible = true
 			$goal/mars_goal.visible = true
-			$rotation_indicator.radius = 30
+			$rotation_indicator.radius = 23
 		GlobalVariables.planets.Earth:
 			size_scale = 4.2
 			$earth.play("default")
 			$earth.visible = true
 			$goal/earth_goal.visible = true
-			$rotation_indicator.radius = 55
+			$rotation_indicator.radius = 50
 		GlobalVariables.planets.Sun:
 			size_scale = 4.8
 			$sun.play("default")
 			$sun.visible = true
 			$goal/sun_goal.visible = true
-			$rotation_indicator.radius = 65
+			$rotation_indicator.radius = 60
 		GlobalVariables.planets.Plant:
 			size_scale = 2.0
 			$plant.play("default")
 			$plant.visible = true
 			$goal/plant_goal.visible = true
-			$rotation_indicator.radius = 30
+			$rotation_indicator.radius = 25
 		GlobalVariables.planets.Soap:
 			size_scale = 1.9
 			$soap.play("default")
 			$soap.visible = true
 			$goal/plant_goal.visible = true
-			$rotation_indicator.radius = 30
+			$rotation_indicator.radius = 23
 		GlobalVariables.planets.Magma:
 			size_scale = 1.4
 			$magma.play("default")
 			$magma.visible = true
 			$goal/mars_goal.visible = true
-			$rotation_indicator.radius = 30
+			$rotation_indicator.radius = 20
 		GlobalVariables.planets.Bowling:
 			size_scale = 1.5
 			$bowling.play("default")
 			$bowling.visible = true
 			$goal/mars_goal.visible = true
-			$rotation_indicator.radius = 30
+			$rotation_indicator.radius = 22
 	
 	shape.radius = 10 * size_scale
 	planet_radius = 10 * size_scale
