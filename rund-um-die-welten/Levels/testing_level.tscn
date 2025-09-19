@@ -23,7 +23,6 @@ position = Vector2(780, 317)
 rotation = 0.0554074
 size_scale = 5.0
 planet_type = 7
-win_planet = true
 clockwise = false
 moon = true
 
