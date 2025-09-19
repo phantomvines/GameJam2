@@ -90,7 +90,7 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	#Check if player is orbiting this planet on low orbit
 	if is_player_in_area():
-		if GlobalVariables.target_planet_position == position && !block_trigger: 
+		if !block_trigger: 
 			GlobalVariables.toggle_button(button_color)
 			block_trigger = true
 	else:

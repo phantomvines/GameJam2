@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=3 uid="uid://c6tgsacf3gi1y"]
+
+[ext_resource type="Script" uid="uid://tlx7l1b53wm7" path="res://Levels/main.gd" id="1_pqpkw"]
+[ext_resource type="PackedScene" uid="uid://b72obu30gqg1g" path="res://UI Elements/scene_utils.tscn" id="2_osvu6"]
+[ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="3_cxbt6"]
+[ext_resource type="PackedScene" uid="uid://bmlfyt1ykh3aq" path="res://planet/planet_v_2.tscn" id="4_03vdk"]
+[ext_resource type="PackedScene" uid="uid://4s3rjs7m32hk" path="res://asteroid_belt/asteroid_belt.tscn" id="5_15sfc"]
+[ext_resource type="PackedScene" uid="uid://nccnr30bmrud" path="res://collectibles/collectible.tscn" id="6_ho1hf"]
+[ext_resource type="PackedScene" uid="uid://dxufmneynppid" path="res://planet/Deathlaser.tscn" id="7_osvu6"]
+[ext_resource type="PackedScene" uid="uid://cx3txojpcod4x" path="res://planet/button_planet.tscn" id="8_cxbt6"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_pqpkw")
+level_name = "Level 13"
+
+[node name="scene_utils" parent="." instance=ExtResource("2_osvu6")]
+metadata/_edit_lock_ = true
+
+[node name="player" parent="." groups=["player"] instance=ExtResource("3_cxbt6")]
+position = Vector2(1496, 933)
+spawn_rotation = 270
+dies_on_screen_leave = true
+
+[node name="asteroid_belt" parent="." instance=ExtResource("5_15sfc")]
+position = Vector2(992, 529)
+speed = 1000
+number_of_holes = 2
+hole_size_in_deg = 60
+circle_radius = 470
+
+[node name="collectible" parent="." instance=ExtResource("6_ho1hf")]
+position = Vector2(992, 288)
+
+[node name="collectible2" parent="." instance=ExtResource("6_ho1hf")]
+position = Vector2(256, 661)
+id = 2
+
+[node name="collectible3" parent="." instance=ExtResource("6_ho1hf")]
+position = Vector2(992, 973)
+id = 1
+
+[node name="planet_v2" parent="." instance=ExtResource("4_03vdk")]
+position = Vector2(992, 533)
+planet_type = 2
+
+[node name="planet_v5" parent="." instance=ExtResource("4_03vdk")]
+position = Vector2(1560, 704)
+planet_type = 4
+collision_enabled = false
+
+[node name="planet_v6" parent="." instance=ExtResource("4_03vdk")]
+position = Vector2(512, 960)
+planet_type = 4
+clockwise = false
+collision_enabled = false
+
+[node name="planet_v4" parent="." instance=ExtResource("4_03vdk")]
+position = Vector2(1728, 160)
+planet_type = 5
+win_planet = true
+
+[node name="Deathlaser" parent="." instance=ExtResource("7_osvu6")]
+position = Vector2(1728, 160)
+rotation_speed_in_deg_per_second = 500
+
+[node name="button_planet" parent="." instance=ExtResource("8_cxbt6")]
+position = Vector2(256, 512)
+max_activation_dist = 32
+button_color = "pink"

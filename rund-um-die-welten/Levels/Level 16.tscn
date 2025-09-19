@@ -1,0 +1,107 @@
+[gd_scene load_steps=10 format=3 uid="uid://c4plydjt0lovw"]
+
+[ext_resource type="Script" uid="uid://tlx7l1b53wm7" path="res://Levels/main.gd" id="1_6y5kb"]
+[ext_resource type="PackedScene" uid="uid://b72obu30gqg1g" path="res://UI Elements/scene_utils.tscn" id="2_grj0t"]
+[ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="3_7o3ul"]
+[ext_resource type="PackedScene" uid="uid://bmlfyt1ykh3aq" path="res://planet/planet_v_2.tscn" id="4_rup6d"]
+[ext_resource type="PackedScene" uid="uid://4s3rjs7m32hk" path="res://asteroid_belt/asteroid_belt.tscn" id="5_pi486"]
+[ext_resource type="PackedScene" uid="uid://nccnr30bmrud" path="res://collectibles/collectible.tscn" id="6_lihu5"]
+[ext_resource type="PackedScene" uid="uid://ufu0fyp248bh" path="res://comet/comet.tscn" id="7_ss3md"]
+[ext_resource type="PackedScene" uid="uid://dxufmneynppid" path="res://planet/Deathlaser.tscn" id="8_grj0t"]
+[ext_resource type="PackedScene" uid="uid://cx3txojpcod4x" path="res://planet/button_planet.tscn" id="9_7o3ul"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_6y5kb")
+level_name = "Level 13"
+
+[node name="scene_utils" parent="." instance=ExtResource("2_grj0t")]
+metadata/_edit_lock_ = true
+
+[node name="player" parent="." groups=["player"] instance=ExtResource("3_7o3ul")]
+position = Vector2(296, 383)
+spawn_rotation = 45
+dies_on_screen_leave = true
+
+[node name="planet_v3" parent="." instance=ExtResource("4_rup6d")]
+position = Vector2(384, 512)
+size_scale = 5.0
+planet_type = 7
+moon_radius = 250
+moon_speed = 85
+
+[node name="planet_v6" parent="." instance=ExtResource("4_rup6d")]
+position = Vector2(928, 448)
+size_scale = 5.0
+planet_type = 2
+moon_radius = 200
+moon_speed = 100
+
+[node name="planet_v7" parent="." instance=ExtResource("4_rup6d")]
+position = Vector2(1280, 576)
+size_scale = 5.0
+planet_type = 6
+moon = true
+moon_radius = 120
+moon_speed = 100
+
+[node name="planet_v8" parent="." instance=ExtResource("4_rup6d")]
+position = Vector2(170, 160)
+size_scale = 5.0
+planet_type = 6
+moon = true
+moon_radius = 120
+moon_speed = 100
+
+[node name="planet_v9" parent="." instance=ExtResource("4_rup6d")]
+position = Vector2(232, 864)
+size_scale = 5.0
+planet_type = 6
+win_planet = true
+clockwise = false
+moon = true
+moon_radius = 120
+moon_speed = 100
+
+[node name="planet_v4" parent="." instance=ExtResource("4_rup6d")]
+position = Vector2(608, 480)
+size_scale = 5.0
+planet_type = 5
+moon_radius = 1000
+
+[node name="asteroid_belt" parent="." instance=ExtResource("5_pi486")]
+position = Vector2(1024, -1216)
+
+[node name="collectible" parent="." instance=ExtResource("6_lihu5")]
+position = Vector2(65, 64)
+
+[node name="collectible2" parent="." instance=ExtResource("6_lihu5")]
+position = Vector2(1504, 864)
+id = 2
+
+[node name="collectible3" parent="." instance=ExtResource("6_lihu5")]
+position = Vector2(1152, 480)
+id = 1
+
+[node name="comet8" parent="." instance=ExtResource("7_ss3md")]
+position = Vector2(232, 608)
+
+[node name="comet9" parent="." instance=ExtResource("7_ss3md")]
+position = Vector2(96, 608)
+
+[node name="comet10" parent="." instance=ExtResource("7_ss3md")]
+position = Vector2(1152, 288)
+
+[node name="comet12" parent="." instance=ExtResource("7_ss3md")]
+position = Vector2(544, 192)
+
+[node name="comet11" parent="." instance=ExtResource("7_ss3md")]
+position = Vector2(1312, 256)
+
+[node name="Deathlaser" parent="." instance=ExtResource("8_grj0t")]
+position = Vector2(864, 928)
+laser_color = "green"
+
+[node name="button_planet" parent="." instance=ExtResource("9_7o3ul")]
+position = Vector2(1696, 512)
+max_activation_dist = 32
+button_color = "green"
