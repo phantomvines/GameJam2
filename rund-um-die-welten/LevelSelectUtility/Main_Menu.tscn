@@ -13,12 +13,10 @@ texture = ExtResource("1_sg3w2")
 
 [node name="World 1" parent="." instance=ExtResource("2_d8tt0")]
 position = Vector2(500, 666)
-clickable_area_radius = 100
 world_file_name = "level_select_screen"
 
 [node name="World 2" parent="." instance=ExtResource("2_d8tt0")]
 position = Vector2(1067, 485)
-clickable_area_radius = 100
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_left = 480.0

@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var clickable_area_radius = 10:
+var clickable_area_radius = 140:
 	set(value):
 		clickable_area_radius = value
 		$collision_shape.shape.radius = clickable_area_radius
