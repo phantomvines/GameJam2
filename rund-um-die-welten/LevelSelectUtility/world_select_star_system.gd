@@ -11,5 +11,6 @@ func _ready() -> void:
 
 func _input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed:
+		Audioplayer.play_sound((load("res://sfx/button_clicks.wav") as AudioStream))
 		GlobalVariables.change_level("LevelSelectUtility/" + str(world_file_name) + ".tscn", true)
 		GlobalVariables.current_world = world_file_name
