@@ -10,3 +10,7 @@ func _ready() -> void:
 
 func _on_button_pressed():
 	get_tree().quit()
+
+
+func _on_quit_button_pressed() -> void:
+	get_tree().quit()

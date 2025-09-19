@@ -8,9 +8,12 @@ func _ready():
 
 func _on_pressed():
 	print("Selected Level is " + GlobalVariables.selected_level)
-	var level_select_path = rootfolder + subfolder + GlobalVariables.selected_level + ".tscn"
+	var level_select_path = rootfolder+ subfolder + GlobalVariables.selected_level + ".tscn"
+	Audioplayer.play_sound((load("res://sfx/button_clicks.wav") as AudioStream))
+	GlobalVariables.change_level(level_select_path)
 	if FileAccess.file_exists(level_select_path):
 		Audioplayer.play_sound((load("res://sfx/button_clicks.wav") as AudioStream))
 		GlobalVariables.change_level(level_select_path)
-	else :
+	else:
+		get_parent().get_node("menu_background").visible = false
 		print("File not found under " + level_select_path)
