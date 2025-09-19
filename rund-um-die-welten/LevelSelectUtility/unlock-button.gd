@@ -26,6 +26,7 @@ func check_unlock():
 
 func _on_pressed():
 	if unlocked:
+		Audioplayer.play_sound((load("res://sfx/button_clicks.wav") as AudioStream))
 		GlobalVariables.player_skin = skin
 
 func update_icon():
