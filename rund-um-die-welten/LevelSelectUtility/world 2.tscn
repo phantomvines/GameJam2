@@ -1,6 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://ds66brql3nmmp"]
+[gd_scene load_steps=12 format=3 uid="uid://4dh5ynq05rq8"]
 
-[ext_resource type="PackedScene" uid="uid://cr840jx5klwj6" path="res://UI Elements/menu_background.tscn" id="1_l3hcs"]
+[ext_resource type="PackedScene" path="res://UI Elements/menu_background.tscn" id="1_l3hcs"]
 [ext_resource type="PackedScene" uid="uid://c11b4i55gx3o5" path="res://LevelSelectUtility/level_select_planet.tscn" id="2_xnhxt"]
 [ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="3_o15yf"]
 [ext_resource type="FontFile" uid="uid://d2ucaasj8wmwj" path="res://Fonts/BRIGHTSTER-Bold-1.ttf" id="4_21fe5"]
