@@ -23,7 +23,6 @@ shape = SubResource("CircleShape2D_a80ru")
 [node name="Color" type="Node2D" parent="."]
 
 [node name="Orange" type="Sprite2D" parent="Color"]
-visible = false
 scale = Vector2(4, 4)
 texture = ExtResource("3_eooxo")
 

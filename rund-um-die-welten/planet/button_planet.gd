@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var max_activation_dist = 100:
+@export var max_activation_dist = 20:
 	set(value):
 		max_activation_dist = value
 		$activation_area/shape.shape.radius = $planet_v2.planet_radius + max_activation_dist
@@ -75,7 +75,7 @@ func _ready() -> void:
 	
 	$activation_area/shape.shape.radius = $planet_v2.planet_radius + max_activation_dist
 	
-	var scale_factor = ($planet_v2.planet_radius+ max_activation_dist)/float(12)
+	var scale_factor = ($planet_v2.planet_radius+ max_activation_dist)/float(48)
 	$Color.scale = Vector2(scale_factor, scale_factor)
 	
 	
