@@ -16,7 +16,7 @@ var selected_level = "Level 1"
 var global_RNG := RandomNumberGenerator.new()
 
 # Level vars
-var collectibles = {"Level 1": [0,0,0], "Level 2": [0,0,0], "Level 3": [0,0,0], "Level 4": [0,0,0], "Level 5": [0,0,0], "Level 6": [0,0,0], "Level 7": [0,0,0], "Level 8": [0,0,0], "Level 9": [0,0,0], "Level 10": [0,0,0]}
+var collectibles = {"Level 1": [0,0,0], "Level 2": [0,0,0], "Level 3": [0,0,0], "Level 4": [0,0,0], "Level 5": [0,0,0], "Level 6": [0,0,0], "Level 7": [0,0,0], "Level 8": [0,0,0], "Level 9": [0,0,0], "Level 10": [0,0,0], "Level 11": [0,0,0], "Level 12": [0,0,0], "Level 13": [0,0,0], "Level 14": [0,0,0], "Level 15": [0,0,0], "Level 16": [0,0,0], "Level 17": [0,0,0], "Level 18": [0,0,0], "Level 19": [0,0,0], "Level 20": [0,0,0]}
 var active_buttons = {"pink": false, "green": false, "orange": false}
 
 

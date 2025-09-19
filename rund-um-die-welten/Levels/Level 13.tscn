@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://bqbm2ss3dybb5"]
+
+[ext_resource type="Script" uid="uid://tlx7l1b53wm7" path="res://Levels/main.gd" id="1_2jw78"]
+[ext_resource type="PackedScene" uid="uid://b72obu30gqg1g" path="res://UI Elements/scene_utils.tscn" id="2_jittv"]
+[ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="3_i40bs"]
+[ext_resource type="PackedScene" uid="uid://bmlfyt1ykh3aq" path="res://planet/planet_v_2.tscn" id="4_imxgt"]
+[ext_resource type="PackedScene" uid="uid://4s3rjs7m32hk" path="res://asteroid_belt/asteroid_belt.tscn" id="5_jmoce"]
+[ext_resource type="PackedScene" uid="uid://nccnr30bmrud" path="res://collectibles/collectible.tscn" id="6_nfulu"]
+[ext_resource type="PackedScene" uid="uid://dxufmneynppid" path="res://planet/Deathlaser.tscn" id="7_q6vt6"]
+[ext_resource type="PackedScene" uid="uid://cx3txojpcod4x" path="res://planet/button_planet.tscn" id="8_jittv"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_2jw78")
+level_name = "Level 13"
+
+[node name="scene_utils" parent="." instance=ExtResource("2_jittv")]
+metadata/_edit_lock_ = true
+
+[node name="player" parent="." groups=["player"] instance=ExtResource("3_i40bs")]
+position = Vector2(264, 512)
+spawn_rotation = 270
+dies_on_screen_leave = true
+
+[node name="planet_v2_5" parent="." instance=ExtResource("4_imxgt")]
+position = Vector2(1568, 831)
+planet_type = 4
+
+[node name="planet_v3" parent="." instance=ExtResource("4_imxgt")]
+position = Vector2(1024, 768)
+size_scale = 5.0
+
+[node name="planet_v5" parent="." instance=ExtResource("4_imxgt")]
+position = Vector2(1728, 255)
+size_scale = 5.0
+win_planet = true
+
+[node name="planet_v4" parent="." instance=ExtResource("4_imxgt")]
+position = Vector2(768, 255)
+size_scale = 5.0
+planet_type = 5
+clockwise = false
+
+[node name="asteroid_belt" parent="." instance=ExtResource("5_jmoce")]
+position = Vector2(1024, -1216)
+
+[node name="collectible" parent="." instance=ExtResource("6_nfulu")]
+position = Vector2(672, 576)
+
+[node name="collectible2" parent="." instance=ExtResource("6_nfulu")]
+position = Vector2(1344, 96)
+id = 2
+
+[node name="collectible3" parent="." instance=ExtResource("6_nfulu")]
+position = Vector2(672, 937)
+id = 1
+
+[node name="Deathlaser" parent="." instance=ExtResource("7_q6vt6")]
+position = Vector2(1344, 255)
+rotation = -0.00224159
+rotation_speed_in_deg_per_second = 50
+laser_color = "orange"
+
+[node name="button_planet" parent="." instance=ExtResource("8_jittv")]
+position = Vector2(416, 544)
+max_activation_dist = 400
+button_color = "orange"

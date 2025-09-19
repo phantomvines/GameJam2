@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ce5ys5akyc5nx"]
+[gd_scene load_steps=9 format=3 uid="uid://ce5ys5akyc5nx"]
 
 [ext_resource type="Script" uid="uid://tlx7l1b53wm7" path="res://Levels/main.gd" id="1_6v3dq"]
 [ext_resource type="PackedScene" uid="uid://b72obu30gqg1g" path="res://UI Elements/scene_utils.tscn" id="2_shews"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bmlfyt1ykh3aq" path="res://planet/planet_v_2.tscn" id="4_o27a1"]
 [ext_resource type="PackedScene" uid="uid://4s3rjs7m32hk" path="res://asteroid_belt/asteroid_belt.tscn" id="5_745wd"]
 [ext_resource type="PackedScene" uid="uid://nccnr30bmrud" path="res://collectibles/collectible.tscn" id="6_lead3"]
+[ext_resource type="PackedScene" uid="uid://ufu0fyp248bh" path="res://comet/comet.tscn" id="8_olvgy"]
 [ext_resource type="PackedScene" uid="uid://dxufmneynppid" path="res://planet/Deathlaser.tscn" id="8_shews"]
 
 [node name="main" type="Node2D"]
@@ -37,7 +38,6 @@ win_planet = true
 [node name="planet_v5" parent="." instance=ExtResource("4_o27a1")]
 position = Vector2(1568, 864)
 size_scale = 5.0
-win_planet = true
 clockwise = false
 
 [node name="asteroid_belt" parent="." instance=ExtResource("5_745wd")]
@@ -56,4 +56,14 @@ id = 1
 
 [node name="Deathlaser" parent="." instance=ExtResource("8_shews")]
 position = Vector2(960, 448)
-rotation_speed_in_deg_per_second = 60
+rotation_speed_in_deg_per_second = 70
+laser_color = "green"
+
+[node name="comet" parent="." instance=ExtResource("8_olvgy")]
+position = Vector2(960, 96)
+
+[node name="comet3" parent="." instance=ExtResource("8_olvgy")]
+position = Vector2(1088, 32)
+
+[node name="comet2" parent="." instance=ExtResource("8_olvgy")]
+position = Vector2(834, 32)
