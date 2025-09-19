@@ -75,6 +75,9 @@ func _ready() -> void:
 	
 	$activation_area/shape.shape.radius = $planet_v2.planet_radius + max_activation_dist
 	
+	var scale_factor = ($planet_v2.planet_radius+ max_activation_dist)/float(12)
+	$Color.scale = Vector2(scale_factor, scale_factor)
+	
 	
 func _physics_process(_delta: float) -> void:
 	#Check if player is orbiting this planet on low orbit

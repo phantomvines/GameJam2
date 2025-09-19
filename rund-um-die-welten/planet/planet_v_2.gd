@@ -6,7 +6,7 @@ extends Area2D
 @export var planet_type: GlobalVariables.planets:
 	set(value):
 		planet_type = value
-		#fit_planet_type(value)
+		fit_planet_type(value)
 
 @export var win_planet = false:
 	set(value):

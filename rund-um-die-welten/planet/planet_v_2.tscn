@@ -10,9 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://dr2h23pobgxwt" path="res://assets/earth_goal.png" id="6_yv8ck"]
 [ext_resource type="Texture2D" uid="uid://nowsaqepmaof" path="res://assets/plant-planet-Sheet.png" id="7_nb57l"]
 [ext_resource type="Texture2D" uid="uid://c6yo05aibftjg" path="res://assets/sun_goal.png" id="8_itp2c"]
-[ext_resource type="Texture2D" uid="uid://nrs8ax6wrs40" path="res://assets/magma-planet-Sheet.png" id="8_slxe4"]
+[ext_resource type="Texture2D" uid="uid://dpqx8s6lx0wms" path="res://assets/magma-planet-Sheet.png" id="8_slxe4"]
 [ext_resource type="Texture2D" uid="uid://cl756ckjgfbqr" path="res://assets/target.png" id="9_itp2c"]
-[ext_resource type="Texture2D" uid="uid://cq0057ksvwtxh" path="res://assets/bowling-planet-Sheet.png" id="9_tqh4j"]
+[ext_resource type="Texture2D" uid="uid://thlhba75iqu3" path="res://assets/bowling-planet-Sheet.png" id="9_tqh4j"]
 [ext_resource type="PackedScene" uid="uid://boss86i1awyuk" path="res://planet/rotation_indicator.tscn" id="10_3lv2v"]
 [ext_resource type="Texture2D" uid="uid://bnfn04p5ojv1h" path="res://assets/plant_goal.png" id="11_nb57l"]
 [ext_resource type="PackedScene" uid="uid://cgeeatxwjsuf8" path="res://planet/moon.tscn" id="14_p2y8r"]
@@ -516,7 +516,6 @@ visible = false
 sprite_frames = SubResource("SpriteFrames_87xh3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(1.5, 1.5)
 shape = SubResource("CircleShape2D_s1de2")
 
 [node name="goal" type="Node2D" parent="."]
