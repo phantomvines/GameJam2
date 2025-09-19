@@ -24,7 +24,6 @@ func _ready() -> void:
 
 
 func fit_planet_type(new_planet_type):
-	var shape = $CollisionShape2D.shape
 	# change size of collision area and animation based on which planet is chosen
 	match new_planet_type:
 		GlobalVariables.planets.DeathStar:
@@ -64,6 +63,7 @@ func fit_planet_type(new_planet_type):
 			$goal/plant_goal.visible = true
 			$rotation_indicator.radius = 30
 	
+	var shape = $CollisionShape2D.shape
 	shape.radius = planet_base_radius* size_scale
 	if get_parent():
 		get_parent().scale_locations(planet_base_radius* size_scale * scale[0])

@@ -40,7 +40,6 @@ func _ready() -> void:
 func emit_player_died(death_message: String):
 	death_counter += 1
 	if death_message != "You left the mission area":
-		print("test")
 		Audioplayer.play_sound(preload("res://sfx/death.wav"))
 	player_died.emit(death_message)
 	
@@ -62,7 +61,8 @@ func restart_level():
 	
 func change_level(level_select_path):
 	get_tree().change_scene_to_file(level_select_path)
-	restart_level()
+	if get_tree().current_scene:
+		restart_level()
 	Audioplayer.play_music("res://sfx/Soundtrack.mp3")
 	reset_all_buttons()
 

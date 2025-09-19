@@ -73,10 +73,10 @@ func player_dies(death_message: String) -> void:
 	print(death_message)
 	$AnimatedSprite2D.visible = false
 	$CPUParticles2D.emitting = false
-	add_child(load("res://player/death_animation.tscn").instantiate())
 	if auto_respawn:
 		position = respawn_point
 	elif(GlobalVariables.target_planet_position):
+		add_child(load("res://player/death_animation.tscn").instantiate())
 		GlobalVariables.emit_game_over(death_message)
 
 
