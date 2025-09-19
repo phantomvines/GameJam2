@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b81fnypg0r01i"]
 
 [ext_resource type="Script" uid="uid://d2umg2v2kkvyf" path="res://LevelSelectUtility/world_select_star_system.gd" id="1_t35k2"]
-[ext_resource type="Texture2D" uid="uid://x5q14xo8tlp7" path="res://assets/solar_system.png" id="2_m35r8"]
+[ext_resource type="Texture2D" uid="uid://gmkmd4xgp2dt" path="res://assets/solar_system.png" id="2_m35r8"]
 [ext_resource type="FontFile" uid="uid://d2ucaasj8wmwj" path="res://Fonts/BRIGHTSTER-Bold-1.ttf" id="3_uq3ng"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m35r8"]
@@ -13,9 +13,13 @@ script = ExtResource("1_t35k2")
 [node name="collision_shape" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_m35r8")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="normal" type="Sprite2D" parent="."]
+visible = false
 scale = Vector2(4, 4)
 texture = ExtResource("2_m35r8")
+
+[node name="inverted" type="Sprite2D" parent="."]
+visible = false
 
 [node name="world_name_text" type="RichTextLabel" parent="."]
 offset_left = -125.0

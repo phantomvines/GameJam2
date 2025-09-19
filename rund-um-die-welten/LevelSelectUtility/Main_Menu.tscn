@@ -20,6 +20,7 @@ world_file_name = "world 1"
 
 [node name="World 2" parent="." instance=ExtResource("2_d8tt0")]
 position = Vector2(1067, 485)
+inverted = true
 world_file_name = "world 2"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]

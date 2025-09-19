@@ -50,7 +50,7 @@ func play_music(path: String):
 	music_player.volume_db = 0  # Adjust volume if needed
 	add_child(music_player)
 	music_player.stream.set_loop(true);
-#	music_player.stream.loop_offset = 0.1
+#	music_player.stream.loop_offset = 0.05
 	music_player.play()
 
 
