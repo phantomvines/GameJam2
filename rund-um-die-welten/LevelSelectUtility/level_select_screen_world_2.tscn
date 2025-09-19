@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ds66brql3nmmp"]
+[gd_scene load_steps=12 format=3 uid="uid://ds66brql3nmmp"]
 
 [ext_resource type="PackedScene" uid="uid://cr840jx5klwj6" path="res://UI Elements/menu_background.tscn" id="1_25d63"]
 [ext_resource type="PackedScene" uid="uid://c11b4i55gx3o5" path="res://LevelSelectUtility/level_select_planet.tscn" id="2_jeu1d"]
@@ -6,7 +6,8 @@
 [ext_resource type="FontFile" uid="uid://d2ucaasj8wmwj" path="res://Fonts/BRIGHTSTER-Bold-1.ttf" id="4_bydni"]
 [ext_resource type="Script" uid="uid://dnqvks40xcnq8" path="res://LevelSelectUtility/selection_cofirm_button.gd" id="5_galr1"]
 [ext_resource type="Texture2D" uid="uid://dj3nxkkx8gvre" path="res://assets/enterprise1.png" id="6_4jafe"]
-[ext_resource type="Script" path="res://LevelSelectUtility/unlock-button.gd" id="7_iltjk"]
+[ext_resource type="Script" uid="uid://jsfpumv6bsd5" path="res://LevelSelectUtility/back_to_galaxy_button.gd" id="6_jeu1d"]
+[ext_resource type="Script" uid="uid://djyqftdc3hb27" path="res://LevelSelectUtility/unlock-button.gd" id="7_iltjk"]
 [ext_resource type="Script" uid="uid://cv3b0iuf5w5c2" path="res://LevelSelectUtility/label.gd" id="8_g1qv7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v3ic8"]
@@ -112,7 +113,7 @@ planet_type = 6
 level_id = "Level 20"
 
 [node name="player" parent="." instance=ExtResource("3_8hmgf")]
-position = Vector2(238, 481)
+position = Vector2(609, 444)
 dies_on_screen_leave = true
 respawn_point = Vector2(250, 500)
 auto_respawn = true
@@ -127,6 +128,18 @@ theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxFlat_v3ic8")
 text = "Confirm Level Selection"
 script = ExtResource("5_galr1")
+
+[node name="Back_to_Galaxy_Button" type="Button" parent="."]
+offset_left = 25.0
+offset_top = 490.0
+offset_right = 325.0
+offset_bottom = 590.0
+theme_override_fonts/font = ExtResource("4_bydni")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3ic8")
+text = "Back to 
+the galaxy"
+script = ExtResource("6_jeu1d")
 
 [node name="Enterpise-Button" type="Button" parent="."]
 offset_left = 1709.0

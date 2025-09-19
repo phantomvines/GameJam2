@@ -1,13 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://c242dsi7lnqqb"]
+[gd_scene load_steps=13 format=3 uid="uid://c242dsi7lnqqb"]
 
 [ext_resource type="PackedScene" uid="uid://c11b4i55gx3o5" path="res://LevelSelectUtility/level_select_planet.tscn" id="1_offx3"]
 [ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="2_iojkr"]
 [ext_resource type="Script" uid="uid://dnqvks40xcnq8" path="res://LevelSelectUtility/selection_cofirm_button.gd" id="3_iojkr"]
 [ext_resource type="FontFile" uid="uid://d2ucaasj8wmwj" path="res://Fonts/BRIGHTSTER-Bold-1.ttf" id="3_m787v"]
 [ext_resource type="Texture2D" uid="uid://dj3nxkkx8gvre" path="res://assets/enterprise1.png" id="5_7xgfl"]
-[ext_resource type="Script" path="res://LevelSelectUtility/unlock-button.gd" id="5_v3ic8"]
+[ext_resource type="Script" uid="uid://djyqftdc3hb27" path="res://LevelSelectUtility/unlock-button.gd" id="5_v3ic8"]
 [ext_resource type="PackedScene" uid="uid://cr840jx5klwj6" path="res://UI Elements/menu_background.tscn" id="7_avbc4"]
 [ext_resource type="Script" uid="uid://cv3b0iuf5w5c2" path="res://LevelSelectUtility/label.gd" id="8_ygamd"]
+[ext_resource type="Script" uid="uid://jsfpumv6bsd5" path="res://LevelSelectUtility/back_to_galaxy_button.gd" id="9_byb64"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v3ic8"]
 bg_color = Color(0.688281, 0.599222, 0.142667, 1)
@@ -24,6 +25,18 @@ corner_radius_bottom_left = 30
 [sub_resource type="LabelSettings" id="LabelSettings_avbc4"]
 font = ExtResource("3_m787v")
 font_size = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ygamd"]
+bg_color = Color(0.688281, 0.599222, 0.142667, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
 
 [node name="Level-Select-Screen" type="Node2D"]
 
@@ -193,3 +206,15 @@ offset_bottom = 51.0
 text = "Death Count: 0"
 label_settings = SubResource("LabelSettings_avbc4")
 script = ExtResource("8_ygamd")
+
+[node name="Back_to_Galaxy_Button" type="Button" parent="."]
+offset_left = 25.0
+offset_top = 490.0
+offset_right = 325.0
+offset_bottom = 590.0
+theme_override_fonts/font = ExtResource("3_m787v")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_ygamd")
+text = "Back to 
+the galaxy"
+script = ExtResource("9_byb64")
