@@ -1,13 +1,14 @@
-[gd_scene load_steps=23 format=3 uid="uid://d0h7r8gitcntt"]
+[gd_scene load_steps=25 format=3 uid="uid://d0h7r8gitcntt"]
 
 [ext_resource type="Script" uid="uid://dw7a4ejn3gkop" path="res://player/player.gd" id="1_oul6g"]
-[ext_resource type="Texture2D" uid="uid://bsplo07cfs8of" path="res://assets/battlecruiser-Sheet.png" id="3_boad6"]
+[ext_resource type="Texture2D" uid="uid://cv5wtgdylxnb8" path="res://assets/battlecruiser-Sheet.png" id="3_boad6"]
 [ext_resource type="Texture2D" uid="uid://ws2nc8w43ys0" path="res://assets/rocket-Sheet.png" id="3_g1dw6"]
 [ext_resource type="Texture2D" uid="uid://b8y87eesj4hgj" path="res://assets/particle.png" id="3_yw30f"]
 [ext_resource type="Texture2D" uid="uid://dfdiudiwcupuo" path="res://assets/enterprise-Sheet.png" id="4_qjkh3"]
 [ext_resource type="Texture2D" uid="uid://bbbbqfabbltie" path="res://assets/falcon-Sheet.png" id="5_boad6"]
 [ext_resource type="Texture2D" uid="uid://deenw7xttt8ub" path="res://assets/x-wing-Sheet.png" id="5_g6k8r"]
-[ext_resource type="Texture2D" uid="uid://vn8hx6amejdh" path="res://assets/light-texture.png" id="7_boad6"]
+[ext_resource type="Texture2D" uid="uid://n17ftvnbb51l" path="res://assets/light-texture.png" id="7_boad6"]
+[ext_resource type="Texture2D" uid="uid://d36cs8kn8r7gg" path="res://assets/sputnik.png" id="7_hg6s5"]
 
 [sub_resource type="Gradient" id="Gradient_g1dw6"]
 offsets = PackedFloat32Array(0, 0.12, 0.286667, 0.46, 0.726667, 0.993333)
@@ -49,6 +50,10 @@ region = Rect2(0, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ebec5"]
 atlas = ExtResource("5_boad6")
 region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wodsf"]
+atlas = ExtResource("7_hg6s5")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hg6s5"]
 atlas = ExtResource("5_g6k8r")
@@ -106,6 +111,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_wodsf")
+}],
+"loop": true,
+"name": &"sputnik",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_hg6s5")
 }, {
 "duration": 1.0,
@@ -141,6 +154,7 @@ hue_variation_curve = SubResource("Curve_g1dw6")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_g6k8r")
+animation = &"sputnik"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.25, -0.25)

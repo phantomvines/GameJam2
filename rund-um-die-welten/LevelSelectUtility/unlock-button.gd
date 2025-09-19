@@ -16,7 +16,7 @@ func check_unlock():
 	for level in GlobalVariables.collectibles.keys():
 		for value in GlobalVariables.collectibles[level]:
 			total += value
-	total += 30
+	
 	if total >= threshold:
 		unlocked = true
 		disabled = false
@@ -37,6 +37,8 @@ func update_icon():
 			icon = load_scaled_icon("res://assets/x-wing1.png")
 		"enterprise":
 			icon = load_scaled_icon("res://assets/enterprise1.png")
+		"sputnik":
+			icon = load_scaled_icon("res://assets/sputnik.png")
 		"falcon":
 			icon = load_scaled_icon("res://assets/falcon1.png")
 		"battlecruiser":
