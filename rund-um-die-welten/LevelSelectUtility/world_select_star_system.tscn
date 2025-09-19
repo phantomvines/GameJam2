@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://b81fnypg0r01i"]
+[gd_scene load_steps=3 format=3 uid="uid://b81fnypg0r01i"]
 
-[node name="WorldSelectStarSystem" type="Node2D"]
+[ext_resource type="Script" uid="uid://d2umg2v2kkvyf" path="res://LevelSelectUtility/world_select_star_system.gd" id="1_t35k2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m35r8"]
+
+[node name="WorldSelectStarSystem" type="Area2D"]
+script = ExtResource("1_t35k2")
+
+[node name="collision_shape" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_m35r8")
