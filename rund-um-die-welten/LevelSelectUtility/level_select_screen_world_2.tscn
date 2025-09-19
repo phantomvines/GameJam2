@@ -1,12 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://ds66brql3nmmp"]
+[gd_scene load_steps=11 format=3 uid="uid://c8mfhjtsa3nf6"]
 
-[ext_resource type="PackedScene" uid="uid://cr840jx5klwj6" path="res://UI Elements/menu_background.tscn" id="1_25d63"]
+[ext_resource type="PackedScene" path="res://UI Elements/menu_background.tscn" id="1_25d63"]
 [ext_resource type="PackedScene" uid="uid://c11b4i55gx3o5" path="res://LevelSelectUtility/level_select_planet.tscn" id="2_jeu1d"]
 [ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="3_8hmgf"]
 [ext_resource type="FontFile" uid="uid://d2ucaasj8wmwj" path="res://Fonts/BRIGHTSTER-Bold-1.ttf" id="4_bydni"]
 [ext_resource type="Script" uid="uid://dnqvks40xcnq8" path="res://LevelSelectUtility/selection_cofirm_button.gd" id="5_galr1"]
 [ext_resource type="Texture2D" uid="uid://dj3nxkkx8gvre" path="res://assets/enterprise1.png" id="6_4jafe"]
-[ext_resource type="Script" path="res://LevelSelectUtility/unlock-button.gd" id="7_iltjk"]
+[ext_resource type="Script" uid="uid://djyqftdc3hb27" path="res://LevelSelectUtility/unlock-button.gd" id="7_iltjk"]
 [ext_resource type="Script" uid="uid://cv3b0iuf5w5c2" path="res://LevelSelectUtility/label.gd" id="8_g1qv7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v3ic8"]

@@ -1,9 +1,7 @@
+[gd_scene load_steps=4 format=3 uid="uid://byhm4i6oum1dp"]
 
-[gd_scene load_steps=0 format=3 uid="uid://b81fnypg0r01i"]
-
-
-[ext_resource type="Script" uid="uid://d2umg2v2kkvyf" path="res://LevelSelectUtility/world_select_star_system.gd" id="1_t35k2"]
-[ext_resource type="Texture2D" uid="uid://x5q14xo8tlp7" path="res://assets/solar_system.png" id="2_m35r8"]
+[ext_resource type="Script" path="res://LevelSelectUtility/world_select_star_system.gd" id="1_t35k2"]
+[ext_resource type="Texture2D" uid="uid://gmkmd4xgp2dt" path="res://assets/solar_system.png" id="2_m35r8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m35r8"]
 radius = 140.0
