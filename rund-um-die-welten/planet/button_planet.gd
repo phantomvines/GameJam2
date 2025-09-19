@@ -73,10 +73,18 @@ func _ready() -> void:
 
 	$planet_v2.collision_enabled = collision_enabled
 	
-	$activation_area/shape.shape.radius = $planet_v2.planet_radius + max_activation_dist
+	# Base radius of everything: 192
+	# Wanted radius: (Planet_radius + max_activation_dist)*4
 	
-	var scale_factor = ($planet_v2.planet_radius+ max_activation_dist)/float(48)
+	var base_radius = 192
+	var wanted_radius = ($planet_v2.planet_radius + max_activation_dist)*4
+	var scale_factor = wanted_radius/float(base_radius)
+	
+	#Scale Sprite
 	$Color.scale = Vector2(scale_factor, scale_factor)
+	#Scale Hitbox
+	$activation_area/shape.scale = Vector2(scale_factor, scale_factor)
+	$activation_area/shape.shape.radius = base_radius
 	
 	
 func _physics_process(_delta: float) -> void:

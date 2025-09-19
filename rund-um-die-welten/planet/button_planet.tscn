@@ -8,6 +8,7 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a80ru"]
 resource_local_to_scene = true
+radius = 192.0
 
 [node name="button_planet" type="Node2D"]
 script = ExtResource("1_a80ru")
@@ -23,6 +24,7 @@ shape = SubResource("CircleShape2D_a80ru")
 [node name="Color" type="Node2D" parent="."]
 
 [node name="Orange" type="Sprite2D" parent="Color"]
+visible = false
 scale = Vector2(4, 4)
 texture = ExtResource("3_eooxo")
 
