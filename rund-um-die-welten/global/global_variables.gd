@@ -10,6 +10,7 @@ var player_skin = "default"
 enum planets {DeathStar, Mars, Earth, Sun, Soap, Plant, Magma, Bowling}
 var planet_names = {planets.DeathStar: "Death Star", planets.Mars: "Mars", planets.Earth: "Earth", planets.Sun: "Sun", planets.Soap: "Soap", planets.Plant: "Plant", planets.Magma: "Magma", planets.Bowling: "Bowling"}
 var selected_level = "Level 1"
+var in_main_menu = true
 
 
 #Doesnt work yet
@@ -34,7 +35,6 @@ signal level_done(win_message: String)
 signal button_changed_stage()
 
 func _ready() -> void:
-	global_RNG.seed = 12345
 	pass
 	
 func emit_player_died(death_message: String):
@@ -50,19 +50,25 @@ func emit_level_done(win_message: String):
 	
 
 func goto_level_select():
-	change_level("res://LevelSelectUtility/level_select_screen.tscn")
-	Audioplayer.stop_music()
+	change_level("res://LevelSelectUtility/level_select_screen.tscn", true)
 	
 func restart_level():
 	target_planet_position = null
 	if get_tree().current_scene:
 		get_tree().reload_current_scene()
 	
-func change_level(level_select_path):
+func play_music():
+	if in_main_menu:
+		Audioplayer.play_music("res://sfx/menu-theme.mp3")
+	else:
+		Audioplayer.play_music("res://sfx/Soundtrack.mp3")
+	
+func change_level(level_select_path, new_level_is_main_menu = false):
 	get_tree().change_scene_to_file(level_select_path)
+	in_main_menu = new_level_is_main_menu
 	restart_level()
-	Audioplayer.play_music("res://sfx/Soundtrack.mp3")
 	reset_all_buttons()
+	play_music()
 
 
 # Button utils

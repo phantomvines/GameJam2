@@ -1,11 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://disuxhv301e4x"]
 
+[gd_scene load_steps=5 format=3 uid="uid://n2egb0q035k5"]
+
+[ext_resource type="Script" uid="uid://fey1vlc3fki" path="res://LevelSelectUtility/main_menu.gd" id="1_h3vtm"]
 [ext_resource type="Texture2D" uid="uid://b645w4bad52ab" path="res://assets/Background.png" id="1_sg3w2"]
 [ext_resource type="PackedScene" uid="uid://byhm4i6oum1dp" path="res://LevelSelectUtility/world_select_star_system.tscn" id="2_d8tt0"]
 [ext_resource type="FontFile" uid="uid://d2ucaasj8wmwj" path="res://Fonts/BRIGHTSTER-Bold-1.ttf" id="3_d8tt0"]
 
 [node name="MainMenu" type="Node2D"]
 texture_filter = 1
+script = ExtResource("1_h3vtm")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(960, 540)

@@ -11,4 +11,4 @@ func _ready() -> void:
 
 func _input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed:
-		GlobalVariables.change_level("LevelSelectUtility/" + str(world_file_name) + ".tscn")
+		GlobalVariables.change_level("LevelSelectUtility/" + str(world_file_name) + ".tscn", true)
