@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bovxwf77p74pn"]
+[gd_scene load_steps=9 format=3 uid="uid://bovxwf77p74pn"]
 
 [ext_resource type="Script" uid="uid://tlx7l1b53wm7" path="res://Levels/main.gd" id="1_xtg75"]
 [ext_resource type="PackedScene" uid="uid://d0h7r8gitcntt" path="res://player/player.tscn" id="2_hi2wx"]
@@ -6,6 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://ufu0fyp248bh" path="res://comet/comet.tscn" id="4_vy3yb"]
 [ext_resource type="PackedScene" uid="uid://b72obu30gqg1g" path="res://UI Elements/scene_utils.tscn" id="5_ui7qv"]
 [ext_resource type="PackedScene" uid="uid://nccnr30bmrud" path="res://collectibles/collectible.tscn" id="6_pjihm"]
+[ext_resource type="FontFile" uid="uid://d2ucaasj8wmwj" path="res://Fonts/BRIGHTSTER-Bold-1.ttf" id="7_oakcl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qi1fe"]
+font = ExtResource("7_oakcl")
+font_size = 32
 
 [node name="main3" type="Node2D"]
 script = ExtResource("1_xtg75")
@@ -65,3 +70,13 @@ position = Vector2(1122, 332)
 [node name="collectible4" parent="." instance=ExtResource("6_pjihm")]
 position = Vector2(1122, 332)
 id = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = 62.0
+offset_top = 52.0
+offset_right = 838.0
+offset_bottom = 117.0
+text = "Click on Planets 
+
+Space for charge towards center"
+label_settings = SubResource("LabelSettings_qi1fe")
