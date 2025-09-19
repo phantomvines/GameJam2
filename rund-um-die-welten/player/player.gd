@@ -71,12 +71,13 @@ func _physics_process(delta: float) -> void:
 #Dummy function for player death: 
 func player_dies(death_message: String) -> void: 
 	print(death_message)
-	$AnimatedSprite2D.visible = false
-	$CPUParticles2D.emitting = false
 	if auto_respawn:
 		position = respawn_point
 	elif(GlobalVariables.target_planet_position):
 		add_child(load("res://player/death_animation.tscn").instantiate())
+		$AnimatedSprite2D.visible = false
+		$CPUParticles2D.emitting = false
+		GlobalVariables.death_counter += 1
 		GlobalVariables.emit_game_over(death_message)
 
 
