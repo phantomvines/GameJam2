@@ -22,6 +22,8 @@ var active_buttons = {"pink": false, "green": false, "orange": false}
 
 var levels = {"Level 1": 0, "Level 2": 0, "Level 3": 0, "Level 4": 0, "Level 5": 0, "Level 6": 0, "Level 7": 0, "Level 8": 0, "Level 9": 0, "Level 10": 0}
 
+var death_counter = 0
+
 # Signals
 # Game-State-Signals
 signal player_died(death_message: String)
@@ -36,6 +38,7 @@ func _ready() -> void:
 	pass
 	
 func emit_player_died(death_message: String):
+	death_counter += 1
 	if death_message != "You left the mission area":
 		print("test")
 		Audioplayer.play_sound(preload("res://sfx/death.wav"))
