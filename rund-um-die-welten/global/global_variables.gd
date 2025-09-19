@@ -55,13 +55,12 @@ func goto_level_select():
 	
 func restart_level():
 	target_planet_position = null
-	global_RNG.seed = 12345
-	get_tree().reload_current_scene()
+	if get_tree().current_scene:
+		get_tree().reload_current_scene()
 	
 func change_level(level_select_path):
 	get_tree().change_scene_to_file(level_select_path)
-	if get_tree().current_scene:
-		restart_level()
+	restart_level()
 	Audioplayer.play_music("res://sfx/Soundtrack.mp3")
 	reset_all_buttons()
 
