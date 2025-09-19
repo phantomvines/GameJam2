@@ -5,8 +5,8 @@
 [ext_resource type="Script" uid="uid://dnqvks40xcnq8" path="res://LevelSelectUtility/selection_cofirm_button.gd" id="3_iojkr"]
 [ext_resource type="FontFile" uid="uid://d2ucaasj8wmwj" path="res://Fonts/BRIGHTSTER-Bold-1.ttf" id="3_m787v"]
 [ext_resource type="Texture2D" uid="uid://dj3nxkkx8gvre" path="res://assets/enterprise1.png" id="5_7xgfl"]
-[ext_resource type="Script" path="res://LevelSelectUtility/unlock-button.gd" id="5_v3ic8"]
-[ext_resource type="PackedScene" uid="uid://cr840jx5klwj6" path="res://UI Elements/menu_background.tscn" id="7_avbc4"]
+[ext_resource type="Script" uid="uid://djyqftdc3hb27" path="res://LevelSelectUtility/unlock-button.gd" id="5_v3ic8"]
+[ext_resource type="PackedScene" path="res://UI Elements/menu_background.tscn" id="7_avbc4"]
 [ext_resource type="Script" uid="uid://cv3b0iuf5w5c2" path="res://LevelSelectUtility/label.gd" id="8_ygamd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v3ic8"]
