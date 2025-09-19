@@ -17,25 +17,27 @@ level_name = "Level 13"
 metadata/_edit_lock_ = true
 
 [node name="player" parent="." groups=["player"] instance=ExtResource("3_i40bs")]
-position = Vector2(264, 512)
+position = Vector2(256, 928)
 spawn_rotation = 270
 dies_on_screen_leave = true
 
 [node name="planet_v2_5" parent="." instance=ExtResource("4_imxgt")]
-position = Vector2(1568, 831)
+position = Vector2(736, 224)
 planet_type = 4
+clockwise = false
 
 [node name="planet_v3" parent="." instance=ExtResource("4_imxgt")]
-position = Vector2(1024, 768)
+position = Vector2(1056, 544)
 size_scale = 5.0
+planet_type = 3
 
 [node name="planet_v5" parent="." instance=ExtResource("4_imxgt")]
-position = Vector2(1728, 255)
+position = Vector2(128, 128)
 size_scale = 5.0
 win_planet = true
 
 [node name="planet_v4" parent="." instance=ExtResource("4_imxgt")]
-position = Vector2(768, 255)
+position = Vector2(352, 832)
 size_scale = 5.0
 planet_type = 5
 clockwise = false
@@ -44,23 +46,34 @@ clockwise = false
 position = Vector2(1024, -1216)
 
 [node name="collectible" parent="." instance=ExtResource("6_nfulu")]
-position = Vector2(672, 576)
+position = Vector2(1056, 224)
 
 [node name="collectible2" parent="." instance=ExtResource("6_nfulu")]
-position = Vector2(1344, 96)
+position = Vector2(416, 416)
 id = 2
 
 [node name="collectible3" parent="." instance=ExtResource("6_nfulu")]
-position = Vector2(672, 937)
+position = Vector2(1056, 864)
 id = 1
 
 [node name="Deathlaser" parent="." instance=ExtResource("7_q6vt6")]
-position = Vector2(1344, 255)
+position = Vector2(288, 320)
 rotation = -0.00224159
-rotation_speed_in_deg_per_second = 50
+rotation_speed_in_deg_per_second = 500
 laser_color = "orange"
 
+[node name="Deathlaser2" parent="." instance=ExtResource("7_q6vt6")]
+position = Vector2(1056, 64)
+rotation = -0.00224159
+rotation_speed_in_deg_per_second = 40
+clockwise = false
+
+[node name="Deathlaser3" parent="." instance=ExtResource("7_q6vt6")]
+position = Vector2(1056, 992)
+rotation = 1.57079
+rotation_speed_in_deg_per_second = 40
+clockwise = false
+
 [node name="button_planet" parent="." instance=ExtResource("8_jittv")]
-position = Vector2(416, 544)
-max_activation_dist = 400
+position = Vector2(1664, 512)
 button_color = "orange"

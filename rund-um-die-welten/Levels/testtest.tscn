@@ -10,8 +10,8 @@
 
 [node name="button_planet" parent="." instance=ExtResource("2_r4tu6")]
 position = Vector2(640, 598)
+max_activation_dist = 40
 button_color = "pink"
-clockwise = false
 
 [node name="player" parent="." groups=["player"] instance=ExtResource("4_1hlkx")]
 position = Vector2(355, 608)
