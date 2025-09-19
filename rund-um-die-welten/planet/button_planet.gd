@@ -5,7 +5,13 @@ extends Node2D
 		max_activation_dist = value
 		$activation_area/shape.shape.radius = $planet_v2.planet_radius + max_activation_dist
 var block_trigger = false
-@export var button_color: String
+@export var button_color: String:
+	set(value):
+		button_color = value
+		for i in ["Orange", "Green", "Pink"]:
+			get_node("Color/"+str(i)).visible = false
+			
+		get_node("Color/"+str(value).capitalize()).visible = true
 
 @export var size_scale := 1.0:
 	set(value):

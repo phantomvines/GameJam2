@@ -1,6 +1,6 @@
 [gd_scene load_steps=38 format=3 uid="uid://dxufmneynppid"]
 
-[ext_resource type="Script" path="res://planet/deathlaser.gd" id="1_sv28e"]
+[ext_resource type="Script" uid="uid://cmuivlhmvghtc" path="res://planet/deathlaser.gd" id="1_sv28e"]
 [ext_resource type="Texture2D" uid="uid://cb8mmj8ebnaxj" path="res://assets/DeathLaserRessources/space-station-orangeexport.png" id="2_1jp7v"]
 [ext_resource type="Texture2D" uid="uid://bl60tpxrep6jt" path="res://assets/DeathLaserRessources/laser-green-Sheet.png" id="2_603sl"]
 [ext_resource type="Texture2D" uid="uid://dh614y12otcbc" path="res://assets/DeathLaserRessources/laser-orange-Sheet.png" id="3_lvrca"]

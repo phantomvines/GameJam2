@@ -6,6 +6,7 @@ extends Node2D
 		laser_color = value
 		station_name = "State"+str(value).capitalize()
 @export var death_message_overwrite: String
+@export var clockwise = true
 var active
 var station_name:
 	set(value):
@@ -45,7 +46,10 @@ func toggle_laser():
 	get_node(station_name + "/LaserSprite1").visible = true
 
 func _physics_process(delta: float) -> void:
-	rotate(deg_to_rad(rotation_speed_in_deg_per_second * delta))
+	if clockwise:
+		rotate(deg_to_rad(rotation_speed_in_deg_per_second * delta))
+	else:
+		rotate(deg_to_rad(rotation_speed_in_deg_per_second * -delta))
 
 
 func _on_laser_area_entered(area: Area2D) -> void:
